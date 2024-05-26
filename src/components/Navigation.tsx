@@ -37,6 +37,7 @@ const Dropdown = ({ isOpen, toggle, items, isActive }) => (
   </DropdownMenu>
 );
 
+
 export default function Navigation() {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
