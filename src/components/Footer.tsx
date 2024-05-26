@@ -65,7 +65,7 @@ export default function Footer() {
           <div className="flex flex-col items-center md:items-start">
             <h2 className="text-3xl font-bold mb-4">KALDA TALU VALGAMAAL</h2>
             <p className="mb-2">ULRICH ALTENKIRCH FIE (reg. kood: 11045862), KMKR nr: EE101238140</p>
-            <p className="mb-4">GPS koordinaadid: 57.83022 = 57° 49' 48'' põhjalaust, 26.27867 = 26° 16' 43'' idapikkust</p>
+            <p className="mb-4">GPS koordinaadid: 57.83022 = 57&rsquo; 49&rsquo; 48&rsquo;&rsquo; põhjalaust, 26.27867 = 26&rsquo; 16&rsquo; 43&rsquo;&rsquo; idapikkust</p>
             <p className="text-sm">Majutus kauni looduse keskel Valgamaal ligastes. Peatumine lihtsalt sisustatud jagatud vannitoaga ühe- ja kahe inimese toas või puhkemajas. Auto-, kanuu- ja rattarent. Tasuta WIFI ja parkimine. Soovi korral hommikusöök rootsi lauas.</p>
           </div>
 
