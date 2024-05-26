@@ -5,7 +5,7 @@
   },
   "MeistPage": {
     "title": "Pathnames",
-    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>"
+    "description": "The pathnames are internationalized too."
   },
   "Error": {
     "title": "Something went wrong!",
@@ -23,8 +23,17 @@
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
   },
   "Navigation": {
-    "home": "Home",
-    "pathnames": "Pathnames"
+    "home": "Koduleht",
+    "meist": "Meist",
+    "majutuseTüübid": "Majutuse tüübid",
+    "hinnakiri": "Hinnakiri",
+    "teenusedJaAktiivnePuhkus": "Teenused ja Aktiivne puhkus",
+    "hostel": "Hostel",
+    "kodumajutuseToad": "Kodumajutuse toad",
+    "puhkemaja": "Puhkemaja",
+    "kampingmajad": "Kämpingmajad",
+    "karavanidJaAutoelamud": "Karavanid ja autoelamud",
+    "telkimisala": "Telkimisala"
   },
   "PageLayout": {
     "links": {
