@@ -112,7 +112,7 @@ export default function Footer() {
             ))}
           </div>
           {/* Autoriõiguste teade */}
-          <p className="mt-4 md:mt-0">&copy; {new Date().getFullYear()} ULRIH ALTENKIRCH FIE. Kõik õigused kaitstud.</p>
+          <p className="mt-4 md:mt-0 text-sm">&copy; {new Date().getFullYear()} ULRIH ALTENKIRCH FIE. Kõik õigused kaitstud.</p>
         </div>
       </footer>
     </TooltipProvider>
