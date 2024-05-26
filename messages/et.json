@@ -37,7 +37,14 @@
     "telkimisala": "Telkimisala",
     "kanuurent": "Kanuurent",
     "sündmusteKorraldamine": "Sündmuste korraldamine",
-    "saun": "Saun"
+    "saun": "Saun",
+    "description": "Looduslik ja ajalooline atmosfäär koos kaasaegsete mugavustega.",
+    "navigation": "Menüü",
+    "contact": "Kontaktid",
+    "address": "1234 Talu Tee, Linn, Riik",
+    "phone": "+372 123 4567",
+    "email": "info@kaldatalu.ee",
+    "allRightsReserved": "Kõik õigused kaitstud."
   },
   "PageLayout": {
     "links": {
