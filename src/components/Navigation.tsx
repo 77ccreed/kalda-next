@@ -2,23 +2,25 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from 'next/navigation';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../components/ui/dropdown-menu";
 import { Button } from "../components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import LocaleSwitcher from "./LocaleSwitcher";
 import NavigationLink from "./NavigationLink";
 
-const Dropdown = ({ isOpen, toggle, items }) => (
+const Dropdown = ({ isOpen, toggle, items, isActive }) => (
   <DropdownMenu>
     <DropdownMenuTrigger asChild>
       <button
         onClick={toggle}
-        className="flex items-center space-x-1 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300"
+        className={`flex items-center space-x-1 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 ${isActive ? 'text-white bg-primary' : 'text-gray-400'
+          }`}
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
         <span>{items.title}</span>
-        <ChevronDown className="w-4 h-4 transition-transform duration-300" style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
+        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'transform rotate-180' : ''}`} />
       </button>
     </DropdownMenuTrigger>
     {isOpen && (
@@ -37,6 +39,7 @@ const Dropdown = ({ isOpen, toggle, items }) => (
 
 export default function Navigation() {
   const t = useTranslations("Navigation");
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState({ accommodation: false, services: false });
 
@@ -82,12 +85,19 @@ export default function Navigation() {
     <header className="bg-secondary text-white">
       <nav className="container mx-auto flex justify-between items-center p-4">
         <div className="flex items-center">
-          <NavigationLink href="/" className="text-2xl font-bold">{t("home")}</NavigationLink>
+          <NavigationLink href="/" className={`text-2xl font-bold ${pathname === '/' ? 'text-accent' : ''}`}>{t("home")}</NavigationLink>
           <div className="hidden md:flex space-x-4 ml-6">
-            <NavigationLink href="/meist">{t("meist")}</NavigationLink>
-            <Dropdown isOpen={isDropdownOpen.accommodation} toggle={() => toggleDropdown('accommodation')} items={accommodationItems} />
-            <Dropdown isOpen={isDropdownOpen.services} toggle={() => toggleDropdown('services')} items={servicesItems} />
-            <NavigationLink href="/hinnakiri">{t("hinnakiri")}</NavigationLink>
+            {menuItems.map((item) => (
+              <NavigationLink
+                key={item.href}
+                href={item.href}
+                className={`block px-4 py-2 ${pathname === item.href ? 'text-accent' : 'text-gray-400'}`}
+              >
+                {item.text}
+              </NavigationLink>
+            ))}
+            <Dropdown isOpen={isDropdownOpen.accommodation} toggle={() => toggleDropdown('accommodation')} items={accommodationItems} isActive={pathname.includes('/majutuse-tüübid')} />
+            <Dropdown isOpen={isDropdownOpen.services} toggle={() => toggleDropdown('services')} items={servicesItems} isActive={pathname.includes('/teenused-ja-aktiivne-puhkus')} />
           </div>
         </div>
         <div className="flex items-center">
@@ -100,7 +110,12 @@ export default function Navigation() {
           <div className="absolute top-16 left-0 w-full bg-secondary md:hidden z-10">
             <div className="flex flex-col items-start space-y-4 p-4">
               {menuItems.map((item) => (
-                <NavigationLink key={item.href} href={item.href} className="block px-4 py-2 text-lg font-bold text-left" onClick={handleLinkClick}>
+                <NavigationLink
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-4 py-2 font-bold text-left ${pathname === item.href ? 'text-accent' : ''}`}
+                  onClick={handleLinkClick}
+                >
                   {item.text}
                 </NavigationLink>
               ))}
