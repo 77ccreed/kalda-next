@@ -76,9 +76,13 @@ export default function Navigation() {
     ],
   };
 
-  const menuItems = [
+  const menuItems1 = [
     { href: "/meist", text: t("meist") },
+  ];
+
+  const menuItems2 = [
     { href: "/hinnakiri", text: t("hinnakiri") },
+    { href: "/kontakt", text: t("kontakt") },
   ];
 
   return (
@@ -87,7 +91,7 @@ export default function Navigation() {
         <div className="flex items-center">
           <NavigationLink href="/" className={`text-2xl font-bold ${pathname === '/' ? 'text-accent' : ''}`}>{t("home")}</NavigationLink>
           <div className="hidden md:flex space-x-4 ml-6">
-            {menuItems.map((item) => (
+            {menuItems1.map((item) => (
               <NavigationLink
                 key={item.href}
                 href={item.href}
@@ -98,6 +102,15 @@ export default function Navigation() {
             ))}
             <Dropdown isOpen={isDropdownOpen.accommodation} toggle={() => toggleDropdown('accommodation')} items={accommodationItems} isActive={pathname.includes('/majutuse-tüübid')} />
             <Dropdown isOpen={isDropdownOpen.services} toggle={() => toggleDropdown('services')} items={servicesItems} isActive={pathname.includes('/teenused-ja-aktiivne-puhkus')} />
+            {menuItems2.map((item) => (
+              <NavigationLink
+                key={item.href}
+                href={item.href}
+                className={`block px-4 py-2 ${pathname === item.href ? 'text-accent' : 'text-gray-400'}`}
+              >
+                {item.text}
+              </NavigationLink>
+            ))}
           </div>
         </div>
         <div className="flex items-center">
@@ -109,11 +122,11 @@ export default function Navigation() {
         {isOpen && (
           <div className="absolute top-16 left-0 w-full bg-secondary md:hidden z-10">
             <div className="flex flex-col items-start space-y-4 p-4">
-              {menuItems.map((item) => (
+              {menuItems1.map((item) => (
                 <NavigationLink
                   key={item.href}
                   href={item.href}
-                  className={`block px-4 py-2 font-bold text-left ${pathname === item.href ? 'text-accent' : ''}`}
+                  className={`block px-4 py-2 text-lg font-bold text-left ${pathname === item.href ? 'text-accent' : ''}`}
                   onClick={handleLinkClick}
                 >
                   {item.text}
@@ -135,6 +148,16 @@ export default function Navigation() {
                   </NavigationLink>
                 ))}
               </div>
+              {menuItems2.map((item) => (
+                <NavigationLink
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-4 py-2 text-lg font-bold text-left ${pathname === item.href ? 'text-accent' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  {item.text}
+                </NavigationLink>
+              ))}
               <LocaleSwitcher />
             </div>
           </div>
