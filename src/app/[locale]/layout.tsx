@@ -9,6 +9,7 @@ import {
 import { ReactNode } from 'react';
 import Navigation from '@/components/Navigation';
 import { locales } from '@/config';
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Navigation />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
