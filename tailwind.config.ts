@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,38 +19,41 @@ const config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        // Peamised värvid
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#4CAF50", // Roheline
+          foreground: "#FFFFFF", // Valge
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#2F4858", // Sinakasroheline
+          foreground: "#FFFFFF", // Valge
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          DEFAULT: "#FFEB3B", // Helekollane
+          foreground: "#2F4858", // Sinakasroheline
         },
+        muted: {
+          DEFAULT: "#E0E0E0", // Helehall
+          foreground: "#757575", // Tumehall
+        },
+        background: {
+          DEFAULT: "#F5F5DC", // Pehme beež
+        },
+        lightGreen: {
+          DEFAULT: "#C8E6C9", // Hele roheline
+        },
+        // Täiendavad värvid
+        border: "#757575", // Tumehall
+        input: "#757575", // Tumehall
+        ring: "#757575", // Tumehall
+        foreground: "#2F4858", // Sinakasroheline
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "#FFFFFF", // Valge
+          foreground: "#2F4858", // Sinakasroheline
         },
         card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          DEFAULT: "#E0E0E0", // Helehall
+          foreground: "#2F4858", // Sinakasroheline
         },
       },
       borderRadius: {
@@ -75,6 +78,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+};
 
-export default config
+export default config;
