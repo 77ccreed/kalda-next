@@ -5,7 +5,7 @@
   },
   "MeistPage": {
     "title": "Pathnames",
-    "description": "The pathnames are internationalized too.If you're using the default language English, you'll see</p>"
+    "description": "The pathnames are internationalized too.If you're using the default language English, you'll see"
   },
   "Error": {
     "title": "Something went wrong!",
@@ -33,7 +33,10 @@
     "puhkemaja": "Puhkemaja",
     "kampingmajad": "Kämpingmajad",
     "karavanidJaAutoelamud": "Karavanid ja autoelamud",
-    "telkimisala": "Telkimisala"
+    "telkimisala": "Telkimisala",
+    "kanuurent": "Kanuurent",
+    "sündmusteKorraldamine": "Sündmuste korraldamine",
+    "saun": "Saun"
   },
   "PageLayout": {
     "links": {
