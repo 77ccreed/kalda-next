@@ -13,15 +13,9 @@ export default function MeistPage({ params: { locale } }: Props) {
   const t = useTranslations('MeistPage');
 
   return (
-    <PageLayout title={t('title')}>
-      <div className="max-w-[490px]">
-        {t.rich('description', {
-          p: (chunks) => <p className="mt-4">{chunks}</p>,
-          code: (chunks) => (
-            <code className="font-mono text-white">{chunks}</code>
-          )
-        })}
-      </div>
-    </PageLayout>
+    <div>
+      <h1>{t('title')}</h1>
+      <p>{t('description')}</p>
+    </div>
   );
 }
