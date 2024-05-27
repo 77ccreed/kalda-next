@@ -81,7 +81,7 @@ export default function Footer() {
 
           {/* Kontaktinfo */}
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-2xl font-semibold mb-4">Aadress</h3>
+            <h3 className="text-2xl font-semibold mb-4">AADRESS</h3>
             {contactInformation.map(({ type, value, language }, index) => (
               <p key={index} className="mb-2">
                 {type === "email" || type === "phone" ? (
