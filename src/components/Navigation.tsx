@@ -3,58 +3,48 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from 'next/navigation';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../components/ui/dropdown-menu";
 import { Button } from "../components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import LocaleSwitcher from "./LocaleSwitcher";
 import NavigationLink from "./NavigationLink";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
-const Dropdown = ({ isOpen, toggle, items, isActive }) => (
-  <DropdownMenu>
-    <DropdownMenuTrigger asChild>
-      <button
-        onClick={toggle}
-        className={`flex items-center space-x-1 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 ${isActive ? 'text-white bg-primary' : 'text-gray-400'
-          }`}
-        aria-haspopup="true"
-        aria-expanded={isOpen}
-      >
-        <span>{items.title}</span>
-        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'transform rotate-180' : ''}`} />
-      </button>
-    </DropdownMenuTrigger>
-    {isOpen && (
-      <DropdownMenuContent className="bg-secondary text-white mt-2 rounded shadow-lg py-2 w-48 transition-all duration-300 ease-out">
-        {items.links.map((link) => (
-          <DropdownMenuItem key={link.href}>
-            <NavigationLink href={link.href} className="block px-4 py-2">
-              {link.text}
-            </NavigationLink>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    )}
-  </DropdownMenu>
+const NavigationMenuComponent = ({ items, isActive }) => (
+  <NavigationMenu>
+    <NavigationMenuList>
+      <NavigationMenuItem>
+        <NavigationMenuTrigger className={`flex items-center space-x-1 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 ${isActive ? 'text-white bg-primary' : 'text-gray-400'
+          }`} aria-haspopup="true" aria-expanded={isActive}>
+          <span>{items.title}</span>
+        </NavigationMenuTrigger>
+        <NavigationMenuContent className="bg-secondary text-white mt-2 rounded shadow-lg py-2 w-48 transition-all duration-300 ease-out">
+          {items.links.map((link) => (
+            <NavigationMenuLink key={link.href} className="block px-4 py-2 hover:bg-accent hover:text-white">
+              <NavigationLink href={link.href}>
+                {link.text}
+              </NavigationLink>
+            </NavigationMenuLink>
+          ))}
+        </NavigationMenuContent>
+      </NavigationMenuItem>
+    </NavigationMenuList>
+  </NavigationMenu>
 );
-
 
 export default function Navigation() {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState({ accommodation: false, services: false });
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = (menu) => {
-    setIsDropdownOpen((prevState) => ({
-      ...prevState,
-      [menu]: !prevState[menu],
-    }));
-  };
-
-  const handleLinkClick = () => {
-    setIsOpen(false);
-  };
+  const handleLinkClick = () => setIsOpen(false);
 
   const accommodationItems = {
     title: t("majutuseTüübid"),
@@ -88,10 +78,10 @@ export default function Navigation() {
 
   return (
     <header className="bg-secondary text-white">
-      <nav className="container mx-auto flex justify-between items-center p-4">
+      <nav className="container mx-auto flex justify-between items-center p-4 relative">
         <div className="flex items-center">
           <NavigationLink href="/" className={`text-2xl font-bold ${pathname === '/' ? 'text-accent' : ''}`}>{t("home")}</NavigationLink>
-          <div className="hidden md:flex space-x-4 ml-6">
+          <div className="hidden md:flex space-x-4 ml-6 relative">
             {menuItems1.map((item) => (
               <NavigationLink
                 key={item.href}
@@ -101,8 +91,14 @@ export default function Navigation() {
                 {item.text}
               </NavigationLink>
             ))}
-            <Dropdown isOpen={isDropdownOpen.accommodation} toggle={() => toggleDropdown('accommodation')} items={accommodationItems} isActive={pathname.includes('/majutuse-tüübid')} />
-            <Dropdown isOpen={isDropdownOpen.services} toggle={() => toggleDropdown('services')} items={servicesItems} isActive={pathname.includes('/teenused-ja-aktiivne-puhkus')} />
+            <NavigationMenuComponent
+              items={accommodationItems}
+              isActive={pathname.includes("/majutuse-tüübid")}
+            />
+            <NavigationMenuComponent
+              items={servicesItems}
+              isActive={pathname.includes("/teenused-ja-aktiivne-puhkus")}
+            />
             {menuItems2.map((item) => (
               <NavigationLink
                 key={item.href}
