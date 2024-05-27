@@ -17,15 +17,15 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const NavigationMenuComponent = ({ items, isActive }) => (
-  <NavigationMenu >
+  <NavigationMenu>
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="bg-secondary text-gray-400" aria-haspopup="true" aria-expanded={isActive}>
+        <NavigationMenuTrigger className="bg-secondary text-white" aria-haspopup="true" aria-expanded={isActive}>
           <span>{items.title}</span>
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
           {items.links.map((link) => (
-            <NavigationMenuLink key={link.href} className="block px-4 py-2">
+            <NavigationMenuLink key={link.href} className="block px-4 py-2 hover:bg-gray-700 hover:text-white transition-colors duration-200">
               <NavigationLink href={link.href}>
                 {link.text}
               </NavigationLink>
@@ -36,6 +36,7 @@ const NavigationMenuComponent = ({ items, isActive }) => (
     </NavigationMenuList>
   </NavigationMenu>
 );
+
 
 export default function Navigation() {
   const t = useTranslations("Navigation");
@@ -85,7 +86,7 @@ export default function Navigation() {
               <NavigationLink
                 key={item.href}
                 href={item.href}
-                className={`block px-4 py-2 ${pathname === item.href ? 'text-accent' : 'text-gray-400'}`}
+                className={`block px-4 py-2 ${pathname === item.href ? 'text-accent' : 'text-white'}`}
               >
                 {item.text}
               </NavigationLink>
@@ -102,7 +103,7 @@ export default function Navigation() {
               <NavigationLink
                 key={item.href}
                 href={item.href}
-                className={`block px-4 py-2 ${pathname === item.href ? 'text-accent' : 'text-gray-400'}`}
+                className={`block px-4 py-2 ${pathname === item.href ? 'text-accent' : 'text-white'}`}
               >
                 {item.text}
               </NavigationLink>
