@@ -17,16 +17,15 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const NavigationMenuComponent = ({ items, isActive }) => (
-  <NavigationMenu>
+  <NavigationMenu >
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className={`flex items-center space-x-1 px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-accent transition-all duration-300 ${isActive ? 'text-white bg-primary' : 'text-gray-400'
-          }`} aria-haspopup="true" aria-expanded={isActive}>
+        <NavigationMenuTrigger className="bg-secondary text-gray-400" aria-haspopup="true" aria-expanded={isActive}>
           <span>{items.title}</span>
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-secondary text-white mt-2 rounded shadow-lg py-2 w-48 transition-all duration-300 ease-out">
+        <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
           {items.links.map((link) => (
-            <NavigationMenuLink key={link.href} className="block px-4 py-2 hover:bg-accent hover:text-white">
+            <NavigationMenuLink key={link.href} className="block px-4 py-2">
               <NavigationLink href={link.href}>
                 {link.text}
               </NavigationLink>
