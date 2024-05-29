@@ -7,16 +7,6 @@ import { Home, Building, Bed, Award, Map } from "lucide-react";
 import NavigationLink from "./NavigationLink";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-const contactInformation = [
-  { type: "address", value: "Kalda talu, ligaste küla, Valga vald, 68308 Valgamaa" },
-  { type: "email", value: "puhkekeskus@msn.com" },
-  { type: "phone", value: "+37256652061", language: "eesti ja vene keeles" },
-  { type: "phone", value: "+37255594776", language: "inglise, saksa keeles" },
-  { type: "bankAccount", value: "Ulrich Altenkirch" },
-  { type: "bankAccount", value: "Swedbank: EE96 2200 0011 0844 3461" },
-  { type: "bankAccount", value: "SEB: EE45 1010 0108 4154 4019" },
-];
-
 const navigationLinks = [
   { href: "/meist", key: "meist" },
   { href: "/majutuse-tüübid/hostel", key: "hostel" },
@@ -75,21 +65,29 @@ function Navigation() {
 }
 
 function ContactInfo() {
-  const t = useTranslations("Navigatsion");
+  const t = useTranslations("Navigation");
   return (
     <div className="flex flex-col items-center md:items-start">
       <h3 className="text-2xl font-semibold mb-4">{t("contactTitle")}</h3>
-      {contactInformation.map(({ type, value, language }, index) => (
-        <p key={index} className="mb-2">
-          {type === "email" || type === "phone" ? (
-            <a href={`${type === "email" ? "mailto" : "tel"}:${value}`} className="hover-accent">
-              {value} {language && `(${language})`}
-            </a>
-          ) : (
-            <span className="font-bold">{value}</span>
-          )}
-        </p>
-      ))}
+      <p className="mb-2">{t("address")}</p>
+      <p className="mb-2">
+        <a href="mailto:puhkekeskus@msn.com" className="hover-accent">
+          {t("email")}
+        </a>
+      </p>
+      <p className="mb-2">
+        <a href="tel:+37256652061" className="hover-accent">
+          {t("phone1")} ({t("phone1Language")})
+        </a>
+      </p>
+      <p className="mb-2">
+        <a href="tel:+37255594776" className="hover-accent">
+          {t("phone2")} ({t("phone2Language")})
+        </a>
+      </p>
+      <p className="font-bold mb-2">{t("bankAccount1")}</p>
+      <p className="font-bold mb-2">{t("bankAccount2")}</p>
+      <p className="font-bold">{t("bankAccount3")}</p>
     </div>
   );
 }
@@ -114,7 +112,7 @@ function SocialMediaLinks() {
 }
 
 export default function Footer() {
-  const t = useTranslations("Navigatsion");
+  const t = useTranslations("Navigation");
   return (
     <TooltipProvider>
       <footer className="bg-secondary text-white py-12">
