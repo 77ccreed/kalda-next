@@ -25,7 +25,7 @@ const NavigationMenuComponent = ({ items, isActive }) => (
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
           {items.links.map((link) => (
-            <NavigationMenuLink key={link.href} href={link.href} className="block px-4 py-2 hover-accent transition-colors duration-200">
+            <NavigationMenuLink key={link.href} href={link.href} className="block px-4 py-2 hover-accent transition-colors duration-200 hover:bg-primary">
               <NavigationLink href={link.href}>
                 {link.text}
               </NavigationLink>
