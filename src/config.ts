@@ -14,6 +14,50 @@ export const pathnames = {
     et: "/meist",
     en: "/about-us",
   },
+  "/majutus/hostel": {
+    et: "/majutus/hostel",
+    en: "/accommodation/hostel",
+  },
+  "/majutus/kodumajutuse-toad": {
+    et: "/majutus/kodumajutuse-toad",
+    en: "/accommodation/homestay-rooms",
+  },
+  "/majutus/puhkemaja": {
+    et: "/majutus/puhkemaja",
+    en: "/accommodation/holiday-house",
+  },
+  "/majutus/kampingmajad": {
+    et: "/majutus/kampingmajad",
+    en: "/accommodation/camping-cabins",
+  },
+  "/majutus/karavanid-ja-autoelamud": {
+    et: "/majutus/karavanid-ja-autoelamud",
+    en: "/accommodation/caravans-and-motorhomes",
+  },
+  "/majutus/telkimisala": {
+    et: "/majutus/telkimisala",
+    en: "/accommodation/camping-area",
+  },
+  "/hinnakiri": {
+    et: "/hinnakiri",
+    en: "/price-list",
+  },
+  "/teenused/kanuurent": {
+    et: "/teenused/kanuurent",
+    en: "/services/canoe-rental",
+  },
+  "/teenused/sündmuste-korraldamine": {
+    et: "/teenused/sündmuste-korraldamine",
+    en: "/services/event-organization",
+  },
+  "/teenused/saun": {
+    et: "/teenused/saun",
+    en: "/services/sauna",
+  },
+  "/kontakt": {
+    et: "/kontakt",
+    en: "/contact",
+  },
 } satisfies Pathnames<typeof locales>;
 
 // Use the default: `always`
