@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from 'next/navigation';
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import LocaleSwitcher from "./LocaleSwitcher";
 import NavigationLink from "./NavigationLink";
@@ -16,7 +16,22 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const NavigationMenuComponent = ({ items, isActive }) => (
+interface NavigationItem {
+  href: string;
+  text: string;
+}
+
+interface MenuItems {
+  title: string;
+  links: NavigationItem[];
+}
+
+interface NavigationMenuComponentProps {
+  items: MenuItems;
+  isActive: boolean;
+}
+
+const NavigationMenuComponent: React.FC<NavigationMenuComponentProps> = ({ items, isActive }) => (
   <NavigationMenu>
     <NavigationMenuList>
       <NavigationMenuItem>
@@ -37,7 +52,7 @@ const NavigationMenuComponent = ({ items, isActive }) => (
   </NavigationMenu>
 );
 
-export default function Navigation() {
+const Navigation: React.FC = () => {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +60,7 @@ export default function Navigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const handleLinkClick = () => setIsOpen(false);
 
-  const accommodationItems = {
+  const accommodationItems: MenuItems = {
     title: t("majutuseTüübid"),
     links: [
       { href: "/majutus/hostel", text: t("hostel") },
@@ -57,7 +72,7 @@ export default function Navigation() {
     ],
   };
 
-  const servicesItems = {
+  const servicesItems: MenuItems = {
     title: t("teenusedJaAktiivnePuhkus"),
     links: [
       { href: "/teenused/kanuurent", text: t("kanuurent") },
@@ -66,11 +81,11 @@ export default function Navigation() {
     ],
   };
 
-  const menuItems1 = [
+  const menuItems1: NavigationItem[] = [
     { href: "/meist", text: t("meist") },
   ];
 
-  const menuItems2 = [
+  const menuItems2: NavigationItem[] = [
     { href: "/hinnakiri", text: t("hinnakiri") },
     { href: "/kontakt", text: t("kontakt") },
   ];
@@ -161,4 +176,6 @@ export default function Navigation() {
       </nav>
     </header>
   );
-}
+};
+
+export default Navigation;
