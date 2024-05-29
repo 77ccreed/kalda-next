@@ -8,7 +8,7 @@ export const host = process.env.VERCEL_URL
 export const defaultLocale = "et" as const;
 export const locales = ["en", "et"] as const;
 
-export const pathnames = {
+export const pathnames: Pathnames<typeof locales> = {
   "/": "/",
   "/meist": {
     et: "/meist",
