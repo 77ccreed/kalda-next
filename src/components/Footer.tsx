@@ -43,12 +43,13 @@ const socialMediaLinks = [
 ];
 
 function Branding() {
+  const t = useTranslations("Navigation");
   return (
     <div className="flex flex-col items-center md:items-start">
-      <h2 className="text-3xl font-bold mb-4">KALDA TALU VALGAMAAL</h2>
-      <p className="mb-2">ULRICH ALTENKIRCH FIE (reg. kood: 11045862), KMKR nr: EE101238140</p>
-      <p className="mb-4">GPS koordinaadid: 57.83022 = 57&rsquo; 49&rsquo; 48&rsquo;&rsquo; põhjalaust, 26.27867 = 26&rsquo; 16&rsquo; 43&rsquo;&rsquo; idapikkust</p>
-      <p className="text-sm">Majutus kauni looduse keskel Valgamaal ligastes. Peatumine lihtsalt sisustatud jagatud vannitoaga ühe- ja kahe inimese toas või puhkemajas. Auto-, kanuu- ja rattarent. Tasuta WIFI ja parkimine. Soovi korral hommikusöök rootsi lauas.</p>
+      <h2 className="text-3xl font-bold mb-4">{t("brandingTitle")}</h2>
+      <p className="mb-2">{t("brandingSubtitle1")}</p>
+      <p className="mb-4">{t("brandingSubtitle2")}</p>
+      <p className="text-sm">{t("brandingDescription")}</p>
     </div>
   );
 }
@@ -63,7 +64,7 @@ function Navigation() {
 
   return (
     <div className="flex flex-col items-center md:items-start">
-      <h3 className="text-2xl font-semibold mb-4">MENÜÜ</h3>
+      <h3 className="text-2xl font-semibold mb-4">{t("navigationTitle")}</h3>
       <nav className="flex flex-col space-y-2">
         {navigationLinks.map(({ href, key }, index) => (
           <NavigationLink key={index} href={href} className={getLinkClassName(href)}>{t(key)}</NavigationLink>
@@ -74,9 +75,10 @@ function Navigation() {
 }
 
 function ContactInfo() {
+  const t = useTranslations("Navigatsion");
   return (
     <div className="flex flex-col items-center md:items-start">
-      <h3 className="text-2xl font-semibold mb-4">AADRESS</h3>
+      <h3 className="text-2xl font-semibold mb-4">{t("contactTitle")}</h3>
       {contactInformation.map(({ type, value, language }, index) => (
         <p key={index} className="mb-2">
           {type === "email" || type === "phone" ? (
@@ -112,6 +114,7 @@ function SocialMediaLinks() {
 }
 
 export default function Footer() {
+  const t = useTranslations("Navigatsion");
   return (
     <TooltipProvider>
       <footer className="bg-secondary text-white py-12">
@@ -122,7 +125,7 @@ export default function Footer() {
         </div>
         <div className="container mx-auto px-4 mt-8 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
           <SocialMediaLinks />
-          <p className="mt-4 md:mt-0 text-sm">&copy; {new Date().getFullYear()} ULRIH ALTENKIRCH FIE. Kõik õigused kaitstud.</p>
+          <p className="mt-4 md:mt-0 text-sm">&copy; {new Date().getFullYear()} {t("allRightsReserved")}</p>
         </div>
       </footer>
     </TooltipProvider>
