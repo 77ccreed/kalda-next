@@ -58,7 +58,7 @@ function Navigation() {
   const pathname = usePathname();
 
   const getLinkClassName = (href: string) => (
-    `hover:text-accent ${pathname === href ? 'text-accent font-semibold' : ''}`
+    `hover-accent ${pathname === href ? 'text-accent font-semibold' : ''}`
   );
 
   return (
@@ -80,7 +80,7 @@ function ContactInfo() {
       {contactInformation.map(({ type, value, language }, index) => (
         <p key={index} className="mb-2">
           {type === "email" || type === "phone" ? (
-            <a href={`${type === "email" ? "mailto" : "tel"}:${value}`} className="hover:text-accent">
+            <a href={`${type === "email" ? "mailto" : "tel"}:${value}`} className="hover-accent">
               {value} {language && `(${language})`}
             </a>
           ) : (
@@ -98,7 +98,7 @@ function SocialMediaLinks() {
       {socialMediaLinks.map(({ href, label, Icon }, index) => (
         <Tooltip key={index}>
           <TooltipTrigger asChild>
-            <a href={href} aria-label={label} className="hover:text-accent">
+            <a href={href} aria-label={label} className="hover-accent">
               <Icon className="w-6 h-6" />
             </a>
           </TooltipTrigger>
