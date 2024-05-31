@@ -19,8 +19,8 @@
     "title": "next-intl example"
   },
   "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+    "label": "Vaheta keelt",
+    "locale": "{locale, select, de {🇩🇪 Saksa keel} en {🇺🇸 Inglise keel} other {ET Eesti keel}}"
   },
   "Navigation": {
     "home": "Kalda Talu",
