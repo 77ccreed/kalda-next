@@ -49,7 +49,7 @@ function Navigation() {
   const pathname = usePathname();
 
   const getLinkClassName = (href: string) => (
-    `hover-accent ${pathname === href ? 'text-accent font-semibold' : ''}`
+    `hover-accent ${pathname === href ? 'text-primary font-semibold' : ''}`
   );
 
   return (
