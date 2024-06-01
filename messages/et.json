@@ -1,7 +1,7 @@
 {
   "IndexPage": {
-    "title": "next-intl example",
-    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
+    "title": "Puhkekeskus Valgamaal",
+    "description": "Tere tulemast looduse rüppe! Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv."
   },
   "MeistPage": {
     "title": "Pathnames",
@@ -43,7 +43,7 @@
     "brandingSubtitle2": "GPS koordinaadid: 57.83022 = 57’ 49’ 48’’ põhjalaust, 26.27867 = 26’ 16’ 43’’ idapikkust",
     "brandingDescription": "Majutus kauni looduse keskel Valgamaal ligastes. Peatumine lihtsalt sisustatud jagatud vannitoaga ühe- ja kahe inimese toas või puhkemajas. Auto-, kanuu- ja rattarent. Tasuta WIFI ja parkimine. Soovi korral hommikusöök rootsi lauas.",
     "navigationTitle": "MENÜÜ",
-    "contactTitle": "AADRESS",
+    "contactTitle": "KONTAKTID",
     "address": "Kalda talu, ligaste küla, Valga vald, 68308 Valgamaa",
     "email": "puhkekeskus@msn.com",
     "phone1": "+37256652061",
