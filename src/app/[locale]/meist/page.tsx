@@ -14,14 +14,20 @@ export default function MeistPage({ params: { locale } }: Props) {
 
   return (
     <>
-      <Hero title="Great companies are made by great people" subtitle='Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui.' tagline='Puhkekeskus'
-        callToAction='Tere' callToAction2='Tere' image={{
+      <Hero
+        title="Great companies are made by great people"
+        subtitle="Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui."
+        tagline="Puhkekeskus"
+        callToAction="Tere"
+        callToActionLink="/contact"  // Link for the first CTA button
+        callToAction2="Tutvu"
+        callToActionLink2="/about"   // Link for the second CTA button
+        image={{
           src: '/img/jurta5.jpg',
-          alt: 'Tere', blurDataURL: 'yourBase64EncodedImage'
+          alt: 'Tere',
+          blurDataURL: 'yourBase64EncodedImage'
         }}
       />
-      <h1>{t('title')}</h1>
-      <p>{t('description')}</p>
     </>
   );
 }
