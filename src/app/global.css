@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: #FFFFFF;
+    --foreground: #2F4858;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: #E0E0E0;
+    --card-foreground: #2F4858;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: #FFFFFF;
+    --popover-foreground: #2F4858;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: #FFEB3B;
+    --primary-foreground: #2F4858;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: #2F4858;
+    --secondary-foreground: #FFFFFF;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: #E0E0E0;
+    --muted-foreground: #757575;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: #C8E6C9;
+    --accent-foreground: #2F4858;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: #F44336;
+    --destructive-foreground: #FFFFFF;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: #757575;
+    --input: #757575;
+    --ring: #757575;
 
     --radius: 0.5rem;
   }
@@ -47,6 +47,6 @@
 
 @layer utilities {
   .hover-accent {
-    @apply hover:text-accent transition-colors;
+    @apply hover:text-primary transition-colors;
   }
 }

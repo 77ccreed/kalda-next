@@ -19,38 +19,37 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Peamised värvid
         primary: {
-          DEFAULT: "#4CAF50", // Roheline
-          foreground: "#FFFFFF", // Valge
+          light: "#FFF176", // Light Yellow
+          DEFAULT: "#FFEB3B", // Yellow
+          dark: "#FBC02D", // Dark Yellow
+          foreground: "#2F4858", // Dark Blue-Green
         },
         secondary: {
-          DEFAULT: "#2F4858", // Sinakasroheline
-          foreground: "#FFFFFF", // Valge
+          light: "#5F7380", // Light Blue-Green
+          DEFAULT: "#2F4858", // Blue-Green
+          dark: "#1D2F36", // Dark Blue-Green
+          foreground: "#FFFFFF", // White
         },
         accent: {
-          DEFAULT: "#FFEB3B", // Helekollane
-          foreground: "#2F4858", // Sinakasroheline
+          light: "#DCE775", // Light Green
+          DEFAULT: "#C8E6C9", // Green
+          dark: "#9CCC65", // Dark Green
+          foreground: "#2F4858", // Dark Blue-Green
         },
         muted: {
-          DEFAULT: "#E0E0E0", // Helehall
-          foreground: "#757575", // Tumehall
+          light: "#F5F5F5", // Light Grey
+          DEFAULT: "#E0E0E0", // Grey
+          dark: "#BDBDBD", // Dark Grey
+          foreground: "#757575", // Medium Grey
         },
         background: {
-          DEFAULT: "#F5F5DC", // Pehme beež
+          DEFAULT: "#FFFFFF", // White
         },
-        lightGreen: {
-          DEFAULT: "#C8E6C9", // Hele roheline
-        },
-        // Täiendavad värvid
-        border: "#757575", // Tumehall
-        input: "#757575", // Tumehall
-        ring: "#757575", // Tumehall
-        foreground: "#2F4858", // Sinakasroheline
-        card: {
-          DEFAULT: "#E0E0E0", // Helehall
-          foreground: "#2F4858", // Sinakasroheline
-        },
+        border: "#757575", // Medium Grey
+        input: "#757575", // Medium Grey
+        ring: "#757575", // Medium Grey
+        foreground: "#2F4858", // Dark Blue-Green
       },
       borderRadius: {
         lg: "var(--radius)",
