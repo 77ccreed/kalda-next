@@ -9,12 +9,12 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const navigationLinks = [
   { href: "/meist", key: "meist" },
-  { href: "/majutuse/hostel", key: "hostel" },
-  { href: "/majutuse/kodumajutuse-toad", key: "kodumajutuseToad" },
-  { href: "/majutuse/puhkemaja", key: "puhkemaja" },
-  { href: "/majutuse/kampingmajad", key: "kampingmajad" },
-  { href: "/majutuse/karavanid-ja-autoelamud", key: "karavanidJaAutoelamud" },
-  { href: "/majutuse/telkimisala", key: "telkimisala" },
+  { href: "/majutus/hostel", key: "hostel" },
+  { href: "/majutus/kodumajutuse-toad", key: "kodumajutuseToad" },
+  { href: "/majutus/puhkemaja", key: "puhkemaja" },
+  { href: "/majutus/kampingmajad", key: "kampingmajad" },
+  { href: "/majutus/karavanid-ja-autoelamud", key: "karavanidJaAutoelamud" },
+  { href: "/majutus/telkimisala", key: "telkimisala" },
   { href: "/broneerimine", key: "broneerimine" },
   { href: "/teenused/kanuurent", key: "kanuurent" },
   { href: "/teenused/sündmuste-korraldamine", key: "sündmusteKorraldamine" },
