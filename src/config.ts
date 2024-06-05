@@ -38,9 +38,9 @@ export const pathnames: Pathnames<typeof locales> = {
     et: "/majutus/telkimisala",
     en: "/accommodation/camping-area",
   },
-  "/hinnakiri": {
-    et: "/hinnakiri",
-    en: "/price-list",
+  "/broneerimine": {
+    et: "/broneerimine",
+    en: "/booking",
   },
   "/teenused/kanuurent": {
     et: "/teenused/kanuurent",
