@@ -46,8 +46,8 @@ export const pathnames: Pathnames<typeof locales> = {
     et: "/teenused/kanuurent",
     en: "/services/canoe-rental",
   },
-  "/teenused/sündmuste-korraldamine": {
-    et: "/teenused/sündmuste-korraldamine",
+  "/teenused/sundmuste-korraldamine": {
+    et: "/teenused/sundmuste-korraldamine",
     en: "/services/event-organization",
   },
   "/teenused/saun": {
