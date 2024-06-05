@@ -9,27 +9,27 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 const navigationLinks = [
   { href: "/meist", key: "meist" },
-  { href: "/majutuse-tüübid/hostel", key: "hostel" },
-  { href: "/majutuse-tüübid/kodumajutuse-toad", key: "kodumajutuseToad" },
-  { href: "/majutuse-tüübid/puhkemaja", key: "puhkemaja" },
-  { href: "/majutuse-tüübid/kampingmajad", key: "kampingmajad" },
-  { href: "/majutuse-tüübid/karavanid-ja-autoelamud", key: "karavanidJaAutoelamud" },
-  { href: "/majutuse-tüübid/telkimisala", key: "telkimisala" },
+  { href: "/majutuse/hostel", key: "hostel" },
+  { href: "/majutuse/kodumajutuse-toad", key: "kodumajutuseToad" },
+  { href: "/majutuse/puhkemaja", key: "puhkemaja" },
+  { href: "/majutuse/kampingmajad", key: "kampingmajad" },
+  { href: "/majutuse/karavanid-ja-autoelamud", key: "karavanidJaAutoelamud" },
+  { href: "/majutuse/telkimisala", key: "telkimisala" },
   { href: "/broneerimine", key: "broneerimine" },
-  { href: "/teenused-ja-aktiivne-puhkus/kanuurent", key: "kanuurent" },
-  { href: "/teenused-ja-aktiivne-puhkus/sündmuste-korraldamine", key: "sündmusteKorraldamine" },
-  { href: "/teenused-ja-aktiivne-puhkus/saun", key: "saun" },
+  { href: "/teenused/kanuurent", key: "kanuurent" },
+  { href: "/teenused/sündmuste-korraldamine", key: "sündmusteKorraldamine" },
+  { href: "/teenused/saun", key: "saun" },
   { href: "/kontakt", key: "kontakt" },
 ];
 
 const socialMediaLinks = [
-  { href: "https://facebook.com", label: "Facebook", Icon: SiFacebook },
-  { href: "https://tripadvisor.com", label: "TripAdvisor", Icon: SiTripadvisor },
-  { href: "https://booking.com", label: "Booking.com", Icon: Home },
-  { href: "https://hotel.de", label: "Hotel.de", Icon: Building },
-  { href: "https://hostelworld.com", label: "Hostelworld", Icon: Bed },
-  { href: "#", label: "Travelmyth Award", Icon: Award },
-  { href: "#", label: "Spotocamp", Icon: Map },
+  { href: "https://www.facebook.com/profile.php?id=100041395076437", label: "Facebook", Icon: SiFacebook },
+  { href: "https://www.tripadvisor.com/Hotel_Review-g13971741-d1068278-Reviews-Kalda_Talu-Iigaste_Valga_County.html", label: "TripAdvisor", Icon: SiTripadvisor },
+  { href: "https://www.booking.com/hotel/ee/kalda-tourist-farm-holiday-villagee.et.html", label: "Booking.com", Icon: Home },
+  { href: "https://www.maaturism.ee/index.php?id=eesti-maaturism&service_id=1453", label: "Maaturism.ee", Icon: Building },
+  { href: "https://www.hostelworld.com/pwa/wds/hosteldetails.php/Kalda-Talu-Puhkekeskus/Valga/102124?from=2024-06-06&to=2024-06-07&guests=2", label: "Hostelworld", Icon: Bed },
+  { href: "https://www.travelmyth.co.uk/Tolliste-Tiidu/Hotels?sm=true&highlighted_hotel=311296", label: "Travelmyth Award", Icon: Award },
+  { href: "https://www.spottocamp.com/en/campsites/kalda-talu-puhkekeskus-camping-valgamaa", label: "Spotocamp", Icon: Map },
 ];
 
 function Branding() {
