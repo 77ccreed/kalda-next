@@ -20,9 +20,9 @@ export default function MeistPage({ params: { locale } }: Props) {
         subtitle="Vivamus venenatis, lectus a pellentesque placerat, felis tellus ultrices eros, et aliquam sapien nibh sed sem. Fusce ut ante eget purus viverra malesuada. Morbi eget mi maximus, ultricies urna eget, tristique lorem. Fusce cursus venenatis quam, a blandit lectus vulputate id. Praesent id interdum orci, vitae condimentum dui."
         tagline="Puhkekeskus"
         callToAction="Tere"
-        callToActionLink="/contact"  // Link for the first CTA button
+        callToActionLink="/kontakt"  // Link for the first CTA button
         callToAction2="Tutvu"
-        callToActionLink2="/about"   // Link for the second CTA button
+        callToActionLink2="/meist"   // Link for the second CTA button
         image={{
           src: Img.src,
           alt: 'Tere',
