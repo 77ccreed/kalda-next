@@ -50,13 +50,10 @@ const Hero = ({
                 )}
                 <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
                   {callToAction && callToActionLink && (
-                    <Button as="a" href={callToActionLink} className="btn btn-primary">
-                      {callToAction}
-                    </Button>
-                  )}
-                  {callToAction2 && callToActionLink2 && (
-                    <Button as="a" href={callToActionLink2} className="btn">
-                      {callToAction2}
+                    <Button asChild={true} className="btn btn-primary">
+                      <a href={callToActionLink}>
+                        {callToAction}
+                      </a>
                     </Button>
                   )}
                 </div>
