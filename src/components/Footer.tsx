@@ -17,7 +17,7 @@ const navigationLinks = [
   { href: "/majutus/telkimisala", key: "telkimisala" },
   { href: "/broneerimine", key: "broneerimine" },
   { href: "/teenused/kanuurent", key: "kanuurent" },
-  { href: "/teenused/sündmuste-korraldamine", key: "sündmusteKorraldamine" },
+  { href: "/teenused/sundmuste-korraldamine", key: "sündmusteKorraldamine" },
   { href: "/teenused/saun", key: "saun" },
   { href: "/kontakt", key: "kontakt" },
 ];
