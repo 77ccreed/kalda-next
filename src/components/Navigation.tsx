@@ -86,7 +86,7 @@ const Navigation: React.FC = () => {
   ];
 
   const menuItems2: NavigationItem[] = [
-    { href: "/hinnakiri", text: t("hinnakiri") },
+    { href: "/broneerimine", text: t("broneerimine") },
     { href: "/kontakt", text: t("kontakt") },
   ];
 

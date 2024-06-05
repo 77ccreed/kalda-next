@@ -15,7 +15,7 @@ const navigationLinks = [
   { href: "/majutuse-tüübid/kampingmajad", key: "kampingmajad" },
   { href: "/majutuse-tüübid/karavanid-ja-autoelamud", key: "karavanidJaAutoelamud" },
   { href: "/majutuse-tüübid/telkimisala", key: "telkimisala" },
-  { href: "/hinnakiri", key: "hinnakiri" },
+  { href: "/broneerimine", key: "broneerimine" },
   { href: "/teenused-ja-aktiivne-puhkus/kanuurent", key: "kanuurent" },
   { href: "/teenused-ja-aktiivne-puhkus/sündmuste-korraldamine", key: "sündmusteKorraldamine" },
   { href: "/teenused-ja-aktiivne-puhkus/saun", key: "saun" },
