@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import NavigationLink from '@/components/NavigationLink';
 
 type HeroProps = {
   title: string;
@@ -15,6 +16,16 @@ type HeroProps = {
     blurDataURL?: string;
   };
 };
+
+const LinkButton: React.FC<{ href?: string; className: string; children: React.ReactNode }> = ({ href, className, children }) => (
+  href ? (
+    <Button asChild={true} className={className}>
+      <NavigationLink href={href}>
+        {children}
+      </NavigationLink>
+    </Button>
+  ) : null
+);
 
 const Hero = ({
   title,
@@ -49,18 +60,13 @@ const Hero = ({
                   </p>
                 )}
                 <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
-                  {callToAction && callToActionLink && (
-                    <Button asChild={true} className="btn btn-primary">
-                      <a href={callToActionLink}>
-                        {callToAction}
-                      </a>
-                    </Button>
-                  )}
+                  <LinkButton href={callToActionLink} className="btn btn-primary">{callToAction}</LinkButton>
+                  <LinkButton href={callToActionLink2} className="btn">{callToAction2}</LinkButton>
                 </div>
               </div>
             </div>
           </div>
-          {image && (
+          {image?.src && (
             <div className="block flex-1 items-center md:flex">
               <div className="relative m-auto h-full max-w-4xl object-cover">
                 <Image
@@ -81,6 +87,7 @@ const Hero = ({
         </div>
       </div>
     </section>
+
   );
 };
 
