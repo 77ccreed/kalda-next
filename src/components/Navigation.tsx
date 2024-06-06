@@ -81,30 +81,23 @@ const Navigation: React.FC = () => {
     ],
   };
 
-  const menuItems1: NavigationItem[] = [
-    { href: "/meist", text: t("meist") },
-  ];
-
-  const menuItems2: NavigationItem[] = [
-    { href: "/broneerimine", text: t("broneerimine") },
-    { href: "/kontakt", text: t("kontakt") },
-  ];
-
   return (
     <header className="bg-secondary text-white">
       <nav className="container mx-auto flex justify-between items-center p-4 relative">
         <div className="flex items-center">
-          <NavigationLink href="/" className={`text-2xl font-bold ${pathname === '/' ? 'text-primary' : 'text-white'} hover-accent`}>{t("home")}</NavigationLink>
+          <NavigationLink
+            href="/"
+            className={`text-2xl font-bold ${pathname === '/' || pathname === '/en' || pathname === '/de' ? 'text-primary' : 'text-white'} hover-accent`}
+          >
+            {t("home")}
+          </NavigationLink>
           <div className="hidden md:flex space-x-4 ml-6 relative">
-            {menuItems1.map((item) => (
-              <NavigationLink
-                key={item.href}
-                href={item.href}
-                className={`block px-4 py-2 ${pathname === item.href ? 'text-primary' : 'text-white'} hover-accent`}
-              >
-                {item.text}
-              </NavigationLink>
-            ))}
+            <NavigationLink
+              href="/meist"
+              className={`block px-4 py-2 ${pathname === '/meist' || pathname === '/en/about-us' || pathname === '/de/uber-uns' ? 'text-primary' : 'text-white'} hover-accent`}
+            >
+              {t("meist")}
+            </NavigationLink>
             <NavigationMenuComponent
               items={accommodationItems}
               isActive={pathname.includes("/majutus")}
@@ -113,15 +106,18 @@ const Navigation: React.FC = () => {
               items={servicesItems}
               isActive={pathname.includes("/teenused")}
             />
-            {menuItems2.map((item) => (
-              <NavigationLink
-                key={item.href}
-                href={item.href}
-                className={`block px-4 py-2 ${pathname === item.href ? 'text-primary' : 'text-white'} hover-accent`}
-              >
-                {item.text}
-              </NavigationLink>
-            ))}
+            <NavigationLink
+              href="/broneerimine"
+              className={`block px-4 py-2 ${pathname === '/broneerimine' || pathname === '/en/booking' || pathname === '/de/buchung' ? 'text-primary' : 'text-white'} hover-accent`}
+            >
+              {t("broneerimine")}
+            </NavigationLink>
+            <NavigationLink
+              href="/kontakt"
+              className={`block px-4 py-2 ${pathname === '/kontakt' || pathname === '/en/contact' || pathname === '/de/kontakt' ? 'text-primary' : 'text-white'} hover-accent`}
+            >
+              {t("kontakt")}
+            </NavigationLink>
           </div>
         </div>
         <div className="flex items-center">
@@ -133,16 +129,13 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="absolute top-16 left-0 w-full bg-secondary md:hidden z-10">
             <div className="flex flex-col items-start space-y-4 p-4">
-              {menuItems1.map((item) => (
-                <NavigationLink
-                  key={item.href}
-                  href={item.href}
-                  className={`block px-4 py-2 text-lg font-bold text-left ${pathname === item.href ? 'text-primary' : 'text-white'} hover-accent`}
-                  onClick={handleLinkClick}
-                >
-                  {item.text}
-                </NavigationLink>
-              ))}
+              <NavigationLink
+                href="/meist"
+                className={`block px-4 py-2 text-lg font-bold text-left ${pathname === '/meist' || pathname === '/en/about-us' || pathname === '/de/uber-uns' ? 'text-primary' : 'text-white'} hover-accent`}
+                onClick={handleLinkClick}
+              >
+                {t("meist")}
+              </NavigationLink>
               <div className="w-full">
                 <span className="block px-4 py-2 text-lg font-bold text-left">{t("majutuseTüübid")}</span>
                 {accommodationItems.links.map((link) => (
@@ -159,16 +152,20 @@ const Navigation: React.FC = () => {
                   </NavigationLink>
                 ))}
               </div>
-              {menuItems2.map((item) => (
-                <NavigationLink
-                  key={item.href}
-                  href={item.href}
-                  className={`block px-4 py-2 text-lg font-bold text-left ${pathname === item.href ? 'text-primary' : 'text-white'} hover-accent`}
-                  onClick={handleLinkClick}
-                >
-                  {item.text}
-                </NavigationLink>
-              ))}
+              <NavigationLink
+                href="/broneerimine"
+                className={`block px-4 py-2 text-lg font-bold text-left ${pathname === '/broneerimine' || pathname === '/en/booking' || pathname === '/de/buchung' ? 'text-primary' : 'text-white'} hover-accent`}
+                onClick={handleLinkClick}
+              >
+                {t("broneerimine")}
+              </NavigationLink>
+              <NavigationLink
+                href="/kontakt"
+                className={`block px-4 py-2 text-lg font-bold text-left ${pathname === '/kontakt' || pathname === '/en/contact' || pathname === '/de/kontakt' ? 'text-primary' : 'text-white'} hover-accent`}
+                onClick={handleLinkClick}
+              >
+                {t("kontakt")}
+              </NavigationLink>
               <LocaleSwitcher />
             </div>
           </div>
