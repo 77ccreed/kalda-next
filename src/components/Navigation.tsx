@@ -138,11 +138,51 @@ const Navigation: React.FC = () => {
               </NavigationLink>
               <div className="w-full">
                 <span className="block px-4 py-2 text-lg font-bold text-left">{t("majutuseTüübid")}</span>
-                {accommodationItems.links.map((link) => (
-                  <NavigationLink key={link.href} href={link.href} className="block px-4 py-2 text-left text-white hover-accent" onClick={handleLinkClick}>
-                    {link.text}
+                <div className="w-full">
+                  <span className="block px-4 py-2 text-lg font-bold text-left">{t("majutuseTüübid")}</span>
+                  <NavigationLink
+                    href="/majutus/hostel"
+                    className={`block px-4 py-2 text-left ${pathname === '/majutus/hostel' || pathname === '/en/accommodation/hostel' || pathname === '/de/unterkunft/hostel' ? 'text-primary' : 'text-white'} hover-accent`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("hostel")}
                   </NavigationLink>
-                ))}
+                  <NavigationLink
+                    href="/majutus/kodumajutuse-toad"
+                    className={`block px-4 py-2 text-left ${pathname === '/majutus/kodumajutuse-toad' || pathname === '/en/accommodation/homestay-rooms' || pathname === '/de/unterkunft/gastezimmer' ? 'text-primary' : 'text-white'} hover-accent`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("kodumajutuseToad")}
+                  </NavigationLink>
+                  <NavigationLink
+                    href="/majutus/puhkemaja"
+                    className={`block px-4 py-2 text-left ${pathname === '/majutus/puhkemaja' || pathname === '/en/accommodation/holiday-house' || pathname === '/de/unterkunft/ferienhaus' ? 'text-primary' : 'text-white'} hover-accent`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("puhkemaja")}
+                  </NavigationLink>
+                  <NavigationLink
+                    href="/majutus/kampingmajad"
+                    className={`block px-4 py-2 text-left ${pathname === '/majutus/kampingmajad' || pathname === '/en/accommodation/camping-cabins' || pathname === '/de/unterkunft/campinghauser' ? 'text-primary' : 'text-white'} hover-accent`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("kampingmajad")}
+                  </NavigationLink>
+                  <NavigationLink
+                    href="/majutus/karavanid-ja-autoelamud"
+                    className={`block px-4 py-2 text-left ${pathname === '/majutus/karavanid-ja-autoelamud' || pathname === '/en/accommodation/caravans-and-motorhomes' || pathname === '/de/unterkunft/wohnwagen-und-wohnmobile' ? 'text-primary' : 'text-white'} hover-accent`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("karavanidJaAutoelamud")}
+                  </NavigationLink>
+                  <NavigationLink
+                    href="/majutus/telkimisala"
+                    className={`block px-4 py-2 text-left ${pathname === '/majutus/telkimisala' || pathname === '/en/accommodation/camping-area' || pathname === '/de/unterkunft/zeltplatz' ? 'text-primary' : 'text-white'} hover-accent`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("telkimisala")}
+                  </NavigationLink>
+                </div>
               </div>
               <div className="w-full">
                 <span className="block px-4 py-2 text-lg font-bold text-left">{t("teenusedJaAktiivnePuhkus")}</span>
