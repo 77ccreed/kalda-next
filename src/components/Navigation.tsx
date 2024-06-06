@@ -35,7 +35,7 @@ const NavigationMenuComponent: React.FC<NavigationMenuComponentProps> = ({ items
   <NavigationMenu>
     <NavigationMenuList>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="bg-secondary text-white hover-accent transition-colors" aria-haspopup="true" aria-expanded={isActive}>
+        <NavigationMenuTrigger className={`bg-secondary text-white hover-accent transition-colors ${isActive ? 'text-primary' : ''}`} aria-haspopup="true" aria-expanded={isActive}>
           <span>{items.title}</span>
         </NavigationMenuTrigger>
         <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
@@ -146,11 +146,27 @@ const Navigation: React.FC = () => {
               </div>
               <div className="w-full">
                 <span className="block px-4 py-2 text-lg font-bold text-left">{t("teenusedJaAktiivnePuhkus")}</span>
-                {servicesItems.links.map((link) => (
-                  <NavigationLink key={link.href} href={link.href} className="block px-4 py-2 text-left text-white hover-accent" onClick={handleLinkClick}>
-                    {link.text}
-                  </NavigationLink>
-                ))}
+                <NavigationLink
+                  href="/teenused/kanuurent"
+                  className={`block px-4 py-2 text-left ${pathname === '/teenused/kanuurent' || pathname === '/en/services/canoe-rental' || pathname === '/de/dienstleistungen/kanuverleih' ? 'text-primary' : 'text-white'} hover-accent`}
+                  onClick={handleLinkClick}
+                >
+                  {t("kanuurent")}
+                </NavigationLink>
+                <NavigationLink
+                  href="/teenused/sundmuste-korraldamine"
+                  className={`block px-4 py-2 text-left ${pathname === '/teenused/sundmuste-korraldamine' || pathname === '/en/services/event-organization' || pathname === '/de/dienstleistungen/veranstaltungsorganisation' ? 'text-primary' : 'text-white'} hover-accent`}
+                  onClick={handleLinkClick}
+                >
+                  {t("sündmusteKorraldamine")}
+                </NavigationLink>
+                <NavigationLink
+                  href="/teenused/saun"
+                  className={`block px-4 py-2 text-left ${pathname === '/teenused/saun' || pathname === '/en/services/sauna' || pathname === '/de/dienstleistungen/sauna' ? 'text-primary' : 'text-white'} hover-accent`}
+                  onClick={handleLinkClick}
+                >
+                  {t("saun")}
+                </NavigationLink>
               </div>
               <NavigationLink
                 href="/broneerimine"
