@@ -16,41 +16,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-interface NavigationItem {
-  href: string;
-  text: string;
-}
-
-interface MenuItems {
-  title: string;
-  links: NavigationItem[];
-}
-
-interface NavigationMenuComponentProps {
-  items: MenuItems;
-  isActive: boolean;
-}
-
-const NavigationMenuComponent: React.FC<NavigationMenuComponentProps> = ({ items, isActive }) => (
-  <NavigationMenu>
-    <NavigationMenuList>
-      <NavigationMenuItem>
-        <NavigationMenuTrigger className={`bg-secondary text-white hover-accent transition-colors ${isActive ? 'text-primary' : ''}`} aria-haspopup="true" aria-expanded={isActive}>
-          <span>{items.title}</span>
-        </NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
-          {items.links.map((link) => (
-            <NavigationMenuLink key={link.href} href={link.href} className="block px-4 py-2 hover-accent transition-colors duration-200">
-              <NavigationLink href={link.href}>
-                {link.text}
-              </NavigationLink>
-            </NavigationMenuLink>
-          ))}
-        </NavigationMenuContent>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-  </NavigationMenu>
-);
 
 const Navigation: React.FC = () => {
   const t = useTranslations("Navigation");
@@ -59,27 +24,6 @@ const Navigation: React.FC = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const handleLinkClick = () => setIsOpen(false);
-
-  const accommodationItems: MenuItems = {
-    title: t("majutuseTüübid"),
-    links: [
-      { href: "/majutus/hostel", text: t("hostel") },
-      { href: "/majutus/kodumajutuse-toad", text: t("kodumajutuseToad") },
-      { href: "/majutus/puhkemaja", text: t("puhkemaja") },
-      { href: "/majutus/kampingmajad", text: t("kampingmajad") },
-      { href: "/majutus/karavanid-ja-autoelamud", text: t("karavanidJaAutoelamud") },
-      { href: "/majutus/telkimisala", text: t("telkimisala") },
-    ],
-  };
-
-  const servicesItems: MenuItems = {
-    title: t("teenusedJaAktiivnePuhkus"),
-    links: [
-      { href: "/teenused/kanuurent", text: t("kanuurent") },
-      { href: "/teenused/sündmuste-korraldamine", text: t("sündmusteKorraldamine") },
-      { href: "/teenused/saun", text: t("saun") },
-    ],
-  };
 
   return (
     <header className="bg-secondary text-white">
@@ -98,14 +42,75 @@ const Navigation: React.FC = () => {
             >
               {t("meist")}
             </NavigationLink>
-            <NavigationMenuComponent
-              items={accommodationItems}
-              isActive={pathname.includes("/majutus")}
-            />
-            <NavigationMenuComponent
-              items={servicesItems}
-              isActive={pathname.includes("/teenused")}
-            />
+
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={`bg-secondary text-white hover-accent transition-colors ${pathname.includes("/majutus") ? 'text-primary' : ''}`} aria-haspopup="true">
+                    <span>{t("majutuseTüübid")}</span>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
+                    <NavigationMenuLink>
+                      <NavigationLink href="/majutus/hostel" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/majutus/hostel' || pathname === '/en/accommodation/hostel' || pathname === '/de/unterkunft/hostel' ? 'text-primary' : 'text-white'}`}>
+                        {t("hostel")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/majutus/kodumajutuse-toad" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/majutus/kodumajutuse-toad' || pathname === '/en/accommodation/homestay-rooms' || pathname === '/de/unterkunft/gastezimmer' ? 'text-primary' : 'text-white'}`}>
+                        {t("kodumajutuseToad")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/majutus/puhkemaja" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/majutus/puhkemaja' || pathname === '/en/accommodation/holiday-house' || pathname === '/de/unterkunft/ferienhaus' ? 'text-primary' : 'text-white'}`}>
+                        {t("puhkemaja")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/majutus/kampingmajad" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/majutus/kampingmajad' || pathname === '/en/accommodation/camping-cabins' || pathname === '/de/unterkunft/campinghauser' ? 'text-primary' : 'text-white'}`}>
+                        {t("kampingmajad")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/majutus/karavanid-ja-autoelamud" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/majutus/karavanid-ja-autoelamud' || pathname === '/en/accommodation/caravans-and-motorhomes' || pathname === '/de/unterkunft/wohnwagen-und-wohnmobile' ? 'text-primary' : 'text-white'}`}>
+                        {t("karavanidJaAutoelamud")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/majutus/telkimisala" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/majutus/telkimisala' || pathname === '/en/accommodation/camping-area' || pathname === '/de/unterkunft/zeltplatz' ? 'text-primary' : 'text-white'}`}>
+                        {t("telkimisala")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className={`bg-secondary text-white hover-accent transition-colors ${pathname.includes("/teenused") ? 'text-primary' : ''}`} aria-haspopup="true">
+                    <span>{t("teenusedJaAktiivnePuhkus")}</span>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
+                    <NavigationMenuLink>
+                      <NavigationLink href="/teenused/kanuurent" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/teenused/kanuurent' || pathname === '/en/services/canoe-rental' || pathname === '/de/dienstleistungen/kanuverleih' ? 'text-primary' : 'text-white'}`}>
+                        {t("kanuurent")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/teenused/sundmuste-korraldamine" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/teenused/sundmuste-korraldamine' || pathname === '/en/services/event-organization' || pathname === '/de/dienstleistungen/veranstaltungsorganisation' ? 'text-primary' : 'text-white'}`}>
+                        {t("sündmusteKorraldamine")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <NavigationLink href="/teenused/saun" className={`block px-4 py-2 hover-accent transition-colors duration-200 ${pathname === '/teenused/saun' || pathname === '/en/services/sauna' || pathname === '/de/dienstleistungen/sauna' ? 'text-primary' : 'text-white'}`}>
+                        {t("saun")}
+                      </NavigationLink>
+                    </NavigationMenuLink>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
             <NavigationLink
               href="/broneerimine"
               className={`block px-4 py-2 ${pathname === '/broneerimine' || pathname === '/en/booking' || pathname === '/de/buchung' ? 'text-primary' : 'text-white'} hover-accent`}
