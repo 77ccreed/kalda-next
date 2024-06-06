@@ -87,7 +87,8 @@ const Navigation: React.FC = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className={`bg-secondary text-white hover-accent transition-colors ${pathname.includes("/teenused") ? 'text-primary' : ''}`} aria-haspopup="true">
+                  <NavigationMenuTrigger className={`bg-secondary hover-accent transition-colors ${pathname.startsWith("/teenused") || pathname.startsWith("/en/services") || pathname.startsWith("/de/dienstleistungen")
+                    ? 'text-primary' : 'text-white'}`} aria-haspopup="true">
                     <span>{t("teenusedJaAktiivnePuhkus")}</span>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-48">
