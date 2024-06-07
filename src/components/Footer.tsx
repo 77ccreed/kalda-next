@@ -7,20 +7,6 @@ import { Home, Building, Bed, Award, Map } from "lucide-react";
 import NavigationLink from "./NavigationLink";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-const navigationLinks = [
-  { href: "/meist", key: "meist" },
-  { href: "/majutus/hostel", key: "hostel" },
-  { href: "/majutus/kodumajutuse-toad", key: "kodumajutuseToad" },
-  { href: "/majutus/puhkemaja", key: "puhkemaja" },
-  { href: "/majutus/kampingmajad", key: "kampingmajad" },
-  { href: "/majutus/karavanid-ja-autoelamud", key: "karavanidJaAutoelamud" },
-  { href: "/majutus/telkimisala", key: "telkimisala" },
-  { href: "/broneerimine", key: "broneerimine" },
-  { href: "/teenused/kanuurent", key: "kanuurent" },
-  { href: "/teenused/sundmuste-korraldamine", key: "sündmusteKorraldamine" },
-  { href: "/teenused/saun", key: "saun" },
-  { href: "/kontakt", key: "kontakt" },
-];
 
 const socialMediaLinks = [
   { href: "https://www.facebook.com/profile.php?id=100041395076437", label: "Facebook", Icon: SiFacebook },
@@ -32,7 +18,23 @@ const socialMediaLinks = [
   { href: "https://www.spottocamp.com/en/campsites/kalda-talu-puhkekeskus-camping-valgamaa", label: "Spotocamp", Icon: Map },
 ];
 
-function Branding() {
+
+const navigationLinks = [
+  { href: "/meist", paths: ['/meist', '/en/about-us', '/de/uber-uns'], translationKey: "meist" },
+  { href: "/majutus/hostel", paths: ['/majutus/hostel', '/en/accommodation/hostel', '/de/unterkunft/hostel'], translationKey: "hostel" },
+  { href: "/majutus/kodumajutuse-toad", paths: ['/majutus/kodumajutuse-toad', '/en/accommodation/homestay-rooms', '/de/unterkunft/privatzimmer'], translationKey: "kodumajutuseToad" },
+  { href: "/majutus/puhkemaja", paths: ['/majutus/puhkemaja', '/en/accommodation/holiday-house', '/de/unterkunft/ferienhaus'], translationKey: "puhkemaja" },
+  { href: "/majutus/kampingmajad", paths: ['/majutus/kampingmajad', '/en/accommodation/camping-houses', '/de/unterkunft/camping-hauser'], translationKey: "kampingmajad" },
+  { href: "/majutus/karavanid-ja-autoelamud", paths: ['/majutus/karavanid-ja-autoelamud', '/en/accommodation/caravans-and-motorhomes', '/de/unterkunft/wohnwagen-und-wohnmobil'], translationKey: "karavanidJaAutoelamud" },
+  { href: "/majutus/telkimisala", paths: ['/majutus/telkimisala', '/en/accommodation/camping-area', '/de/unterkunft/campingplatz'], translationKey: "telkimisala" },
+  { href: "/teenused/kanuurent", paths: ['/teenused/kanuurent', '/en/services/canoe-rental', '/de/dienstleistungen/kanuverleih'], translationKey: "kanuurent" },
+  { href: "/teenused/sundmuste-korraldamine", paths: ['/teenused/sundmuste-korraldamine', '/en/services/event-organization', '/de/dienstleistungen/veranstaltungsorganisation'], translationKey: "sündmusteKorraldamine" },
+  { href: "/teenused/saun", paths: ['/teenused/saun', '/en/services/sauna', '/de/dienstleistungen/sauna'], translationKey: "saun" },
+  { href: "/broneerimine", paths: ['/broneerimine', '/en/booking', '/de/buchung'], translationKey: "broneerimine" },
+  { href: "/kontakt", paths: ['/kontakt', '/en/contact', '/de/kontakt'], translationKey: "kontakt" },
+];
+
+const Branding = () => {
   const t = useTranslations("Navigation");
   return (
     <div className="flex flex-col items-center md:items-start">
@@ -42,54 +44,32 @@ function Branding() {
       <p className="text-sm">{t("brandingDescription")}</p>
     </div>
   );
-}
+};
 
-function Navigation() {
+
+const Navigation = () => {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
-
-
 
   return (
     <div className="flex flex-col items-center md:items-start">
       <h3 className="text-2xl font-semibold mb-4">{t("navigationTitle")}</h3>
       <nav className="flex flex-col space-y-2">
-        <NavigationLink href="/meist" className={`hover-accent ${pathname === '/meist' || pathname === '/en/about-us' || pathname === '/de/uber-uns'
-          ? 'text-primary font-semibold' : ''}`}
-        >
-          {t("meist")}</NavigationLink>
-        <NavigationLink href="/majutus/hostel" className={`hover-accent ${pathname === '/majutus/hostel' || pathname === '/en/accommodation/hostel'
-          || pathname === '/de/unterkunft/hostel' ? 'text-primary font-semibold' : ''}`}
-        >
-          {t("hostel")}</NavigationLink>
-        <NavigationLink href="/majutus/kodumajutuse-toad" className={`hover-accent ${pathname === '/majutus/kodumajutuse-toad' || pathname === '/en/accommodation/homestay-rooms'
-          || pathname === '/de/unterkunft/privatzimmer' ? 'text-primary font-semibold' : ''}`}
-        >
-          {t("kodumajutuseToad")}</NavigationLink>
-        <NavigationLink href="/majutus/puhkemaja" className={`hover-accent ${pathname === '/majutus/puhkemaja' || pathname === '/en/accommodation/holiday-house' || pathname === '/de/unterkunft/ferienhaus' ? 'text-primary font-semibold' : ''}`}>
-          {t("puhkemaja")}</NavigationLink>
-        <NavigationLink href="/majutus/kampingmajad" className={`hover-accent ${pathname === '/majutus/kampingmajad' || pathname === '/en/accommodation/camping-houses' || pathname === '/de/unterkunft/camping-hauser' ? 'text-primary font-semibold' : ''}`}>
-          {t("kampingmajad")}</NavigationLink>
-        <NavigationLink href="/majutus/karavanid-ja-autoelamud" className={`hover-accent ${pathname === '/majutus/karavanid-ja-autoelamud' || pathname === '/en/accommodation/caravans-and-motorhomes' || pathname === '/de/unterkunft/wohnwagen-und-wohnmobil' ? 'text-primary font-semibold' : ''}`}>
-          {t("karavanidJaAutoelamud")}</NavigationLink>
-        <NavigationLink href="/majutus/telkimisala" className={`hover-accent ${pathname === '/majutus/telkimisala' || pathname === '/en/accommodation/camping-area' || pathname === '/de/unterkunft/campingplatz' ? 'text-primary font-semibold' : ''}`}>
-          {t("telkimisala")}</NavigationLink>
-        <NavigationLink href="/teenused/kanuurent" className={`hover-accent ${pathname === '/teenused/kanuurent' || pathname === '/en/services/canoe-rental' || pathname === '/de/dienstleistungen/kanuverleih' ? 'text-primary font-semibold' : ''}`}>
-          {t("kanuurent")}</NavigationLink>
-        <NavigationLink href="/teenused/sundmuste-korraldamine" className={`hover-accent ${pathname === '/teenused/sundmuste-korraldamine' || pathname === '/en/services/event-organization' || pathname === '/de/dienstleistungen/veranstaltungsorganisation' ? 'text-primary font-semibold' : ''}`}>
-          {t("sündmusteKorraldamine")}</NavigationLink>
-        <NavigationLink href="/teenused/saun" className={`hover-accent ${pathname === '/teenused/saun' || pathname === '/en/services/sauna' || pathname === '/de/dienstleistungen/sauna' ? 'text-primary font-semibold' : ''}`}>
-          {t("saun")}</NavigationLink>
-        <NavigationLink href="/broneerimine" className={`hover-accent ${pathname === '/broneerimine' || pathname === '/en/booking' || pathname === '/de/buchung' ? 'text-primary font-semibold' : ''}`}>
-          {t("broneerimine")}</NavigationLink>
-        <NavigationLink href="/kontakt" className={`hover-accent ${pathname === '/kontakt' || pathname === '/en/contact' || pathname === '/de/kontakt' ? 'text-primary font-semibold' : ''}`}>
-          {t("kontakt")}</NavigationLink>
+        {navigationLinks.map(({ href, paths, translationKey }) => (
+          <NavigationLink
+            key={href}
+            href={href}
+            className={`hover-accent ${paths.includes(pathname) ? 'text-primary font-semibold' : ''}`}
+          >
+            {t(translationKey)}
+          </NavigationLink>
+        ))}
       </nav>
     </div>
   );
 }
 
-function ContactInfo() {
+const ContactInfo = () => {
   const t = useTranslations("Navigation");
   return (
     <div className="flex flex-col items-center md:items-start">
@@ -117,11 +97,11 @@ function ContactInfo() {
   );
 }
 
-function SocialMediaLinks() {
+const SocialMediaLinks = () => {
   return (
     <div className="flex space-x-4">
-      {socialMediaLinks.map(({ href, label, Icon }, index) => (
-        <Tooltip key={index}>
+      {socialMediaLinks.map(({ href, label, Icon }) => (
+        <Tooltip key={href}>
           <TooltipTrigger asChild>
             <a href={href} aria-label={label} className="hover-accent">
               <Icon className="w-6 h-6" />
@@ -136,7 +116,7 @@ function SocialMediaLinks() {
   );
 }
 
-export default function Footer() {
+const Footer = () => {
   const t = useTranslations("Navigation");
   return (
     <TooltipProvider>
@@ -154,3 +134,5 @@ export default function Footer() {
     </TooltipProvider>
   );
 }
+
+export default Footer;
