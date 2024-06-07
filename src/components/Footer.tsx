@@ -48,17 +48,42 @@ function Navigation() {
   const t = useTranslations("Navigation");
   const pathname = usePathname();
 
-  const getLinkClassName = (href: string) => (
-    `hover-accent ${pathname === href ? 'text-primary font-semibold' : ''}`
-  );
+
 
   return (
     <div className="flex flex-col items-center md:items-start">
       <h3 className="text-2xl font-semibold mb-4">{t("navigationTitle")}</h3>
       <nav className="flex flex-col space-y-2">
-        {navigationLinks.map(({ href, key }, index) => (
-          <NavigationLink key={index} href={href} className={getLinkClassName(href)}>{t(key)}</NavigationLink>
-        ))}
+        <NavigationLink href="/meist" className={`hover-accent ${pathname === '/meist' || pathname === '/en/about-us' || pathname === '/de/uber-uns'
+          ? 'text-primary font-semibold' : ''}`}
+        >
+          {t("meist")}</NavigationLink>
+        <NavigationLink href="/majutus/hostel" className={`hover-accent ${pathname === '/majutus/hostel' || pathname === '/en/accommodation/hostel'
+          || pathname === '/de/unterkunft/hostel' ? 'text-primary font-semibold' : ''}`}
+        >
+          {t("hostel")}</NavigationLink>
+        <NavigationLink href="/majutus/kodumajutuse-toad" className={`hover-accent ${pathname === '/majutus/kodumajutuse-toad' || pathname === '/en/accommodation/homestay-rooms'
+          || pathname === '/de/unterkunft/privatzimmer' ? 'text-primary font-semibold' : ''}`}
+        >
+          {t("kodumajutuseToad")}</NavigationLink>
+        <NavigationLink href="/majutus/puhkemaja" className={`hover-accent ${pathname === '/majutus/puhkemaja' || pathname === '/en/accommodation/holiday-house' || pathname === '/de/unterkunft/ferienhaus' ? 'text-primary font-semibold' : ''}`}>
+          {t("puhkemaja")}</NavigationLink>
+        <NavigationLink href="/majutus/kampingmajad" className={`hover-accent ${pathname === '/majutus/kampingmajad' || pathname === '/en/accommodation/camping-houses' || pathname === '/de/unterkunft/camping-hauser' ? 'text-primary font-semibold' : ''}`}>
+          {t("kampingmajad")}</NavigationLink>
+        <NavigationLink href="/majutus/karavanid-ja-autoelamud" className={`hover-accent ${pathname === '/majutus/karavanid-ja-autoelamud' || pathname === '/en/accommodation/caravans-and-motorhomes' || pathname === '/de/unterkunft/wohnwagen-und-wohnmobil' ? 'text-primary font-semibold' : ''}`}>
+          {t("karavanidJaAutoelamud")}</NavigationLink>
+        <NavigationLink href="/majutus/telkimisala" className={`hover-accent ${pathname === '/majutus/telkimisala' || pathname === '/en/accommodation/camping-area' || pathname === '/de/unterkunft/campingplatz' ? 'text-primary font-semibold' : ''}`}>
+          {t("telkimisala")}</NavigationLink>
+        <NavigationLink href="/teenused/kanuurent" className={`hover-accent ${pathname === '/teenused/kanuurent' || pathname === '/en/services/canoe-rental' || pathname === '/de/dienstleistungen/kanuverleih' ? 'text-primary font-semibold' : ''}`}>
+          {t("kanuurent")}</NavigationLink>
+        <NavigationLink href="/teenused/sundmuste-korraldamine" className={`hover-accent ${pathname === '/teenused/sundmuste-korraldamine' || pathname === '/en/services/event-organization' || pathname === '/de/dienstleistungen/veranstaltungsorganisation' ? 'text-primary font-semibold' : ''}`}>
+          {t("sündmusteKorraldamine")}</NavigationLink>
+        <NavigationLink href="/teenused/saun" className={`hover-accent ${pathname === '/teenused/saun' || pathname === '/en/services/sauna' || pathname === '/de/dienstleistungen/sauna' ? 'text-primary font-semibold' : ''}`}>
+          {t("saun")}</NavigationLink>
+        <NavigationLink href="/broneerimine" className={`hover-accent ${pathname === '/broneerimine' || pathname === '/en/booking' || pathname === '/de/buchung' ? 'text-primary font-semibold' : ''}`}>
+          {t("broneerimine")}</NavigationLink>
+        <NavigationLink href="/kontakt" className={`hover-accent ${pathname === '/kontakt' || pathname === '/en/contact' || pathname === '/de/kontakt' ? 'text-primary font-semibold' : ''}`}>
+          {t("kontakt")}</NavigationLink>
       </nav>
     </div>
   );
