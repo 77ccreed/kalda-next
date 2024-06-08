@@ -4,8 +4,9 @@
     "description": "Tere tulemast looduse rüppe! Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv."
   },
   "MeistPage": {
-    "title": "Pathnames",
-    "description": "The pathnames are internationalized too.If you're using the default language English, you'll see"
+    "title": "Tere tulemast looduse rüppe!",
+    "subtitle": "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv.",
+    "tagline": "Puhkekeskus"
   },
   "Error": {
     "title": "Something went wrong!",

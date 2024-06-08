@@ -5,7 +5,8 @@
   },
   "MeistPage": {
     "title": "Pathnames",
-    "description": "The pathnames are internationalized too."
+    "subtitle": "The pathnames are internationalized too.",
+    "tagline": "Puhkekeskus"
   },
   "Error": {
     "title": "Something went wrong!",
