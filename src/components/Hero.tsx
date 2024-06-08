@@ -19,7 +19,7 @@ type HeroProps = {
 
 const LinkButton: React.FC<{ href?: string; className: string; children: React.ReactNode }> = ({ href, className, children }) => (
   href ? (
-    <Button asChild={true} className={className}>
+    <Button asChild className={className}>
       <NavigationLink href={href}>
         {children}
       </NavigationLink>
@@ -40,10 +40,10 @@ const Hero = ({
   return (
     <section className="relative bg-secondary text-primary-foreground" id="heroTwo" role="banner" aria-labelledby="hero-title">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-0 top-1 h-[20500px] w-[20500px] translate-x-[-47.5%] rounded-full bg-primary" />
+        <div className="absolute left-0 top-0 h-[15000px] w-[15000px] translate-x-[-50%] rounded-full bg-primary" />
       </div>
-      <div className="container relative flex grow flex-col px-4">
-        <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 md:flex md:h-screen 2xl:h-auto">
+      <div className="container relative flex flex-col px-4">
+        <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 md:flex md:min-h-screen">
           <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
             <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
               <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">
@@ -63,8 +63,8 @@ const Hero = ({
                       {subtitle}
                     </p>
                   )}
-                  <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
-                    <LinkButton href={callToActionLink} className="btn bg-secondary text-white hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-focus">
+                  <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <LinkButton href={callToActionLink} className="btn bg-primary text-white hover:bg-primary-dark focus:ring-2 focus:ring-primary-focus">
                       {callToAction}
                     </LinkButton>
                     <LinkButton href={callToActionLink2} className="btn bg-secondary text-white hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-focus">
