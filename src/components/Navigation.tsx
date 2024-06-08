@@ -145,7 +145,6 @@ const Navigation: React.FC = () => {
               <div className="w-full">
                 <span className="block px-4 py-2 text-lg font-bold text-left">{t("majutuseTüübid")}</span>
                 <div className="w-full">
-                  <span className="block px-4 py-2 text-lg font-bold text-left">{t("majutuseTüübid")}</span>
                   <NavigationLink
                     href="/majutus/hostel"
                     className={`block px-4 py-2 text-left ${pathname === '/majutus/hostel' || pathname === '/en/accommodation/hostel' || pathname === '/de/unterkunft/hostel' ? 'text-primary' : 'text-white'} hover-accent`}
