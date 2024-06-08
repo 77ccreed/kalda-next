@@ -18,7 +18,6 @@ const socialMediaLinks = [
   { href: "https://www.spottocamp.com/en/campsites/kalda-talu-puhkekeskus-camping-valgamaa", label: "Spotocamp", Icon: Map },
 ];
 
-
 const navigationLinks = [
   { href: "/meist", paths: ['/meist', '/en/about-us', '/de/uber-uns'], translationKey: "meist" },
   { href: "/majutus/hostel", paths: ['/majutus/hostel', '/en/accommodation/hostel', '/de/unterkunft/hostel'], translationKey: "hostel" },
@@ -45,7 +44,6 @@ const Branding = () => {
     </div>
   );
 };
-
 
 const Navigation = () => {
   const t = useTranslations("Navigation");
@@ -76,17 +74,17 @@ const ContactInfo = () => {
       <h3 className="text-2xl font-semibold mb-4">{t("contactTitle")}</h3>
       <p className="mb-2">{t("address")}</p>
       <p className="mb-2">
-        <a href="mailto:puhkekeskus@msn.com" className="hover-accent">
+        <a href="mailto:puhkekeskus@msn.com" className="hover-accent" aria-label="Email us at puhkekeskus@msn.com">
           {t("email")}
         </a>
       </p>
       <p className="mb-2">
-        <a href="tel:+37256652061" className="hover-accent">
+        <a href="tel:+37256652061" className="hover-accent" aria-label="Call us at +37256652061">
           {t("phone1")} ({t("phone1Language")})
         </a>
       </p>
       <p className="mb-2">
-        <a href="tel:+37255594776" className="hover-accent">
+        <a href="tel:+37255594776" className="hover-accent" aria-label="Call us at +37255594776">
           {t("phone2")} ({t("phone2Language")})
         </a>
       </p>
