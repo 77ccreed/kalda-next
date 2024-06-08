@@ -7,7 +7,6 @@ import { Home, Building, Bed, Award, Map } from "lucide-react";
 import NavigationLink from "./NavigationLink";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-
 const socialMediaLinks = [
   { href: "https://www.facebook.com/profile.php?id=100041395076437", label: "Facebook", Icon: SiFacebook },
   { href: "https://www.tripadvisor.com/Hotel_Review-g13971741-d1068278-Reviews-Kalda_Talu-Iigaste_Valga_County.html", label: "TripAdvisor", Icon: SiTripadvisor },
@@ -116,6 +115,8 @@ const SocialMediaLinks = () => {
 
 const Footer = () => {
   const t = useTranslations("Navigation");
+  const currentYear = new Date().getFullYear();
+
   return (
     <TooltipProvider>
       <footer className="bg-secondary text-white py-12">
@@ -126,7 +127,7 @@ const Footer = () => {
         </div>
         <div className="container mx-auto px-4 mt-8 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
           <SocialMediaLinks />
-          <p className="mt-4 md:mt-0 text-sm">&copy; {new Date().getFullYear()} {t("allRightsReserved")}</p>
+          <p className="mt-4 md:mt-0 text-sm">&copy; {currentYear} {t("allRightsReserved")}</p>
         </div>
       </footer>
     </TooltipProvider>
