@@ -38,56 +38,64 @@ const Hero = ({
   image
 }: HeroProps) => {
   return (
-    <section className="bg-accent" id="heroTwo">
-      <div className="mx-auto max-w-7xl px-4 pt-[72px] sm:px-6 md:flex md:h-screen 2xl:h-auto">
-        <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
-          <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
-            <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">
-              {tagline && (
-                <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
-                  {tagline}
-                </p>
-              )}
-              {title && (
-                <h1 className="leading-tighter font-heading mb-4 px-4 text-5xl font-bold tracking-tighter md:px-0 md:text-[3.48rem]">
-                  {title}
-                </h1>
-              )}
-              <div className="mx-auto max-w-3xl">
-                {subtitle && (
-                  <p className="mb-8 text-xl font-normal text-gray-600 dark:text-slate-400">
-                    {subtitle}
+    <section className="relative bg-secondary text-primary-foreground" id="heroTwo" role="banner" aria-labelledby="hero-title">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute left-0 top-1 h-[20500px] w-[20500px] translate-x-[-47.5%] rounded-full bg-primary" />
+      </div>
+      <div className="container relative flex grow flex-col px-4">
+        <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 md:flex md:h-screen 2xl:h-auto">
+          <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
+            <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
+              <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">
+                {tagline && (
+                  <p className="text-base font-semibold uppercase tracking-wide text-secondary">
+                    {tagline}
                   </p>
                 )}
-                <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
-                  <LinkButton href={callToActionLink} className="btn btn-primary">{callToAction}</LinkButton>
-                  <LinkButton href={callToActionLink2} className="btn">{callToAction2}</LinkButton>
+                {title && (
+                  <h1 id="hero-title" className="leading-tighter font-heading mb-4 px-4 text-4xl font-bold tracking-tighter md:px-0 md:text-5xl">
+                    {title}
+                  </h1>
+                )}
+                <div className="mx-auto max-w-3xl">
+                  {subtitle && (
+                    <p className="mb-8 text-lg font-normal text-muted-foreground">
+                      {subtitle}
+                    </p>
+                  )}
+                  <div className="flex max-w-none flex-col flex-nowrap justify-center gap-4 sm:flex-row md:m-0 md:justify-start">
+                    <LinkButton href={callToActionLink} className="btn bg-secondary text-white hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-focus">
+                      {callToAction}
+                    </LinkButton>
+                    <LinkButton href={callToActionLink2} className="btn bg-secondary text-white hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-focus">
+                      {callToAction2}
+                    </LinkButton>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {image?.src && (
-            <div className="block flex-1 items-center md:flex">
-              <div className="relative m-auto h-full max-w-4xl object-cover">
-                <Image
-                  className="mx-auto h-full w-auto rounded-md bg-gray-400 object-cover drop-shadow-2xl dark:bg-slate-700"
-                  src={image.src}
-                  alt={image.alt}
-                  blurDataURL={image.blurDataURL}
-                  width={540}
-                  height={405}
-                  sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
-                  loading="eager"
-                  placeholder="blur"
-                  priority
-                />
+            {image?.src && (
+              <div className="block flex-1 items-center md:flex">
+                <div className="relative m-auto h-full max-w-4xl">
+                  <Image
+                    className="mx-auto h-full w-auto rounded-md object-cover drop-shadow-2xl"
+                    src={image.src}
+                    alt={image.alt}
+                    blurDataURL={image.blurDataURL}
+                    width={540}
+                    height={405}
+                    sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                    loading="eager"
+                    placeholder="blur"
+                    priority
+                  />
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </section>
-
   );
 };
 
