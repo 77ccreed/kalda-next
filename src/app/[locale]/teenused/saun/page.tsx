@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Hero from '@/components/Hero';
-import Img from '@/assets/images/palksaun/saunalava1.jpg'
+import Img from '@/assets/images/palksaun/kaminaruum.jpg';
 
 type Props = {
   params: { locale: string };
