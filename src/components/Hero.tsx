@@ -31,7 +31,10 @@ const Hero = ({
   const t = useTranslations('IndexPage');
 
   return (
-    <section className="relative bg-primary text-primary-foreground" id="heroTwo" role="banner" aria-labelledby="hero-title">
+    <section className="relative bg-secondary text-primary-foreground" id="heroTwo" role="banner" aria-labelledby="hero-title">
+      <div className="absolute inset-0 overflow-hidden border-border">
+        <div className="absolute left-0 top-1 h-[20500px] w-[20500px] translate-x-[-47.5%] rounded-full bg-primary" />
+      </div>
       <div className="container relative flex flex-col px-4">
         <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 md:flex md:min-h-screen">
           <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
