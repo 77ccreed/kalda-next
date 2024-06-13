@@ -11,14 +11,14 @@ export default function MeistPage({ params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
-  const t = useTranslations('MeistPage');
+  const t = useTranslations('IndexPage');
 
   return (
     <>
       <Hero
         title={t('title')}
-        subtitle={t('subtitle')}
-        tagline={t('tagline')}
+        subtitle="Tere"
+        tagline="Tere"
         image={{
           src: Img.src,
           alt: 'Tere',
