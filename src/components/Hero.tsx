@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import NavigationLink from '@/components/NavigationLink';
@@ -17,16 +18,6 @@ type HeroProps = {
   };
 };
 
-const LinkButton: React.FC<{ href?: string; className: string; children: React.ReactNode }> = ({ href, className, children }) => (
-  href ? (
-    <Button asChild className={className}>
-      <NavigationLink href={href}>
-        {children}
-      </NavigationLink>
-    </Button>
-  ) : null
-);
-
 const Hero = ({
   title,
   subtitle,
@@ -37,13 +28,12 @@ const Hero = ({
   callToActionLink2,
   image
 }: HeroProps) => {
+  const t = useTranslations('IndexPage');
+
   return (
-    <section className="relative bg-secondary text-primary-foreground" id="heroTwo" role="banner" aria-labelledby="hero-title">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-0 top-0 h-[15000px] w-[15000px] translate-x-[-50%] rounded-full bg-primary" />
-      </div>
+    <section className="relative bg-primary text-primary-foreground" id="heroTwo" role="banner" aria-labelledby="hero-title">
       <div className="container relative flex flex-col px-4">
-        <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 md:flex md:min-h-screen">
+        <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 md:flex md:min-h-screen">
           <div className="block py-12 text-center md:flex md:py-12 md:text-left lg:py-16">
             <div className="mx-auto flex max-w-5xl basis-[56%] items-center">
               <div className="max-w-3xl pb-12 pr-0 md:py-0 md:pr-8 md:pb-0 lg:pr-16">
@@ -64,12 +54,16 @@ const Hero = ({
                     </p>
                   )}
                   <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <LinkButton href={callToActionLink} className="btn bg-primary text-white hover:bg-primary-dark focus:ring-2 focus:ring-primary-focus">
-                      {callToAction}
-                    </LinkButton>
-                    <LinkButton href={callToActionLink2} className="btn bg-secondary text-white hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-focus">
-                      {callToAction2}
-                    </LinkButton>
+                    <Button asChild variant="secondary" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                      <NavigationLink href={callToActionLink}>
+                        {callToAction}
+                      </NavigationLink>
+                    </Button>
+                    <Button asChild variant="highlight" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                      <NavigationLink href={callToActionLink2}>
+                        {callToAction2}
+                      </NavigationLink>
+                    </Button>
                   </div>
                 </div>
               </div>
