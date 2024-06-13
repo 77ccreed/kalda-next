@@ -25,12 +25,18 @@
     --accent: #C8E6C9;
     --accent-foreground: #2F4858;
 
+    --highlight: #E57373;
+    --highlight-foreground: #FFFFFF;
+
     --destructive: #F44336;
     --destructive-foreground: #FFFFFF;
 
     --border: #757575;
     --input: #757575;
     --ring: #757575;
+
+    --neutral: #E1C699;
+    --neutral-foreground: #2F4858;
 
     --radius: 0.5rem;
   }
@@ -48,5 +54,21 @@
 @layer utilities {
   .hover-accent {
     @apply hover:text-primary transition-colors;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary-dark focus:ring-2 focus:ring-primary-focus;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-focus;
+  }
+
+  .btn-highlight {
+    @apply bg-highlight text-highlight-foreground hover:bg-highlight-dark focus:ring-2 focus:ring-highlight-focus;
   }
 }
