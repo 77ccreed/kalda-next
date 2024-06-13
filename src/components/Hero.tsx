@@ -54,16 +54,20 @@ const Hero = ({
                     </p>
                   )}
                   <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <Button asChild variant="secondary" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                      <NavigationLink href={callToActionLink}>
-                        {callToAction}
-                      </NavigationLink>
-                    </Button>
-                    <Button asChild variant="highlight" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                      <NavigationLink href={callToActionLink2}>
-                        {callToAction2}
-                      </NavigationLink>
-                    </Button>
+                    {callToAction && callToActionLink && (
+                      <Button asChild variant="secondary" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                        <NavigationLink href={callToActionLink}>
+                          {callToAction}
+                        </NavigationLink>
+                      </Button>
+                    )}
+                    {callToAction2 && callToActionLink2 && (
+                      <Button asChild variant="highlight" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                        <NavigationLink href={callToActionLink2}>
+                          {callToAction2}
+                        </NavigationLink>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
