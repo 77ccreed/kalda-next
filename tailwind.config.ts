@@ -20,7 +20,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          light: "#FFF176", // Light Yellow
+          light: "#FFF59D", // Lighter Yellow
           DEFAULT: "#FFEB3B", // Yellow
           dark: "#FBC02D", // Dark Yellow
           foreground: "#2F4858", // Dark Blue-Green
@@ -43,6 +43,12 @@ const config: Config = {
           dark: "#BDBDBD", // Dark Grey
           foreground: "#757575", // Medium Grey
         },
+        highlight: {
+          light: "#FFCDD2", // Light Coral
+          DEFAULT: "#E57373", // Coral
+          dark: "#D32F2F", // Dark Coral
+          foreground: "#FFFFFF", // White
+        },
         background: {
           DEFAULT: "#FFFFFF", // White
         },
@@ -50,6 +56,12 @@ const config: Config = {
         input: "#757575", // Medium Grey
         ring: "#757575", // Medium Grey
         foreground: "#2F4858", // Dark Blue-Green
+        neutral: {
+          light: "#FAF3E0", // Light Beige
+          DEFAULT: "#E1C699", // Beige
+          dark: "#C5A179", // Dark Beige
+          foreground: "#2F4858", // Dark Blue-Green
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
