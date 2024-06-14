@@ -32,12 +32,12 @@ const Features = ({ header, items, columns = 3, id }: FeaturesProps) => (
             </p>
           )}
           {header.title && (
-            <h2 className={twMerge('font-heading mb-4 text-4xl font-bold tracking-tight md:text-5xl text-secondary')}>
+            <h2 className={twMerge('font-heading mb-4 text-4xl font-bold tracking-tight md:text-5xl text-primary-foreground')}>
               {header.title}
             </h2>
           )}
           {header.subtitle && (
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-secondary-light">
+            <p className="mx-auto mt-4 max-w-3xl text-xl text-primary-foreground">
               {header.subtitle}
             </p>
           )}
@@ -58,17 +58,17 @@ const Features = ({ header, items, columns = 3, id }: FeaturesProps) => (
         {items.map(({ title, description, icon: Icon, callToAction }, index) => (
           <div key={id ? `item-${id}-${index}` : `item-grid-${index}`} className="bg-white rounded-lg shadow-md p-6 transition-transform transform hover:scale-105">
             <div className="flex flex-col items-center h-full">
-              {Icon && <Icon className="h-12 w-12 mb-4 text-primary" />}
+              {Icon && <Icon className="h-12 w-12 mb-4 text-primary-foreground" />}
               <div className="flex-1 text-center">
-                <h3 className="text-xl font-bold text-secondary">{title}</h3>
-                <p className="mt-3 text-md text-muted">{description}</p>
+                <h3 className="text-xl font-bold text-primary-foreground">{title}</h3>
+                <p className="mt-3 text-md text-primary-foreground">{description}</p>
               </div>
               {callToAction && (
                 <a
                   href={callToAction.href}
                   target={callToAction.targetBlank ? '_blank' : '_self'}
                   rel={callToAction.targetBlank ? 'noopener noreferrer' : undefined}
-                  className="mt-4 text-primary font-bold hover:underline hover-accent"
+                  className="mt-4 text-primary-foreground font-bold hover:underline hover:text-secondary"
                 >
                   {callToAction.text}
                 </a>
