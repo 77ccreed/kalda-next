@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 //import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
-import Img from '@/assets/images/taust.jpg';
+import Img from '@/assets/images/kampingmaja/chouse1_small.jpg';
 import Features from '@/components/Features';
 import { Home, Building, Bed, Award, Map } from "lucide-react";
 
@@ -19,15 +19,15 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   const featuresData = {
     header: {
-      title: "Our Features",
-      subtitle: "Discover the amazing features that make our product unique.",
-      tagline: "Features",
+      title: "Info ja teenused",
+      subtitle: "Tere tulemast Kalda Talu Puhkekeskusesse! Siin saate tutvuda meie pakutavate majutusvõimaluste ja teenustega.",
+      tagline: "Info",
       position: "center",
     },
     items: [
       {
-        title: "Feature One",
-        description: "This is the description for feature one. It explains what the feature is about.",
+        title: "Erinevad majutusvõimalused",
+        description: "Pakume mitmesugust majutust: alates väga lihtsast vähenõudlikule inimesele, kuni mugava ja luksuslikuni. Vali endale sobiv.",
         icon: Home,
         callToAction: {
           text: "Learn More",
@@ -36,8 +36,8 @@ export default function IndexPage({ params: { locale } }: Props) {
         },
       },
       {
-        title: "Feature Two",
-        description: "This is the description for feature two. It explains what the feature is about.",
+        title: "Pesemisvõimalused",
+        description: "Kui broneerite privaatse ruumi või voodi hostelis on ka jagatud duširuum hinna sees. Muude majutusviiside korral lisandub väike tasu.",
         icon: Building,
         callToAction: {
           text: "Learn More",
@@ -46,8 +46,8 @@ export default function IndexPage({ params: { locale } }: Props) {
         },
       },
       {
-        title: "Feature Three",
-        description: "This is the description for feature three. It explains what the feature is about.",
+        title: "Hommikusöök",
+        description: "Me ei valmista sooja sööki. Privaat-tubade külalistele serveerime rikkaliku külma hommikusöögi, kõikides jagatud tubades on kohvi ja tee valmistamise võimalus. Samuti on olemas külmkapp.",
         icon: Bed,
         callToAction: {
           text: "Learn More",
