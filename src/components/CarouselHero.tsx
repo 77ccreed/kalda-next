@@ -106,8 +106,8 @@ const CarouselHero = ({
                   <CarouselContent className="-ml-4">
                     {images.map((image, index) => (
                       <CarouselItem key={index} className="pl-4">
-                        <Card>
-                          <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <Card className="w-full h-full">
+                          <CardContent className="p-0">
                             <Image
                               src={image.src}
                               alt={image.alt}
