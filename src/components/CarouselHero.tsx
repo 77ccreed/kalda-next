@@ -120,9 +120,23 @@ const CarouselHero = ({
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
+                  <CarouselPrevious className="hidden md:flex" />
+                  <CarouselNext className="hidden md:flex" />
                 </Carousel>
+                <div className="flex justify-between items-center md:hidden mt-4">
+                  <Button
+                    onClick={() => api?.scrollPrev()}
+                    className="p-2 bg-primary text-primary-foreground rounded-full"
+                  >
+                    Prev
+                  </Button>
+                  <Button
+                    onClick={() => api?.scrollNext()}
+                    className="p-2 bg-primary text-primary-foreground rounded-full"
+                  >
+                    Next
+                  </Button>
+                </div>
                 <div className="py-2 text-center text-sm text-muted-foreground">
                   Slide {current} of {count}
                 </div>
