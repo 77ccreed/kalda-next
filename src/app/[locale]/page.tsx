@@ -3,8 +3,11 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 //import PageLayout from '@/components/PageLayout';
 import Hero from '@/components/Hero';
 import Img from '@/assets/images/kampingmaja/chouse1_small.jpg';
+import Img2 from '@/assets/images/kampingmaja/chouse2_small.jpg';
+import Img3 from '@/assets/images/kampingmaja/chouse3_small.jpg';
 import Features from '@/components/Features';
 import { Home, Building, Bed, Award, Map } from "lucide-react";
+import CarouselHero from '@/components/CarouselHero';
 
 
 type Props = {
@@ -63,12 +66,37 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   return (
     <>
-      <Hero
+      <CarouselHero
+        title={t('title')}
+        subtitle="Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel"
+        tagline="Puhkekeskus"
+        callToAction="Tere"
+        callToActionLink="/contact"
+        callToAction2="Tutvu"
+        callToActionLink2="/about"
+        images={[
+          {
+            src: Img.src,
+            alt: 'Tere', width: 800, height: 600
+
+          },
+          {
+            src: Img2.src,
+            alt: 'Tere',
+            width: 800, height: 600
+          },
+          {
+            src: Img3.src,
+            alt: 'Tere', width: 800, height: 600
+          },
+        ]}
+      />
+      {/* <Hero
         title={t('title')}
         subtitle={t('subtitle')}
         tagline={t('tagline')}
         callToAction="Tere"
-        callToActionLink="/contact"  // Link for the first CTA button
+        callToActionLink="/contact"  
         callToAction2="Tutvu"
         callToActionLink2="/about"
         image={{
@@ -76,7 +104,7 @@ export default function IndexPage({ params: { locale } }: Props) {
           alt: 'Tere',
           blurDataURL: 'yourBase64EncodedImage'
         }}
-      />
+      />*/}
       <Features {...featuresData} />
 
     </>
