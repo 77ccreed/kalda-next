@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
@@ -25,6 +24,7 @@ type PricingProps = {
     period: string;
     items: string[];
     callToAction?: CallToActionType;
+    callToAction2?: CallToActionType; // Add a secondary call-to-action
     hasRibbon?: boolean;
     ribbonTitle?: string;
     image: {
@@ -82,12 +82,20 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
                 </li>
               ))}
             </ul>
-            {price.callToAction && (
-              <CTA
-                callToAction={price.callToAction}
-                linkClass="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors"
-              />
-            )}
+            <div className="flex flex-col sm:flex-row gap-4">
+              {price.callToAction && (
+                <CTA
+                  callToAction={price.callToAction}
+                  linkClass="w-full sm:w-auto bg-secondary text-white hover:bg-secondary-dark transition-colors"
+                />
+              )}
+              {price.callToAction2 && (
+                <CTA
+                  callToAction={price.callToAction2}
+                  linkClass="w-full sm:w-auto bg-gray-200 text-secondary hover:bg-gray-300 transition-colors"
+                />
+              )}
+            </div>
           </CardContent>
         </Card>
       ))}
