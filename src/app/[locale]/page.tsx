@@ -2,7 +2,8 @@ import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 //import Hero from '@/components/Hero';
 import Img from '@/assets/images/kampingmaja/chouse1_small.jpg';
-import Img2 from '@/assets/images/kampingmaja/chouse2_small.jpg';
+import Img1 from '@/assets/images/autoelamud/mobile1.jpg';
+import Img2 from '@/assets/images/telkimisniit/camp1.jpg';
 import Img3 from '@/assets/images/kampingmaja/chouse3_small.jpg';
 import Features from '@/components/Features';
 import { BedDouble, ShowerHead, Coffee, Check } from "lucide-react";
@@ -81,8 +82,10 @@ export default function IndexPage({ params: { locale } }: Props) {
           href: "/broneerimine/telkimisala",
           targetBlank: false
         },
-        hasRibbon: true,
-        ribbonTitle: "Populaarne"
+        image: {
+          src: Img2,
+          alt: "Telkimisala"
+        }
       },
       {
         title: "Karavanid ja autoelamud",
@@ -94,6 +97,10 @@ export default function IndexPage({ params: { locale } }: Props) {
           text: "Broneeri nüüd",
           href: "/broneerimine/karavanid-autoelamud",
           targetBlank: false
+        },
+        image: {
+          src: Img1,
+          alt: "Karavanid ja autoelamud"
         }
       },
       {
@@ -108,7 +115,11 @@ export default function IndexPage({ params: { locale } }: Props) {
           targetBlank: false
         },
         hasRibbon: true,
-        ribbonTitle: "Populaarne"
+        ribbonTitle: "Populaarne suvel",
+        image: {
+          src: Img,
+          alt: "Kämpingumajad"
+        }
       },
       {
         title: "Hostel",
@@ -120,6 +131,10 @@ export default function IndexPage({ params: { locale } }: Props) {
           text: "Broneeri nüüd",
           href: "/broneerimine/hostel",
           targetBlank: false
+        },
+        image: {
+          src: Img2,
+          alt: "Hostel"
         }
       },
       {
@@ -132,6 +147,12 @@ export default function IndexPage({ params: { locale } }: Props) {
           text: "Broneeri nüüd",
           href: "/broneerimine/kodumajutuse-toad",
           targetBlank: false
+        },
+        hasRibbon: true,
+        ribbonTitle: "Populaarne talvel",
+        image: {
+          src: Img2,
+          alt: "Kodumajutuse toad"
         }
       },
       {
@@ -144,10 +165,15 @@ export default function IndexPage({ params: { locale } }: Props) {
           text: "Broneeri nüüd",
           href: "/broneerimine/puhkemaja",
           targetBlank: false
+        },
+        image: {
+          src: Img2,
+          alt: "Puhkemaja"
         }
       }
     ]
   };
+
 
   const comparisonData = {
     header: {
