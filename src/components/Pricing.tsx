@@ -1,8 +1,8 @@
 import React from 'react';
+import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Headline from '@/components/common/Headline';
-import ItemGrid from '@/components/common/ItemGrid';
 import WidgetWrapper from '@/components/common/WidgetWrapper';
 import CTA from '@/components/common/CTA';
 
@@ -27,6 +27,10 @@ type PricingProps = {
     callToAction?: CallToActionType;
     hasRibbon?: boolean;
     ribbonTitle?: string;
+    image: {
+      src: string;
+      alt: string;
+    };
   }[];
   id?: string;
   hasBackground?: boolean;
@@ -46,8 +50,19 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
       {prices.map((price, index) => (
         <Card key={index} className="relative bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
           {price.hasRibbon && price.ribbonTitle && (
-            <div className="absolute top-0 right-0 bg-secondary text-white py-1 px-3 rounded-bl-lg">
+            <div className="absolute top-0 right-0 bg-secondary text-white py-1 px-3 rounded-bl-lg z-10">
               {price.ribbonTitle}
+            </div>
+          )}
+          {price.image && (
+            <div className="relative w-full h-48">
+              <Image
+                src={price.image.src}
+                alt={price.image.alt}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-lg"
+              />
             </div>
           )}
           <CardContent className="flex flex-col justify-between p-6 text-center">
