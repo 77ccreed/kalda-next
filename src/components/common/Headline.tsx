@@ -10,33 +10,29 @@ type HeadlineProps = {
   containerClass?: string;
   titleClass?: string;
   subtitleClass?: string;
+  taglineClass?: string;
 };
 
-const Headline = ({ header, containerClass, titleClass, subtitleClass }: HeadlineProps) => {
+const Headline = ({ header, containerClass, titleClass, subtitleClass, taglineClass }: HeadlineProps) => {
   const { title, subtitle, tagline, position } = header;
 
+  // Determine text alignment classes based on the position
+  const textAlignClass = position === 'left' ? 'text-left' : position === 'right' ? 'text-right' : 'text-center';
+
   return (
-    <div className={twMerge('mb-6', containerClass)}>
+    <div className={twMerge(`mb-6 md:mb-12 ${textAlignClass}`, containerClass)}>
       {tagline && (
-        <p className="text-base font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-200">
+        <p className={twMerge(`text-base font-semibold uppercase tracking-wide text-secondary ${textAlignClass}`, taglineClass)}>
           {tagline}
         </p>
       )}
       {title && (
-        <h2 className={twMerge('font-heading mb-4 font-bold tracking-tight', titleClass, {
-          'text-left': position === 'left',
-          'text-right': position === 'right',
-          'text-center': position !== 'left' && position !== 'right',
-        })}>
+        <h2 className={twMerge(`font-heading mb-4 text-4xl font-bold tracking-tight md:text-5xl text-primary-foreground ${textAlignClass}`, titleClass)}>
           {title}
         </h2>
       )}
       {subtitle && (
-        <p className={twMerge('mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400', subtitleClass, {
-          'text-left': position === 'left',
-          'text-right': position === 'right',
-          'text-center': position !== 'left' && position !== 'right',
-        })}>
+        <p className={twMerge(`mx-auto mt-4 max-w-3xl text-xl text-primary-foreground ${textAlignClass}`, subtitleClass)}>
           {subtitle}
         </p>
       )}
