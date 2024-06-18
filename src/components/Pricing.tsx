@@ -1,9 +1,12 @@
+import React from 'react';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Headline from '@/components/common/Headline';
 import WidgetWrapper from '@/components/common/WidgetWrapper';
 import CTA from '@/components/common/CTA';
+import NavigationLink from '@/components/NavigationLink';
+import { Button } from '@/components/ui/button';
 
 type CallToActionType = {
   text: string;
@@ -24,7 +27,7 @@ type PricingProps = {
     period: string;
     items: string[];
     callToAction?: CallToActionType;
-    callToAction2?: CallToActionType; // Add a secondary call-to-action
+    callToAction2?: CallToActionType;
     hasRibbon?: boolean;
     ribbonTitle?: string;
     image: {
@@ -82,18 +85,20 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               {price.callToAction && (
-                <CTA
-                  callToAction={price.callToAction}
-                  linkClass="w-full sm:w-auto bg-secondary text-white hover:bg-secondary-dark transition-colors"
-                />
+                <Button asChild variant="secondary" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                  <NavigationLink href={price.callToAction.href}>
+                    {price.callToAction.text}
+                  </NavigationLink>
+                </Button>
               )}
               {price.callToAction2 && (
-                <CTA
-                  callToAction={price.callToAction2}
-                  linkClass="w-full sm:w-auto bg-gray-200 text-secondary hover:bg-gray-300 transition-colors"
-                />
+                <Button asChild variant="highlight" className="shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                  <NavigationLink href={price.callToAction2.href}>
+                    {price.callToAction2.text}
+                  </NavigationLink>
+                </Button>
               )}
             </div>
           </CardContent>
