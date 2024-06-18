@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
-
 import { Card, CardContent } from '@/components/ui/card';
+import Headline from '@/components/common/Headline';
+import WidgetWrapper from '@/components/common/WidgetWrapper';
 
 type ContentProps = {
   header?: {
@@ -37,16 +38,14 @@ const Content = ({
   hasBackground = false,
 }: ContentProps) => {
   return (
-    <section
-      id={id ? id : ''}
-      className={`relative ${hasBackground ? 'bg-primary' : ''} ${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}
-    >
+    <WidgetWrapper id={id || ''} hasBackground={hasBackground} containerClass={`${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}>
       {header && (
-        <div className="text-center mb-8">
-          {header.tagline && <p className="text-lg font-semibold text-primary-600">{header.tagline}</p>}
-          {header.title && <h2 className="text-3xl sm:text-5xl font-bold text-primary-foreground">{header.title}</h2>}
-          {header.subtitle && <p className="mt-4 text-xl text-gray-600">{header.subtitle}</p>}
-        </div>
+        <Headline
+          header={header}
+          containerClass="text-center mb-8"
+          titleClass="text-3xl sm:text-5xl font-bold text-primary-foreground"
+          subtitleClass="mt-4 text-xl text-gray-600"
+        />
       )}
       <div className="mx-auto max-w-7xl">
         <div className={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
@@ -81,7 +80,7 @@ const Content = ({
                       alt={image.alt}
                       sizes="(max-width: 768px) 100vw, 432px"
                       placeholder="blur"
-                      quality={50}
+                      quality={100}
                     />
                   </CardContent>
                 </Card>
@@ -90,7 +89,7 @@ const Content = ({
           </div>
         </div>
       </div>
-    </section>
+    </WidgetWrapper>
   );
 };
 
