@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 //import Hero from '@/components/Hero';
+import ImgSkaut from '@/assets/images/skaudid/skaudipilt2.jpg';
 import Img1 from '@/assets/images/telkimisniit/camp1.jpg';
 import Img2 from '@/assets/images/autoelamud/mobile1.jpg';
 import Img3 from '@/assets/images/kampingmaja/chouse1_small.jpg';
@@ -413,37 +414,38 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   const contentData = {
     header: {
-      title: "Discover Our Features",
-      subtitle: "Learn more about what we offer.",
-      tagline: "Features"
+      title: "Kalda Talu Iigastes",
+      subtitle: "Kalda talu Iigastes asub 20 kilomeetri kaugusel Valgast kirdes. Iigaste küla kuulub Valga valda. Lähim keskus on Laatre 6 km kaugusel.",
+      tagline: "Asukoht"
     },
-    content: "Welcome to our nature retreat, where you can enjoy various activities and comfortable accommodations.",
+    content: "Tegemist on metsadest ümbritsetud põllumajanduspiirkonnaga. Kirdesse jäävad spordiga seotud Otepää alad, lõunasse Karula rahvuspark metsaste mägede ning paljude väikeste järvedega.",
     items: [
       {
-        title: "Comfortable Rooms",
-        description: "Our rooms are designed for your comfort with all necessary amenities.",
+        title: "Lähimad poed",
+        description: "Lähemal asuvad toitupoed on Tsirguliinas 10 km kaugusel ja Sangastes 13 km kaugusel. Mitmed suuremad kaubanduskeskused asuvad Valgas.",
         icon: Check
       },
       {
-        title: "Scenic Views",
-        description: "Enjoy breathtaking views from your room.",
+        title: "Erilised külalised",
+        description: "Eriti oodatakse Kalda talus skaute ja gaide.",
         icon: Check
       },
       {
-        title: "Activities",
-        description: "Engage in various outdoor activities like hiking, cycling, and more.",
+        title: "Väikese Emajõe kaldal",
+        description: "Kalda talu asub Väikese Emajõe kaldal.",
         icon: Check
       }
     ],
     image: {
-      src: Img1,
-      alt: "Scenic view"
+      src: ImgSkaut,
+      alt: "Skaudid söömas",
     },
     isReversed: false,
     isAfterContent: false,
-    id: "features",
+    id: "location",
     hasBackground: true
   };
+
 
 
 
@@ -462,7 +464,7 @@ export default function IndexPage({ params: { locale } }: Props) {
           { src: Img5.src, alt: 'Tere', width: 600, height: 400 },
           { src: Img4.src, alt: 'Tere', width: 600, height: 400 },
           { src: Img3.src, alt: 'Tere', width: 600, height: 400 },
-          { src: Img2.src, alt: 'Tere', width: 600, height: 400 },
+
           { src: Img1.src, alt: 'Tere', width: 600, height: 400 }
         ]}
       />
