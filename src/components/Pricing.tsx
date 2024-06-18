@@ -1,10 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Headline from '@/components/common/Headline';
 import WidgetWrapper from '@/components/common/WidgetWrapper';
-import CTA from '@/components/common/CTA';
 import NavigationLink from '@/components/NavigationLink';
 import { Button } from '@/components/ui/button';
 
