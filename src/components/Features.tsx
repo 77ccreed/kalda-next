@@ -1,4 +1,5 @@
 import { twMerge } from 'tailwind-merge';
+import Headline from '@/components/common/Headline';
 
 interface FeaturesProps {
   header?: {
@@ -25,23 +26,13 @@ const Features = ({ header, items, columns = 3, id }: FeaturesProps) => (
   <section className="relative py-12 md:py-16 lg:py-20 bg-primary" id={id || 'features'}>
     <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
       {header && (
-        <div className={`mb-6 ${header.position === 'center' ? 'text-center' : header.position === 'right' ? 'text-right' : 'text-left'} md:mb-12`}>
-          {header.tagline && (
-            <p className="text-base font-semibold uppercase tracking-wide text-secondary">
-              {header.tagline}
-            </p>
-          )}
-          {header.title && (
-            <h2 className={twMerge('font-heading mb-4 text-4xl font-bold tracking-tight md:text-5xl text-primary-foreground')}>
-              {header.title}
-            </h2>
-          )}
-          {header.subtitle && (
-            <p className="mx-auto mt-4 max-w-3xl text-xl text-primary-foreground">
-              {header.subtitle}
-            </p>
-          )}
-        </div>
+        <Headline
+          header={header}
+          containerClass="mb-6 md:mb-12"
+          titleClass="text-4xl md:text-5xl text-primary-foreground"
+          subtitleClass="mt-4 text-xl text-primary-foreground"
+          taglineClass="text-secondary"
+        />
       )}
       <div
         className={twMerge(
