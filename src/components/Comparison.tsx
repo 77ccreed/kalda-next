@@ -7,7 +7,6 @@ import WidgetWrapper from '@/components/common/WidgetWrapper';
 type CallToActionType = {
   text: string;
   href: string;
-  targetBlank?: boolean;
 };
 
 type ComparisonProps = {
@@ -59,7 +58,7 @@ const Comparison = ({ header, columns, id, hasBackground = false }: ComparisonPr
             </div>
           ))}
           {index !== 0 && callToAction && (
-            <Button href={callToAction.href} target={callToAction.targetBlank ? '_blank' : '_self'} className="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors mt-8">
+            <Button href={callToAction.href} className="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors mt-8">
               {callToAction.text}
             </Button>
           )}
