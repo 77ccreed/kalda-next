@@ -43,15 +43,15 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
       <Headline
         header={header}
         containerClass="text-center mb-8"
-        titleClass="text-3xl font-bold"
-        subtitleClass="mt-4 text-xl"
+        titleClass="text-4xl font-extrabold"
+        subtitleClass="mt-4 text-2xl text-gray-500"
       />
     )}
     <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {prices.map((price, index) => (
-        <Card key={index} className="relative bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+        <Card key={index} className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
           {price.hasRibbon && price.ribbonTitle && (
-            <div className="absolute top-0 right-0 bg-secondary text-white py-1 px-3 rounded-bl-lg z-10">
+            <div className="absolute top-0 right-0 bg-gradient-to-r from-pink-500 to-red-500 text-white py-1 px-3 rounded-bl-lg shadow-md z-10">
               {price.ribbonTitle}
             </div>
           )}
@@ -63,23 +63,25 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
                 layout="fill"
                 objectFit="cover"
                 className="rounded-t-lg"
+                style={{ filter: 'brightness(0.75)' }}
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-t-lg"></div>
             </div>
           )}
           <CardContent className="flex flex-col justify-between p-6 text-center">
             <div>
-              <h3 className="text-xl font-semibold text-secondary">{price.title}</h3>
-              {price.subtitle && <p className="text-secondary mt-2">{price.subtitle}</p>}
+              <h3 className="text-3xl font-semibold text-primary-foreground">{price.title}</h3>
+              {price.subtitle && <p className="text-lg text-gray-600 mt-2">{price.subtitle}</p>}
               <div className="mt-4 mb-8">
-                <div className="text-5xl font-bold text-secondary">{price.price}</div>
-                <div className="text-secondary">{price.period}</div>
+                <div className="text-6xl font-bold text-primary-foreground">{price.price}</div>
+                <div className="text-lg text-gray-600">{price.period}</div>
               </div>
             </div>
             <ul className="text-left space-y-2 mb-8">
               {price.items.map((item, idx) => (
                 <li key={idx} className="flex items-start">
-                  <Check className="text-secondary mr-2" />
-                  <span className="text-secondary">{item}</span>
+                  <Check className="text-primary-foreground mr-2" />
+                  <span className="text-gray-600">{item}</span>
                 </li>
               ))}
             </ul>
