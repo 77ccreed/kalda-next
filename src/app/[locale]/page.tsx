@@ -1,6 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 //import Hero from '@/components/Hero';
+import Puhkemaja from '@/assets/images/puhkemaja/puhkemaja.jpg';
+import Sommer from '@/assets/images/tegevused/sommer.jpg';
 import ImgSkaut from '@/assets/images/skaudid/skaudipilt2.jpg';
 import Img1 from '@/assets/images/telkimisniit/camp1.jpg';
 import Img2 from '@/assets/images/autoelamud/mobile1.jpg';
@@ -228,8 +230,6 @@ export default function IndexPage({ params: { locale } }: Props) {
           href: "/telkimisala",
           targetBlank: false
         },
-        hasRibbon: true,
-        ribbonTitle: "Populaarne",
         image: {
           src: Img1,
           alt: "Telkimisala"
@@ -273,7 +273,7 @@ export default function IndexPage({ params: { locale } }: Props) {
           targetBlank: false
         },
         hasRibbon: true,
-        ribbonTitle: "Populaarne suvel",
+        ribbonTitle: "Populaarne",
         image: {
           src: Img3,
           alt: "Kämpingumajad"
@@ -317,7 +317,7 @@ export default function IndexPage({ params: { locale } }: Props) {
           targetBlank: false
         },
         hasRibbon: true,
-        ribbonTitle: "Populaarne talvel",
+        ribbonTitle: "Populaarne",
         image: {
           src: Img5,
           alt: "Kodumajutuse toad"
@@ -474,9 +474,83 @@ export default function IndexPage({ params: { locale } }: Props) {
     hasBackground: true
   };
 
+  const contentData2 = {
+    header: {
+      title: "Kalda talu asub Väikese Emajõe kaldal",
+      subtitle: "Jõgi, mis suubub Võrtsjärve ning edasi Peipsisse ja kasvab oma teel üha suuremaks. Talu läheduses ühineb Väikese Emajõega Ärnu jõgi - koht kus kalameestel on tegemist.",
+      tagline: "Jõgi ja Loodus",
+    },
+    content: "Ka linnuvaatlejatele jagub imetlemist. Tänu rahulikule paigale ja suurtele osalt niisketele metsadele satub siin silma mitmeid liike, keda muidu vaevalt kohtab. Metsloomi võib jõe ääres joomas näha.",
+    items: [
+      {
+        title: "Kalapüük",
+        description: "Talu läheduses ühineb Väikese Emajõega Ärnu jõgi - koht kus kalameestel on tegemist.",
+        icon: Check,
+      },
+      {
+        title: "Linnuvaatlus",
+        description: "Rahulik paik ja suured metsad pakuvad imetlemist linnuvaatlejatele.",
+        icon: Check,
+      },
+      {
+        title: "Metsloomade vaatlemine",
+        description: "Metsloomi võib jõe ääres joomas näha.",
+        icon: Check,
+      },
+    ],
+    image: {
+      src: Sommer,
+      alt: "Loodus",
+    },
+    isReversed: false,
+    isAfterContent: false,
+    id: "nature",
+    hasBackground: true,
+  };
 
-
-
+  const contentData3 = {
+    header: {
+      title: "Talus on vaikne, kuna maja on teeotsas viimane",
+      subtitle: "Saab sõita rattaga ning matkata teedel, kuhu mootorsõidukid harva satuvad. Talus on piisavalt ruumi korraga mitmetele külaliste gruppidele.",
+      tagline: "Talu Rahu ja Mugavused",
+    },
+    content: "Telkimisplats, kämpingumajakesed ja suuremad majutusruumid on seatud nõnda, et külastajad üksteist ei häiriks. Lisaks Valga/Valka linnale on läheduses uudistamiseks rukkikrahv Bergi Sangaste loss, muuseum ja park, Pokumaa, Antsla ning Karula rahvuspargi vaatamisväärsused. Eestis on hästi levinud Internetiühendus. Nii saab ka siin talus traadita võrgu kaudu uudistele kaasa elada.",
+    items: [
+      {
+        title: "Erakordne rahu",
+        description: "Talu on viimane maja teeotsas, pakkudes vaikust ja rahu.",
+        icon: Check,
+      },
+      {
+        title: "Mitmed tegevused",
+        description: "Rattasõit ja matkad teedel, kuhu mootorsõidukid harva satuvad.",
+        icon: Check,
+      },
+      {
+        title: "Erinevad majutusvõimalused",
+        description: "Telkimisplats, kämpingumajakesed ja suuremad majutusruumid.",
+        icon: Check,
+      },
+      {
+        title: "Lähedal asuvad vaatamisväärsused",
+        description: "Rukkikrahv Bergi Sangaste loss, Pokumaa, Antsla, Karula rahvuspark.",
+        icon: Check,
+      },
+      {
+        title: "Hea Internetiühendus",
+        description: "Eestis on hästi levinud Internetiühendus, saadaval ka talus.",
+        icon: Check,
+      },
+    ],
+    image: {
+      src: Puhkemaja,
+      alt: "Talu",
+    },
+    isReversed: true,
+    isAfterContent: false,
+    id: "peace",
+    hasBackground: true,
+  };
   return (
     <>
       <CarouselHero
@@ -501,6 +575,8 @@ export default function IndexPage({ params: { locale } }: Props) {
       <Comparison {...comparisonData} hasBackground={true} />
       <Content {...contentData} />
       <Features {...featuresData2} />
+      <Content {...contentData2} />
+      <Content {...contentData3} />
     </>
   );
 }
