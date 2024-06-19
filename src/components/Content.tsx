@@ -1,5 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Headline from '@/components/common/Headline';
@@ -18,7 +18,7 @@ type ContentProps = {
     icon?: React.ComponentType<{ className?: string }>;
   }[];
   image?: {
-    src: string;
+    src: string | StaticImageData;
     alt: string;
   };
   isReversed?: boolean;
