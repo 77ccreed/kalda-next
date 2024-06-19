@@ -9,7 +9,7 @@ import Img4 from '@/assets/images/lihtneoomaja/kainestusmaja1_small.jpg';
 import Img5 from '@/assets/images/bbtoad/GHroom2a.jpg';
 import Img6 from '@/assets/images/puhkemaja/puhkemaja SW.jpg';
 import Features from '@/components/Features';
-import { BedDouble, ShowerHead, Coffee, Check } from "lucide-react";
+import { BedDouble, ShowerHead, Coffee, Check, CheckCircle, MapPin, Car } from "lucide-react";
 import CarouselHero from '@/components/CarouselHero';
 import Pricing from '@/components/Pricing';
 import Comparison from '@/components/Comparison';
@@ -65,6 +65,34 @@ export default function IndexPage({ params: { locale } }: Props) {
       },
     ],
     columns: 3,
+  };
+
+
+  const featuresData2 = {
+    header: {
+      title: "Maastik ja Matkamine",
+      subtitle: "Kalda Talu ümbruskonnas leidub hulgaliselt võimalusi aktiivseks puhkuseks ning looduse avastamiseks aastaringselt. Jalutamine, jooksmine, rattasõit, ujumine. Talvel suusatamine ja uisutamine. Näiteks pole tõenäoliselt igaüks näinud veel kopratammi.",
+      tagline: "Tegevused ja Huviväärsused",
+      position: "center",
+    },
+    items: [
+      {
+        title: "Matkarajad",
+        description: "RMK matkarajad, mis pakuvad võimalusi lihtsatest lühikestest kõnnakutest kuni nõudlikumate matkade ja ööbimisvõimalusteni.",
+        icon: CheckCircle,
+      },
+      {
+        title: "Ratta ja Auto Rent",
+        description: "Rentige meilt jalgratas või auto, et uurida maakonna kaugemaid paiku või põigata Lätti.",
+        icon: Car,
+      },
+      {
+        title: "Rand ja Kanuuretked",
+        description: "Rand on 6 km kaugusel. Väike Emajõgi sobib kanuuretke alguspunktiks. Mitmepäevased ekskursioonid Koiva ja teiste jõgede vahel.",
+        icon: MapPin,
+      },
+    ],
+    columns: 3, // Adjust number of columns as needed
   };
 
   /* const pricingData = {
@@ -472,6 +500,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} hasBackground={true} />
       <Content {...contentData} />
+      <Features {...featuresData2} />
     </>
   );
 }
