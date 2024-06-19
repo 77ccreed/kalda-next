@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import { Check } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import Headline from '@/components/common/Headline';
@@ -29,7 +30,7 @@ type PricingProps = {
     hasRibbon?: boolean;
     ribbonTitle?: string;
     image: {
-      src: string;
+      src: string | StaticImageData;
       alt: string;
     };
   }[];
@@ -42,14 +43,15 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
     {header && (
       <Headline
         header={header}
-        containerClass="text-center mb-8"
-        titleClass="text-4xl font-extrabold"
-        subtitleClass="mt-4 text-2xl text-gray-500"
+        containerClass="mb-6 md:mb-12"
+        titleClass="text-4xl md:text-5xl text-primary-foreground"
+        subtitleClass="mt-4 text-xl text-primary-foreground"
+        taglineClass="text-secondary"
       />
     )}
     <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {prices.map((price, index) => (
-        <Card key={index} className="relative bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <Card key={index} className="relative bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl">
           {price.hasRibbon && price.ribbonTitle && (
             <div className="absolute top-0 right-0 bg-gradient-to-r from-pink-500 to-red-500 text-white py-1 px-3 rounded-bl-lg shadow-md z-10">
               {price.ribbonTitle}
@@ -71,7 +73,7 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
           <CardContent className="flex flex-col justify-between p-6 text-center">
             <div>
               <h3 className="text-3xl font-semibold text-primary-foreground">{price.title}</h3>
-              {price.subtitle && <p className="text-lg text-gray-600 mt-2">{price.subtitle}</p>}
+              {price.subtitle && <p className="text-md text-gray-600 mt-2">{price.subtitle}</p>}
               <div className="mt-4 mb-8">
                 <div className="text-6xl font-bold text-primary-foreground">{price.price}</div>
                 <div className="text-lg text-gray-600">{price.period}</div>
