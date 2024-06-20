@@ -38,13 +38,13 @@ const Content = ({
   hasBackground = false,
 }: ContentProps) => {
   return (
-    <WidgetWrapper id={id || ''} hasBackground={hasBackground} containerClass={`${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : ''}`}>
+    <WidgetWrapper id={id || ''} hasBackground={hasBackground} containerClass={`${isAfterContent ? 'py-0 md:py-0 lg:py-0 pb-12 md:pb-16 lg:pb-20' : 'py-12 md:py-16 lg:py-20'}`}>
       {header && (
         <Headline
           header={header}
           containerClass="text-center mb-8"
-          titleClass="text-3xl sm:text-5xl font-bold text-primary-foreground"
-          subtitleClass="mt-4 text-xl text-gray-600"
+          titleClass="text-4xl sm:text-5xl font-bold text-primary-foreground"
+          subtitleClass="mt-4 text-xl text-secondary"
         />
       )}
       <div className="mx-auto max-w-7xl">
@@ -55,12 +55,12 @@ const Content = ({
               <div className="gap-4 md:gap-y-6">
                 {items.map((item, idx) => (
                   <div key={idx} className="flex max-w-full mb-4">
-                    <div className="flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full bg-primary text-white mr-4 rtl:mr-0 rtl:ml-4 mt-1 p-1">
+                    <div className="flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full bg-secondary text-white mr-4 rtl:mr-0 rtl:ml-4 mt-1 p-1">
                       {item.icon ? <item.icon className="w-5 h-5" /> : <Check className="w-5 h-5" />}
                     </div>
                     <div>
                       <h3 className="text-lg font-medium leading-6 text-primary-foreground mt-1 mb-2">{item.title}</h3>
-                      <p className="mt-1 text-primary-foreground">{item.description}</p>
+                      <p className="mt-1 text-gray-700">{item.description}</p>
                     </div>
                   </div>
                 ))}
