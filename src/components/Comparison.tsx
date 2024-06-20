@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, Minus } from 'lucide-react';
+import NavigationLink from '@/components/NavigationLink';
 import { Button } from '@/components/ui/button';
 import Headline from '@/components/common/Headline';
 import WidgetWrapper from '@/components/common/WidgetWrapper';
@@ -58,8 +59,12 @@ const Comparison = ({ header, columns, id, hasBackground = false }: ComparisonPr
             </div>
           ))}
           {index !== 0 && callToAction && (
-            <Button href={callToAction.href} className="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors mt-8">
-              {callToAction.text}
+            <Button className="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors mt-8">
+              <NavigationLink href={
+                callToAction.href
+              }>
+                {callToAction.text}
+              </NavigationLink>
             </Button>
           )}
         </div>
