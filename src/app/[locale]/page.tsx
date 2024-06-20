@@ -75,7 +75,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       title: "Maastik ja Matkamine",
       subtitle: "Kalda Talu ümbruskonnas leidub hulgaliselt võimalusi aktiivseks puhkuseks ning looduse avastamiseks aastaringselt. Jalutamine, jooksmine, rattasõit, ujumine. Talvel suusatamine ja uisutamine. Näiteks pole tõenäoliselt igaüks näinud veel kopratammi.",
       tagline: "Tegevused ja Huviväärsused",
-      position: "center",
+      position: "center" as 'center',
     },
     items: [
       {
