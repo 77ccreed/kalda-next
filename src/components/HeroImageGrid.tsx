@@ -2,6 +2,12 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import NavigationLink from '@/components/NavigationLink';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import Img1 from '@/assets/images/telkimisniit/camp1.jpg';
+import Img2 from '@/assets/images/autoelamud/mobile1.jpg';
+import Img3 from '@/assets/images/kampingmaja/chouse1_small.jpg';
+import Img4 from '@/assets/images/lihtneoomaja/kainestusmaja1_small.jpg';
+import Img5 from '@/assets/images/bbtoad/GHroom2a.jpg';
+import Img6 from '@/assets/images/puhkemaja/puhkemaja SW.jpg';
 
 type HeroImageGridProps = {
   title: string;
@@ -11,7 +17,6 @@ type HeroImageGridProps = {
   callToAction2?: string;
   callToActionLink?: string;
   callToActionLink2?: string;
-  images: { src: string; alt: string; aspectRatio: number }[];
 };
 
 const HeroImageGrid = ({
@@ -21,8 +26,7 @@ const HeroImageGrid = ({
   callToAction,
   callToAction2,
   callToActionLink,
-  callToActionLink2,
-  images
+  callToActionLink2
 }: HeroImageGridProps) => {
   return (
     <section className="relative bg-secondary text-primary-foreground" id="hero-image-grid" role="banner" aria-labelledby="hero-title">
@@ -72,18 +76,66 @@ const HeroImageGrid = ({
             <div className="block flex-1 items-center md:flex">
               <div className="relative m-auto h-full max-w-4xl">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {images.map((image, index) => (
-                    <AspectRatio key={index} ratio={image.aspectRatio} className="relative">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="rounded-md object-cover drop-shadow-2xl"
-                        sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
-                        priority
-                      />
-                    </AspectRatio>
-                  ))}
+                  <AspectRatio ratio={3 / 2} className="relative w-full">
+                    <Image
+                      src={Img1}
+                      alt="Telkimisniit"
+                      layout="fill"
+                      className="rounded-md object-cover drop-shadow-2xl"
+                      sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                      priority
+                    />
+                  </AspectRatio>
+                  <AspectRatio ratio={3 / 2} className="relative w-full">
+                    <Image
+                      src={Img2}
+                      alt="Autoelamud"
+                      layout="fill"
+                      className="rounded-md object-cover drop-shadow-2xl"
+                      sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                      priority
+                    />
+                  </AspectRatio>
+                  <AspectRatio ratio={4 / 3} className="relative w-full">
+                    <Image
+                      src={Img3}
+                      alt="Kämpingumaja"
+                      layout="fill"
+                      className="rounded-md object-cover drop-shadow-2xl"
+                      sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                      priority
+                    />
+                  </AspectRatio>
+                  <AspectRatio ratio={4 / 3} className="relative w-full">
+                    <Image
+                      src={Img4}
+                      alt="Lihtne öömaja"
+                      layout="fill"
+                      className="rounded-md object-cover drop-shadow-2xl"
+                      sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                      priority
+                    />
+                  </AspectRatio>
+                  <AspectRatio ratio={4 / 3} className="relative w-full">
+                    <Image
+                      src={Img5}
+                      alt="Kodumajutuse toad"
+                      layout="fill"
+                      className="rounded-md object-cover drop-shadow-2xl"
+                      sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                      priority
+                    />
+                  </AspectRatio>
+                  <AspectRatio ratio={4 / 3} className="relative w-full">
+                    <Image
+                      src={Img6}
+                      alt="Puhkemaja"
+                      layout="fill"
+                      className="rounded-md object-cover drop-shadow-2xl"
+                      sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
+                      priority
+                    />
+                  </AspectRatio>
                 </div>
               </div>
             </div>
