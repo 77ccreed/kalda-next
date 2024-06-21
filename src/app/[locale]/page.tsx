@@ -13,6 +13,7 @@ import Img6 from '@/assets/images/puhkemaja/puhkemaja SW.jpg';
 import Features from '@/components/Features';
 import { BedDouble, ShowerHead, Coffee, Check, CheckCircle, MapPin, Car } from "lucide-react";
 import CarouselHero from '@/components/CarouselHero';
+import HeroImageGrid from '@/components/HeroImageGrid';
 import Pricing from '@/components/Pricing';
 import Comparison from '@/components/Comparison';
 import Content from '@/components/Content';
@@ -445,7 +446,7 @@ export default function IndexPage({ params: { locale } }: Props) {
   };
   return (
     <>
-      <CarouselHero
+      <HeroImageGrid
         title={t('title')}
         subtitle="Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel"
         tagline="Puhkekeskus"
@@ -454,12 +455,31 @@ export default function IndexPage({ params: { locale } }: Props) {
         callToAction2="Teenused"
         callToActionLink2="/about"
         images={[
-          { src: Img6.src, alt: 'Tere', width: 600, height: 400 },
-          { src: Img5.src, alt: 'Tere', width: 600, height: 400 },
-          { src: Img4.src, alt: 'Tere', width: 600, height: 400 },
-          { src: Img3.src, alt: 'Tere', width: 600, height: 400 },
-
-          { src: Img1.src, alt: 'Tere', width: 600, height: 400 }
+          {
+            src: Img6.src,
+            alt: 'Puhkemaja',
+            aspectRatio: 3 / 2
+          },
+          {
+            src: Img5.src,
+            alt: 'Kodumajutuse toad',
+            aspectRatio: 4 / 3
+          },
+          {
+            src: Img4.src,
+            alt: 'Lihtne öömaja',
+            aspectRatio: 3 / 4
+          },
+          {
+            src: Img3.src,
+            alt: 'Kämpingumaja',
+            aspectRatio: 3 / 2
+          },
+          {
+            src: Img1.src,
+            alt: 'Telkimisniit',
+            aspectRatio: 4 / 3
+          }
         ]}
       />
       <Features {...featuresData} />
