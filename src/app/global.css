@@ -31,11 +31,11 @@
     --destructive: #F44336;
     --destructive-foreground: #FFFFFF;
 
-    --border: #757575;
+    --border: #2F4858;
     --input: #757575;
     --ring: #757575;
 
-    --neutral: #E1C699;
+    --neutral: #E0E0E0;
     --neutral-foreground: #2F4858;
 
     --radius: 0.5rem;
@@ -47,11 +47,15 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
   }
 }
 
 @layer utilities {
+  .text-foreground {
+    color: var(--foreground);
+  }
+
   .hover-accent {
     @apply hover:text-primary transition-colors;
   }
@@ -65,10 +69,18 @@
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary-dark focus:ring-2 focus:ring-secondary-foreground;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary-light focus:ring-2 focus:ring-secondary-foreground;
   }
 
   .btn-highlight {
     @apply bg-highlight text-highlight-foreground hover:bg-highlight-dark focus:ring-2 focus:ring-highlight-foreground;
+  }
+
+  .heading {
+    @apply font-heading;
+  }
+
+  .cta {
+    @apply font-cta;
   }
 }
