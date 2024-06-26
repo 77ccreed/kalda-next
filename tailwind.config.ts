@@ -20,47 +20,47 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          light: "#FFF59D", // Lighter Yellow
-          DEFAULT: "#FFEB3B", // Yellow
-          dark: "#FBC02D", // Dark Yellow
-          foreground: "#2F4858", // Dark Blue-Green
+          light: "#FFF9C4", // Lighter Yellow
+          DEFAULT: "#FFD700", // Kuldne Kollane
+          dark: "#FBC02D", // Tume Kollane
+          foreground: "#2F4858", // Tume Sinakasroheline
         },
         secondary: {
-          light: "#5F7380", // Light Blue-Green
-          DEFAULT: "#2F4858", // Blue-Green
-          dark: "#1D2F36", // Dark Blue-Green
-          foreground: "#FFFFFF", // White
+          light: "#5F7380", // Hele Sinakasroheline
+          DEFAULT: "#2F4858", // Tume Sinakasroheline
+          dark: "#1D2F36", // Tume Sinakasroheline (variatsioon)
+          foreground: "#FFFFFF", // Valge
         },
         accent: {
-          light: "#DCE775", // Light Green
-          DEFAULT: "#C8E6C9", // Green
-          dark: "#9CCC65", // Dark Green
-          foreground: "#2F4858", // Dark Blue-Green
+          light: "#E8F5E9", // Hele Roheline
+          DEFAULT: "#C8E6C9", // Hele Roheline
+          dark: "#A5D6A7", // Tumeroheline
+          foreground: "#2F4858", // Tume Sinakasroheline
         },
         muted: {
-          light: "#F5F5F5", // Light Grey
-          DEFAULT: "#E0E0E0", // Grey
-          dark: "#BDBDBD", // Dark Grey
-          foreground: "#757575", // Medium Grey
+          light: "#F5F5F5", // Helehall
+          DEFAULT: "#E0E0E0", // Hall
+          dark: "#BDBDBD", // Tumehall
+          foreground: "#757575", // Keskminehall
         },
         highlight: {
-          light: "#FFCDD2", // Light Coral
-          DEFAULT: "#E57373", // Coral
-          dark: "#D32F2F", // Dark Coral
-          foreground: "#FFFFFF", // White
+          light: "#FFCDD2", // Hele Korall
+          DEFAULT: "#E57373", // Korall
+          dark: "#D32F2F", // Tume Korall
+          foreground: "#FFFFFF", // Valge
         },
         background: {
-          DEFAULT: "#FFFFFF", // White
+          DEFAULT: "#FFFFFF", // Valge
         },
-        border: "#757575", // Medium Grey
-        input: "#757575", // Medium Grey
-        ring: "#757575", // Medium Grey
-        foreground: "#2F4858", // Dark Blue-Green
+        border: "#757575", // Keskminehall
+        input: "#757575", // Keskminehall
+        ring: "#757575", // Keskminehall
+        foreground: "#2F4858", // Tume Sinakasroheline
         neutral: {
-          light: "#FAF3E0", // Light Beige
-          DEFAULT: "#E1C699", // Beige
-          dark: "#C5A179", // Dark Beige
-          foreground: "#2F4858", // Dark Blue-Green
+          light: "#FAF3E0", // Helebeež
+          DEFAULT: "#E1C699", // Beež
+          dark: "#C5A179", // Tumebeež
+          foreground: "#2F4858", // Tume Sinakasroheline
         },
       },
       borderRadius: {
