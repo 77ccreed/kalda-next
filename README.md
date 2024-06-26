@@ -14,208 +14,196 @@ pnpm dev
 bun dev
 ```
 
-# Kalda Talu Veebilehe Analüüs
+# Analysis of Kalda Talu Website
 
-## Sissejuhatus
+## Introduction
 
-Tabel Kalda talu veebilehe analüüsi kohta.
+A table analyzing the Kalda Talu website.
 
-## Tabeli Sisu
+## Table Content
 
-### Kategooria: Primary Audience
+- **Category: Primary Audience**
+  - Tourists, families, nature lovers, adventurers, scouts and guides, retirees, culture and history enthusiasts.
 
-- Turistid, pered, looduse armastajad, seiklushimulised, skaudid ja gaidid, pensionärid, kultuuri- ja ajaloohuvilised.
+- **Category: User Task**
+  - Main purpose for the visitor: Find and book accommodation, get information about accommodation options and services, explore activities and leisure opportunities.
 
-### Kategooria: User Task
+- **Category: Business Goal**
+  - Provide guests with a pleasant accommodation experience, increase the number of bookings, promote rural tourism, generate additional revenue through various services.
 
-- **Kodulehe eesmärk külastaja jaoks:** Leida ja broneerida majutust, saada infot majutusvõimaluste ja teenuste kohta, uurida tegevusi ja vaba aja veetmise võimalusi.
+- **Category: Inward Paths**
+  - Where are users likely to come from to end up on this page? Search engines (Google), booking platforms (Booking.com, VisitEstonia.ee), social media (Facebook, Tripadvisor), influencers, word of mouth, direct access via the homepage.
 
-### Kategooria: Business Goal
+- **Category: Outward Paths**
+  - Where are users likely to want to go after this page? Booking page, contact page, accommodation options page, pricing page, nearby attractions page, activities and services page.
 
-- Pakkuda külalistele meeldivat majutuskogemust, suurendada broneeringute arvu, edendada maaturismi, saada lisatulu erinevate teenuste pakkumisega.
-
-### Kategooria: Inward Paths
-
-- **Where are users likely to come from to end up on this page?** Otsingumootorid (Google), broneerimisplatvormid (Booking.com, VisitEstonia.ee), sotsiaalmeedia (Facebook, Tripadvisor), suunamudijad, suusõnaliselt, otse kodulehe kaudu.
-
-### Kategooria: Outward Paths
-
-- **Where are users likely to want to go after this page?** Broneerimisleht, kontaktileht, majutusvõimaluste leht, hinnakirja leht, lähedal asuvate vaatamisväärsuste leht, tegevuste ja teenuste leht.
-
-### Kategooria: Main Keywords
-
-- Kalda talu, majutus Valgamaal, telkimine, kämpingud, puhkemaja, hostel, loodusretked, kanuuretked, skautide laagrid.
+- **Category: Main Keywords**
+  - Kalda talu, accommodation in Valgamaa, camping, campgrounds, holiday home, hostel, nature hikes, canoe trips, scout camps.
 
 ## Core Content
 
-### Küsimused, mida kasutajad võivad omada
+### Questions users might have
 
-- Kas seal on vaba koht?
-- Millised on majutusvõimalused?
-- Kui palju maksab ööbimine?
-- Kuidas broneerida?
-- Millised on läheduses asuvad vaatamisväärsused ja tegevused?
-- Kas saab telkida või karavaniga ööbida?
-- Millised on makse- ja tühistamistingimused?
-- Kas pere ja lemmikloomad on teretulnud?
-- Kas seal on wifi?
-- Kas hommikusöök on hinna sees?
-- Kas saun on olemas?
-- Millised on sõidukite parkimisvõimalused?
+- Is there a vacancy?
+- What are the accommodation options?
+- How much does an overnight stay cost?
+- How to book?
+- What are the nearby attractions and activities?
+- Is it possible to camp or stay in a caravan?
+- What are the payment and cancellation policies?
+- Are families and pets welcome?
+- Is there Wi-Fi?
+- Is breakfast included?
+- Is there a sauna?
+- What are the parking options for vehicles?
 
-## Core Content Analysis
+### Core Content Analysis
 
-### Majutusvõimalused
+- **Accommodation Options**
+  - **Attribute & Notes:** Detailed description of accommodation types (hostel, holiday home, camping area, cabins). Guests are offered a wide range of accommodation options with varying comfort and prices.
+  - **Content:** Texts about accommodation types, price lists, pictures, usage possibilities.
 
-- **Attribute & Notes:** Detailne kirjeldus majutustüüpide kohta (hostel, puhkemaja, telkimisala, kämpingumajad). Külalistele pakutakse laia valikut majutusvõimalusi erineva mugavuse ja hinnaga.
-- **Content:** Tekstid majutustüüpide kohta, hinnakirjad, pildid, kasutusvõimalused.
+- **Booking**
+  - **Attribute & Notes:** Simple and diverse booking options (phone, email, booking agencies).
+  - **Content:** Description of the booking process, contact information, booking terms.
 
-### Broneerimine
+- **Location and Activities**
+  - **Attribute & Notes:** Description of the location and surroundings, nature activities (walking, cycling, canoeing).
+  - **Content:** Map, attractions, description of activities.
 
-- **Attribute & Notes:** Lihtsad ja mitmekesised broneerimisvõimalused (telefon, e-post, broneerimisagentuurid).
-- **Content:** Broneerimise protsessi kirjeldus, kontaktinfo, broneerimistingimused.
+- **Services and Additional Options**
+  - **Attribute & Notes:** Description of services (sauna, grilling facilities, car rental), answering questions (Frequently Asked Questions).
+  - **Content:** List of services and price list, FAQ section.
 
-### Asukoht ja tegevused
+### Main Questions from Visitors
 
-- **Attribute & Notes:** Asukoha ja lähiümbruse kirjeldus, tegevused looduses (jalutamine, rattasõit, kanuuretke).
-- **Content:** Kaart, vaatamisväärsused, tegevuste kirjeldus.
+Visitors want to know what accommodation options are available, their prices, how to book, what can be done in the surrounding area, and what services are offered. Additionally, they are interested in whether the place is suitable for families and pets, as well as payment terms and cancellation policies.
 
-### Teenused ja lisavõimalused
+## Kalda Talu Brand Book
 
-- **Attribute & Notes:** Teenuste kirjeldus (saun, grillimisvõimalused, autorent), küsimustele vastamine (Korduma kippuvad küsimused).
-- **Content:** Teenuste loetelu ja hinnakiri, KKK sektsioon.
+### Color Palette
 
-## Külastaja Peamised Küsimused
+- **Primary Colors**
+  - Golden Yellow (#FFD700): Used as the main background color to create a warm and friendly atmosphere.
+  - Dark Teal (#2F4858): Used for text and outlines to ensure good readability and clarity. Also used as the background color for navigation and footer.
+  - White (#FFFFFF): Used for backgrounds and contrasting elements to add cleanliness and clarity.
 
-Külastaja tahab teada, millised on saadaval olevad majutusvõimalused, nende hinnad, kuidas broneerida, mida lähiümbruses teha saab ja millised teenused on pakkuda. Lisaks huvitab neid, kas koht sobib peredele ja lemmikloomadele ning millised on maksetingimused ja tühistamispoliitika.
+- **Additional Colors**
+  - Dark Yellow (#FBC02D): Used for accents and buttons to add depth and contrast.
+  - Light Teal (#5F7380): Used for secondary elements and hover effects.
+  - Light Green (#C8E6C9): Used for accents and interactive elements.
+  - Coral (#E57373): Used for highlighted elements and Call to Action (CTA) buttons to draw attention to important parts.
+  - Neutral Gray (#E0E0E0): Used as an additional background color to balance bright colors and provide rest for the eyes.
+  - Dark Gray (#424242): Used for text and icons to provide excellent contrast and readability.
 
-# Kalda Talu Brändiraamat
+# Fonts
 
-## Värvipalett
+## Headings
 
-### Põhivärvid
+- **Lora, serif**: Used for large headings and subheadings to create an elegant and authentic look. Lora adds a traditional feel and is perfect for emphasizing the farm's hospitable atmosphere.
 
-- **Kuldne Kollane (#FFD700):** Kasutatakse peamise taustavärvina, et luua sooja ja sõbralikku atmosfääri.
-- **Tume Sinakasroheline (#2F4858):** Kasutatakse teksti ja piirjoonte värvina, et tagada hea loetavus ja selgus. Kasutatakse ka navigatsiooni ja jaluse (footer) taustavärvina.
-- **Valge (#FFFFFF):** Kasutatakse taustade ja kontrastsete elementide jaoks, et lisada puhtust ja selgust.
+## Body Text
 
-### Täiendavad Värvid
+- **Open Sans, sans-serif**: Used for body text to ensure clarity and readability. Open Sans is a neutral and modern font, perfect for conveying informative content and ensuring a pleasant reading experience on any device.
 
-- **Tume Kollane (#FBC02D):** Kasutatakse aktsentidena ja nupuvärvina, et lisada sügavust ja kontrasti.
-- **Hele Sinakasroheline (#5F7380):** Kasutatakse sekundaarsete elementide ja hover-efektide jaoks.
-- **Hele Roheline (#C8E6C9):** Kasutatakse aktsentidena ja interaktiivsete elementide jaoks.
-- **Korall (#E57373):** Kasutatakse esiletõstetud elementide ja CTA (Kutse Tegevusele) nuppude jaoks, et juhtida tähelepanu olulistele osadele.
-- **Neutraalne Hall (#E0E0E0):** Kasutatakse täiendava taustavärvina, et tasakaalustada erksaid värve ja pakkuda puhkehetke silmadele.
-- **Tume Hall (#424242):** Tekstide ja ikoonide jaoks, et pakkuda suurepärast kontrasti ja loetavust.
+## CTA (Call to Action)
 
-## Fondid
+- **Poppins, sans-serif**: Used for CTA buttons and distinctive elements to ensure a modern and standout appearance. Poppins' bold and clear lines draw attention to important actions and make the buttons eye-catching and easily noticeable.
 
-## Pealkirjad
+# Buttons and Interactive Elements
 
-- **Lora, serif**: Kasutatakse suurte pealkirjade ja alapealkirjade jaoks, et luua elegantne ja autentne välimus. Lora lisab traditsioonilist tunnet ja sobib ideaalselt rõhutama talu külalislahket atmosfääri.
+## Buttons (on dark background)
 
-## Tekstid
+- Main buttons use a golden yellow background (#FFD700) and dark teal text (#2F4858). On hover, the buttons change to a darker yellow (#FBC02D).
 
-- **Open Sans, sans-serif**: Kasutatakse põhitekstide jaoks, mis tagab selguse ja loetavuse. Open Sans on neutraalne ja kaasaegne font, mis sobib suurepäraselt informatiivse sisu edastamiseks ja tagab meeldiva lugemiskogemuse igas seadmes.
+## Buttons (on light background)
 
-## CTA (Kutse Tegevusele)
+- Main buttons use a dark teal background (#2F4858) and white text (#FFFFFF). On hover, the buttons change to light teal (#5F7380).
 
-- **Poppins, sans-serif**: Kasutatakse CTA nuppude ja eristuvate elementide jaoks, et tagada kaasaegne ja silmapaistev välimus. Poppins'i paksud ja selged jooned juhivad tähelepanu olulistele tegevustele ja muudavad nupud silmatorkavaks ja kergesti märgatavaks.
+## Interactive boxes
 
-## Nupud ja Interaktiivsed Elemendid
+- Use a golden yellow background (#FFD700) and dark teal border (#2F4858). On hover, the boxes turn slightly green.
 
-### Nupud (tumedal taustal)
+# Iconography and Images
 
-- Peamised nupud kasutavad kuldset kollast tausta (#FFD700) ja tume sinakasrohelist teksti (#2F4858). Hover-efektiga muutuvad nupud tumedamaks kollaseks (#FBC02D).
+## Iconography
 
-### Nupud (heledal taustal)
+- Clear, minimalist icons using primary colors. Icons should be simple and understandable.
 
-- Peamised nupud kasutavad tume sinakasrohelist tausta (#2F4858) ja valget teksti (#FFFFFF). Hover-efektiga muutuvad nupud hele sinakasroheliseks (#5F7380).
+## Images
 
-### Interaktiivsed kastid
+- High-quality photos that emphasize the farm's natural environment, services, and tranquility. Wide-screen images are used in headers, and gallery-style designs are used on service pages.
 
-- Kasutavad kuldset kollast tausta (#FFD700) ja tume sinakasrohelist äärist (#2F4858). Hover-efektiga muutuvad kastid kergelt roheliseks.
+# General UI Elements
 
-## Ikonograafia ja Pildid
+## Backgrounds and Borders
 
-### Ikonograafia
+- Golden yellow background (#FFD700) with dark teal borders (#2F4858). The entire website should be visually harmonious and not overloaded.
 
-- Selged, minimalistlikud ikoonid, mis kasutavad põhivärve. Ikoonid peavad olema lihtsad ja arusaadavad.
+## Shadows and Spacing
 
-### Pildid
+- Subtle shadows and spacing are used to create depth and visual interest.
 
-- Kõrge kvaliteediga fotod, mis rõhutavad talu looduskeskkonda, teenuseid ja rahu. Kasutatakse laiekraan pilte päises ja galerii stiilis kujundusi teenuste lehtedel.
+## Responsiveness
 
-## Üldised UI Elemendid
+- The website must be optimized for all devices, ensuring an excellent user experience on both mobile and desktop.
 
-### Taustad ja Piirjooned
+# Components and Samples
 
-- Kuldne kollane taust (#FFD700) koos tume sinakasroheliste piirjoontega (#2F4858). Kogu veebileht peab olema visuaalselt harmooniline ja mitte ülekoormatud.
+## Navigation (Nav)
 
-### Varjud ja Vahekaugused
+- Background: Dark teal (#2F4858)
+- Text: White (#FFFFFF)
+- Active link: Golden yellow (#FFD700)
+- Hover effect: Text changes to light teal (#5F7380)
 
-- Kasutatakse peeneid varje ja vahekaugusi, et luua sügavust ja visuaalset huvitavust.
+## Footer Area
 
-### Responsiivsus
+- Background: Dark teal (#2F4858)
+- Text: White (#FFFFFF)
+- Links: Light teal (#5F7380)
+- Hover effect: Text changes to golden yellow (#FFD700)
 
-- Veebileht peab olema optimeeritud kõigi seadmete jaoks, tagades suurepärase kasutajakogemuse nii mobiilis kui ka lauaarvutis.
+## Features Section
 
-## Komponendid ja Näidised
+- Background: Golden yellow (#FFD700)
+- Headings and text: Dark teal (#2F4858)
+- Cards: White background (#FFFFFF) and dark teal text
 
-### Navigatsioon (Nav)
+## Pricing Section
 
-- **Taust:** Tume sinakasroheline (#2F4858)
-- **Tekst:** Valge (#FFFFFF)
-- **Aktiveeritud link:** Kuldne kollane (#FFD700)
-- **Hover-efekt:** Tekst muutub hele sinakasroheliseks (#5F7380)
+- Background: Golden yellow (#FFD700)
+- Headings and text: Dark teal (#2F4858)
+- Cards: White background (#FFFFFF) and dark teal text
+- Buttons: Golden yellow background (#FFD700) and dark teal text (#2F4858)
 
-### Jaluse ala (Footer)
+## Content Section
 
-- **Taust:** Tume sinakasroheline (#2F4858)
-- **Tekst:** Valge (#FFFFFF)
-- **Lingid:** Hele sinakasroheline (#5F7380)
-- **Hover-efekt:** Tekst muutub kuldseks kollaseks (#FFD700)
+- Background: Golden yellow (#FFD700)
+- Headings and text: Dark teal (#2F4858)
+- Images: High-quality photos with dark teal borders
 
-### Omaduste sektsioon (Features)
+# Conclusion
 
-- **Taust:** Kuldne kollane (#FFD700)
-- **Pealkirjad ja tekst:** Tume sinakasroheline (#2F4858)
-- **Kaardid:** Valge (#FFFFFF) taust ja tume sinakasroheline tekst
+The design of the Kalda Talu website must align with the farm's values, offering satisfaction and visual pleasure to users. All elements must be carefully selected and implemented to create a unified and professional appearance that reflects the essence and mission of the farm. Following these guidelines ensures that the Kalda Talu website is visually appealing, functional, and user-friendly, helping to create a strong brand presence online.
 
-### Hinnakirja sektsioon (Pricing)
+# Inaccuracies and Inconsistencies
 
-- **Taust:** Kuldne kollane (#FFD700)
-- **Pealkirjad ja tekst:** Tume sinakasroheline (#2F4858)
-- **Kaardid:** Valge (#FFFFFF) taust ja tume sinakasroheline tekst
-- **Nupud:** Kuldne kollane taust (#FFD700) ja tume sinakasroheline tekst (#2F4858)
+## Color Harmony
 
-### Sisu sektsioon (Content)
+- Yellow (#FFD700) and dark teal (#2F4858) may provide sufficient contrast, but golden yellow may be too bright on a light background (e.g., white), causing visual fatigue.
+- Golden yellow may be too bright for larger areas. It is recommended to test different shades of yellow with users to find the most pleasant and functional option.
 
-- **Taust:** Kuldne kollane (#FFD700)
-- **Pealkirjad ja tekst:** Tume sinakasroheline (#2F4858)
-- **Pildid:** Kõrge kvaliteediga fotod koos tume sinakasrohelistest ääristega
+## Interactive Elements
 
-## Järeldus
+- Using a golden yellow background (#FFD700) for interactive boxes may be too dominant and visually tiring. Consider softer tones or additional neutral colors to balance the design.
 
-Kalda Talu kodulehe kujundus peab olema kooskõlas talu väärtustega ja pakkuma kasutajatele rahulolu ning visuaalset naudingut. Kõik elemendid peavad olema hoolikalt valitud ja rakendatud, et luua ühtne ja professionaalne välimus, mis peegeldab talu olemust ja missiooni. Nende juhiste järgimine tagab, et Kalda Talu koduleht on visuaalselt atraktiivne, funktsionaalne ja kasutajasõbralik, aidates luua tugevat brändi kohalolu veebis.
+## Visual Load
 
-## Ebatäpsused ja Vastuolud
+- To maintain overall harmony, it is important to ensure that the page is not overloaded with bright colors. Excessive use of colors and elements can make the page visually tiring.
 
-### Värvide Kooskõla
+## Color and Contrast Testing
 
-- Kollane (#FFD700) ja tume sinakasroheline (#2F4858) võivad pakkuda piisavat kontrasti, kuid kuldne kollane võib olla heledal taustal (nt. valge) liiga erksav, põhjustades visuaalset väsimust.
-- Kuldne kollane võib olla liiga hele suuremate pindade jaoks. Soovitatav on testida erinevaid kollase toone kasutajatega, et leida kõige meeldivam ja funktsionaalne variant.
+- It is important to conduct contrast tests to ensure sufficient readability and accessibility. Color blindness simulations and adherence to WCAG standards help ensure the site is accessible to all users.
 
-### Interaktiivsed Elemendid
-
-- Kuldse kollase tausta (#FFD700) kasutamine interaktiivsete kastide jaoks võib olla liiga domineeriv ja visuaalselt väsitav. Võiks kaaluda pehmemaid toone või täiendavaid neutraalseid värve, et tasakaalustada disaini.
-
-### Visuaalne Koormus
-
-- Üldise harmoonia säilitamiseks on oluline jälgida, et leht ei oleks ülekoormatud erksate värvidega. Värvide ja elementide liigne kasutamine võib muuta lehe visuaalselt väsitavaks.
-
-### Värvide ja Kontrasti Testimine
-
-- Oluline on läbi viia kontrasti testid, et tagada piisav loetavus ja ligipääsetavus. Värvipimeduse simulatsioonid ja WCAG standardite järgimine aitavad tagada, et leht on kättesaadav kõigile kasutajatele.
-
-Kokkuvõttes, kuigi brändiraamat pakub tugeva aluse Kalda Talu veebilehe disainiks, on oluline tähelepanu pöörata värvide ja fondide harmooniale, visua
+In conclusion, while the brand book provides a strong foundation for the design of the Kalda Talu website, it is essential to pay attention to the harmony of colors and fonts, visual balance, and accessibility.
