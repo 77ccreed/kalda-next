@@ -454,33 +454,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         callToActionLink="/contact"
         callToAction2="Teenused"
         callToActionLink2="/about"
-        images={[
-          {
-            src: Img6.src,
-            alt: 'Puhkemaja',
-            aspectRatio: 3 / 2
-          },
-          {
-            src: Img5.src,
-            alt: 'Kodumajutuse toad',
-            aspectRatio: 4 / 3
-          },
-          {
-            src: Img4.src,
-            alt: 'Lihtne öömaja',
-            aspectRatio: 3 / 4
-          },
-          {
-            src: Img3.src,
-            alt: 'Kämpingumaja',
-            aspectRatio: 3 / 2
-          },
-          {
-            src: Img1.src,
-            alt: 'Telkimisniit',
-            aspectRatio: 4 / 3
-          }
-        ]}
+
       />
       <Features {...featuresData} />
       <Pricing {...pricingData} />
