@@ -114,6 +114,7 @@ const CarouselHero = ({
                               width={image.width}
                               height={image.height}
                               className="rounded-md object-cover drop-shadow-2xl"
+                              priority
                             />
                           </CardContent>
                         </Card>
