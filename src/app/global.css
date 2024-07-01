@@ -4,40 +4,42 @@
 
 @layer base {
   :root {
+    /* Backgrounds */
     --background: #FFFFFF;
     --foreground: #2F4858;
-
     --card: #E0E0E0;
-    --card-foreground: #2F4858;
-
     --popover: #FFFFFF;
-    --popover-foreground: #2F4858;
 
+    /* Text Colors */
+    --text-primary: #2F4858;
+    --text-secondary: #FFFFFF;
+    --text-muted: #757575;
+    --text-highlight: #FFFFFF;
+
+    /* Primary Colors */
     --primary: #FFD700;
     --primary-foreground: #2F4858;
 
+    /* Secondary Colors */
     --secondary: #2F4858;
     --secondary-foreground: #FFFFFF;
 
-    --muted: #E0E0E0;
-    --muted-foreground: #757575;
-
+    /* Accent Colors */
     --accent: #C8E6C9;
     --accent-foreground: #2F4858;
-
     --highlight: #E57373;
     --highlight-foreground: #FFFFFF;
 
+    /* Misc Colors */
     --destructive: #F44336;
     --destructive-foreground: #FFFFFF;
-
     --border: #2F4858;
     --input: #757575;
     --ring: #757575;
-
     --neutral: #E0E0E0;
     --neutral-foreground: #2F4858;
 
+    /* Border Radius */
     --radius: 0.5rem;
   }
 }
@@ -46,8 +48,17 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground font-body;
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-highlight {
+    color: var(--text-highlight);
   }
 }
 
@@ -57,23 +68,23 @@
   }
 
   .hover-accent {
-    @apply hover:text-primary transition-colors;
+    @apply hover:text-primary transition-colors duration-300;
   }
 
   .btn {
-    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-colors duration-300;
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary-dark focus:ring-2 focus:ring-primary-foreground;
+    @apply bg-primary text-primary-foreground hover:bg-primary-dark focus:ring-2 focus:ring-primary-foreground active:bg-primary-darker disabled:bg-primary-muted;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary-light focus:ring-2 focus:ring-secondary-foreground;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary-light focus:ring-2 focus:ring-secondary-foreground active:bg-secondary-darker disabled:bg-secondary-muted;
   }
 
   .btn-highlight {
-    @apply bg-highlight text-highlight-foreground hover:bg-highlight-dark focus:ring-2 focus:ring-highlight-foreground;
+    @apply bg-highlight text-highlight-foreground hover:bg-highlight-dark focus:ring-2 focus:ring-highlight-foreground active:bg-highlight-darker disabled:bg-highlight-muted;
   }
 
   .heading {
