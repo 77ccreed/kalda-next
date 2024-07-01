@@ -50,7 +50,7 @@ const Content = ({
       <div className="mx-auto max-w-7xl">
         <div className={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
           <div className="self-center md:basis-1/2">
-            {content && <div className="mb-8 lg:mb-12 text-lg text-primary-foreground">{content}</div>}
+            {content && <div className="mb-8 lg:mb-12 text-lg text-primary-foreground leading-relaxed">{content}</div>}
             {items && (
               <div className="gap-4 md:gap-y-6">
                 {items.map((item, idx) => (
@@ -70,7 +70,7 @@ const Content = ({
           <div aria-hidden="true" className="mt-10 md:mt-0 md:basis-1/2">
             {image && (
               <div className="relative m-auto max-w-4xl">
-                <Card className="w-full h-full bg-primary shadow-lg">
+                <Card className="w-full h-full bg-primary shadow-lg hover:shadow-2xl transition-shadow duration-300">
                   <CardContent className="p-0">
                     <Image
                       className="w-full rounded-lg object-cover"
