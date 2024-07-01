@@ -22,7 +22,7 @@
   },
   "LocaleSwitcher": {
     "label": "Vaheta keelt",
-    "locale": "{locale, select, de {🇩🇪 Saksa keel} en {🇺🇸 Inglise keel} other {ET Eesti keel}}"
+    "locale": "{locale, select, de {🇩🇪 Saksa keel} en {🇺🇸 Inglise keel} et {🇪🇪 Eesti keel} other {Unknown}}"
   },
   "Navigation": {
     "home": "Kalda Talu",
