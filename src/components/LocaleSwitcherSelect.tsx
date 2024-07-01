@@ -2,8 +2,9 @@
 
 import clsx from 'clsx';
 import { useParams } from 'next/navigation';
-import { ChangeEvent, ReactNode, useTransition } from 'react';
+import { useTransition } from 'react';
 import { useRouter, usePathname } from '../navigatsion';
+import { FlagIcon } from './FlagIcon';
 
 type Props = {
   value: string;
@@ -21,12 +22,11 @@ export default function LocaleSwitcherSelect({
   const pathname = usePathname();
   const params = useParams();
 
-  function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-    const nextLocale = event.target.value;
+  function onSelectChange() {
     startTransition(() => {
       router.replace(
         { pathname, params },
-        { locale: nextLocale }
+        { locale: value }
       );
     });
   }
@@ -34,14 +34,14 @@ export default function LocaleSwitcherSelect({
   return (
     <button
       className={clsx(
-        'block w-full px-4 py-2 text-left transition-colors',
+        'w-full px-4 py-2 text-left transition-colors flex items-center',
         isActive ? 'text-primary font-semibold' : 'text-white hover:text-primary',
         isPending && 'opacity-50 cursor-not-allowed'
       )}
       onClick={onSelectChange}
-      value={value}
       disabled={isPending}
     >
+      <FlagIcon code={value} className="mr-2" />
       {label}
     </button>
   );
