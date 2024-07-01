@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { usePathname } from 'next/navigation';
 import { SiFacebook, SiTripadvisor } from 'react-icons/si';
-import { Home, Building, Bed, Award, Map } from "lucide-react";
+import { Home, Building, Bed, Award, Map, Mail, Phone } from "lucide-react";
 import NavigationLink from "./NavigationLink";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -35,7 +35,7 @@ const navigationLinks = [
 const Branding = () => {
   const t = useTranslations("Navigation");
   return (
-    <div className="flex flex-col items-center md:items-start">
+    <div className="flex flex-col items-center md:items-start text-center md:text-left">
       <h2 className="text-3xl font-bold mb-4">{t("brandingTitle")}</h2>
       <p className="mb-2">{t("brandingSubtitle1")}</p>
       <p className="mb-4">{t("brandingSubtitle2")}</p>
@@ -49,7 +49,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col items-center md:items-start">
+    <div className="flex flex-col items-center md:items-start text-center md:text-left">
       <h3 className="text-2xl font-semibold mb-4">{t("navigationTitle")}</h3>
       <nav className="flex flex-col space-y-2">
         {navigationLinks.map(({ href, paths, translationKey }) => (
@@ -69,34 +69,42 @@ const Navigation = () => {
 const ContactInfo = () => {
   const t = useTranslations("Navigation");
   return (
-    <div className="flex flex-col items-center md:items-start">
+    <div className="flex flex-col items-center md:items-start text-center md:text-left">
       <h3 className="text-2xl font-semibold mb-4">{t("contactTitle")}</h3>
       <p className="mb-2">{t("address")}</p>
-      <p className="mb-2">
+      <div className="flex items-center mb-2">
+        <Mail className="w-5 h-5 mr-2" />
         <a href="mailto:puhkekeskus@msn.com" className="hover-accent" aria-label="Email us at puhkekeskus@msn.com">
           {t("email")}
         </a>
-      </p>
-      <p className="mb-2">
+      </div>
+      <div className="flex items-center mb-2">
+        <Phone className="w-5 h-5 mr-2" />
         <a href="tel:+37256652061" className="hover-accent" aria-label="Call us at +37256652061">
           {t("phone1")} ({t("phone1Language")})
         </a>
-      </p>
-      <p className="mb-2">
+      </div>
+      <div className="flex items-center mb-2">
+        <Phone className="w-5 h-5 mr-2" />
         <a href="tel:+37255594776" className="hover-accent" aria-label="Call us at +37255594776">
           {t("phone2")} ({t("phone2Language")})
         </a>
-      </p>
-      <p className="font-bold mb-2">{t("bankAccount1")}</p>
-      <p className="font-bold mb-2">{t("bankAccount2")}</p>
-      <p className="font-bold">{t("bankAccount3")}</p>
+      </div>
+      <div className="mt-4">
+        <h4 className="font-bold mb-2">{t("bankAccountTitle")}</h4>
+        <ul className="list-disc list-inside">
+          <li>{t("bankAccount1")}</li>
+          <li>{t("bankAccount2")}</li>
+          <li>{t("bankAccount3")}</li>
+        </ul>
+      </div>
     </div>
   );
 }
 
 const SocialMediaLinks = () => {
   return (
-    <div className="flex space-x-4">
+    <div className="flex justify-center md:justify-start space-x-4 mt-4 md:mt-0">
       {socialMediaLinks.map(({ href, label, Icon }) => (
         <Tooltip key={href}>
           <TooltipTrigger asChild>
@@ -125,7 +133,7 @@ const Footer = () => {
           <Navigation />
           <ContactInfo />
         </div>
-        <div className="container mx-auto px-4 mt-8 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="container mx-auto px-4 mt-8 border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <SocialMediaLinks />
           <p className="mt-4 md:mt-0 text-sm">&copy; {currentYear} {t("allRightsReserved")}</p>
         </div>
