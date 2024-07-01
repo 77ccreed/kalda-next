@@ -6,15 +6,15 @@ import { ChangeEvent, ReactNode, useTransition } from 'react';
 import { useRouter, usePathname } from '../navigatsion';
 
 type Props = {
-  children: ReactNode;
-  defaultValue: string;
+  value: string;
   label: string;
+  isActive: boolean;
 };
 
 export default function LocaleSwitcherSelect({
-  children,
-  defaultValue,
-  label
+  value,
+  label,
+  isActive,
 }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
@@ -25,9 +25,6 @@ export default function LocaleSwitcherSelect({
     const nextLocale = event.target.value;
     startTransition(() => {
       router.replace(
-        // @ts-expect-error -- TypeScript will validate that only known `params`
-        // are used in combination with a given `pathname`. Since the two will
-        // always match for the current route, we can skip runtime checks.
         { pathname, params },
         { locale: nextLocale }
       );
@@ -35,22 +32,17 @@ export default function LocaleSwitcherSelect({
   }
 
   return (
-    <label
+    <button
       className={clsx(
-        'relative text-gray-400',
-        isPending && 'transition-opacity [&:disabled]:opacity-30'
+        'block w-full px-4 py-2 text-left transition-colors',
+        isActive ? 'text-primary font-semibold' : 'text-white hover:text-primary',
+        isPending && 'opacity-50 cursor-not-allowed'
       )}
+      onClick={onSelectChange}
+      value={value}
+      disabled={isPending}
     >
-      <p className="sr-only">{label}</p>
-      <select
-        className="inline-flex appearance-none bg-transparent py-3 pl-2 pr-6"
-        defaultValue={defaultValue}
-        disabled={isPending}
-        onChange={onSelectChange}
-      >
-        {children}
-      </select>
-      <span className="pointer-events-none absolute right-2 top-[8px]">⌄</span>
-    </label>
+      {label}
+    </button>
   );
 }
