@@ -35,7 +35,7 @@ const pricingData = {
         alt: "Telkimisala"
       }
     },
-    // Ülejäänud hinnapaketid...
+    // Other price packages...
   ]
 };
 
