@@ -26,16 +26,16 @@ type ComparisonProps = {
 };
 
 const Comparison = ({ header, columns, id, hasBackground = false }: ComparisonProps) => (
-  <WidgetWrapper id={id || 'comparison'} hasBackground={hasBackground} containerClass="bg-primary text-secondary">
+  <WidgetWrapper id={id || 'comparison'} hasBackground={hasBackground} containerClass="bg-primary text-secondary py-12">
     {header && (
       <Headline
         header={header}
         containerClass="text-center mb-8"
-        titleClass="text-3xl font-bold text-secondary"
+        titleClass="text-4xl font-bold text-secondary"
         subtitleClass="mt-4 text-xl text-secondary"
       />
     )}
-    <div className="relative ml-[-1em] flex overflow-x-auto md:pb-12">
+    <div className="relative flex overflow-x-auto pb-12">
       {columns.map(({ title, items, callToAction }, index) => (
         <div
           key={`column-content-${index}`}
@@ -59,10 +59,8 @@ const Comparison = ({ header, columns, id, hasBackground = false }: ComparisonPr
             </div>
           ))}
           {index !== 0 && callToAction && (
-            <Button className="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors mt-8">
-              <NavigationLink href={
-                callToAction.href
-              }>
+            <Button className="w-full bg-secondary text-white hover:bg-secondary-dark transition-colors mt-8 shadow-lg">
+              <NavigationLink href={callToAction.href}>
                 {callToAction.text}
               </NavigationLink>
             </Button>
