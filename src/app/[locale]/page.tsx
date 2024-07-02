@@ -114,13 +114,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         period: "öö kohta inimesele",
         items: ["Ruum kuni 400 inimesele", "Lõkkease", "Lipuvarras skautidele", "Väliköök pliidiga"],
         callToAction: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine/telkimisala",
+          text: "Loe rohkem",
+          href: "/telkimisala",
           targetBlank: false
         },
         callToAction2: {
-          text: "Loe rohkem",
-          href: "/telkimisala",
+          text: "Broneeri nüüd",
+          href: "/broneerimine",
           targetBlank: false
         },
         image: {
@@ -135,13 +135,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         period: "öö kohta inimesele",
         items: ["4 parkimiskohta elektriga", "Ruum rohkematele karavanidele", "Saadaval vesi ja gaas", "Tualeti tühjendamise võimalus"],
         callToAction: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine/karavanid-autoelamud",
+          text: "Loe rohkem",
+          href: "/karavanid-autoelamud",
           targetBlank: false
         },
         callToAction2: {
-          text: "Loe rohkem",
-          href: "/karavanid-autoelamud",
+          text: "Broneeri nüüd",
+          href: "/broneerimine",
           targetBlank: false
         },
         image: {
@@ -156,13 +156,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         period: "öö kohta",
         items: ["Küttega kämpingud", "Kaheinimesevoodi ja narivoodi", "Kohvimasin ja lauanõud", "Külma veega pesemine kraanikausis"],
         callToAction: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine/kampingumajad",
+          text: "Loe rohkem",
+          href: "/kampingumajad",
           targetBlank: false
         },
         callToAction2: {
-          text: "Loe rohkem",
-          href: "/kampingumajad",
+          text: "Broneeri nüüd",
+          href: "/broneerimine",
           targetBlank: false
         },
         hasRibbon: true,
@@ -179,13 +179,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         period: "öö kohta",
         items: ["Jagatud toad", "Täiendavad mugavused privaatseks kasutamiseks", "Koridori dushid", "Ligipääsetav aastaringselt"],
         callToAction: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine/hostel",
+          text: "Loe rohkem",
+          href: "/hostel",
           targetBlank: false
         },
         callToAction2: {
-          text: "Loe rohkem",
-          href: "/hostel",
+          text: "Broneeri nüüd",
+          href: "/broneerimine",
           targetBlank: false
         },
         image: {
@@ -200,13 +200,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         period: "öö kohta",
         items: ["Toad kaheinimesevooditega", "Minibaar ja õhukonditsioneer", "Rikkalik hommikusöök hinna sees", "Jagatud vannitoa mugavused"],
         callToAction: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine/kodumajutuse-toad",
+          text: "Loe rohkem",
+          href: "/kodumajutuse-toad",
           targetBlank: false
         },
         callToAction2: {
-          text: "Loe rohkem",
-          href: "/kodumajutuse-toad",
+          text: "Broneeri nüüd",
+          href: "/broneerimine",
           targetBlank: false
         },
         hasRibbon: true,
@@ -223,13 +223,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         period: "nelja öö või nädala kohta",
         items: ["Maja kuni 6 inimesele", "Elutuba kaminaga", "Täielikult varustatud köök", "Saun ja vannituba"],
         callToAction: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine/puhkemaja",
+          text: "Loe rohkem",
+          href: "/puhkemaja",
           targetBlank: false
         },
         callToAction2: {
-          text: "Loe rohkem",
-          href: "/puhkemaja",
+          text: "Broneeri nüüd",
+          href: "/broneerimine",
           targetBlank: false
         },
         image: {
@@ -237,9 +237,9 @@ export default function IndexPage({ params: { locale } }: Props) {
           alt: "Puhkemaja"
         }
       }
-
     ]
   };
+
 
 
 
