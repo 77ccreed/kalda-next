@@ -43,10 +43,10 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
     {header && (
       <Headline
         header={header}
-        containerClass="mb-12 text-center"
-        titleClass="text-4xl font-bold text-primary-foreground"
+        containerClass="mb-8 md:mb-14 text-center"
+        titleClass="text-4xl md:text-5xl text-primary-foreground"
         subtitleClass="mt-4 text-xl text-primary-foreground"
-        taglineClass="text-md text-muted-foreground"
+        taglineClass="text-secondary"
       />
     )}
     <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -87,17 +87,17 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
               ))}
             </ul>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              {price.callToAction && (
+              {price.callToAction2 && (
                 <Button asChild variant="primary" className="shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                  <NavigationLink href={price.callToAction.href}>
-                    {price.callToAction.text}
+                  <NavigationLink href={price.callToAction2.href}>
+                    {price.callToAction2.text}
                   </NavigationLink>
                 </Button>
               )}
-              {price.callToAction2 && (
+              {price.callToAction && (
                 <Button asChild variant="secondary" className="shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-                  <NavigationLink href={price.callToAction2.href}>
-                    {price.callToAction2.text}
+                  <NavigationLink href={price.callToAction.href}>
+                    {price.callToAction.text}
                   </NavigationLink>
                 </Button>
               )}
