@@ -88,7 +88,7 @@ const Pricing = ({ header, prices, id, hasBackground = true }: PricingProps) => 
             </ul>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               {price.callToAction && (
-                <Button asChild variant="primary" className="shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <Button asChild variant="ghost" className="shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                   <NavigationLink href={price.callToAction.href}>
                     {price.callToAction.text}
                   </NavigationLink>
