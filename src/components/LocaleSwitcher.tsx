@@ -32,7 +32,6 @@ export default function LocaleSwitcher() {
                 <LocaleSwitcherSelect
                   value={cur}
                   label={t('locale', { locale: cur })}
-                  isActive={cur === locale}
                 />
               </NavigationMenuLink>
             ))}
