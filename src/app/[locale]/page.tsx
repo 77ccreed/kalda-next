@@ -102,7 +102,7 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   const pricingData = {
     header: {
-      title: "Meie Majutusvõimalused",
+      title: "Meie majutusvõimalused",
       subtitle: "Vali endale sobiv peatuspaik.",
       tagline: "Hinnakiri"
     },
