@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
-//import Hero from '@/components/Hero';
+import Hero from '@/components/Hero';
 import Puhkemaja from '@/assets/images/puhkemaja/puhkemaja.jpg';
 import Sommer from '@/assets/images/tegevused/sommer.jpg';
 import ImgSkaut from '@/assets/images/skaudid/skaudipilt2.jpg';
@@ -12,11 +12,12 @@ import Img5 from '@/assets/images/bbtoad/GHroom2a.jpg';
 import Img6 from '@/assets/images/puhkemaja/puhkemaja SW.jpg';
 import Features from '@/components/Features';
 import { BedDouble, ShowerHead, Coffee, Check, CheckCircle, MapPin, Car } from "lucide-react";
-import CarouselHero from '@/components/CarouselHero';
-import HeroImageGrid from '@/components/HeroImageGrid';
+//import CarouselHero from '@/components/CarouselHero';
+//import HeroImageGrid from '@/components/HeroImageGrid';
 import Pricing from '@/components/Pricing';
 import Comparison from '@/components/Comparison';
 import Content from '@/components/Content';
+import Img from '@/assets/images/taust.jpg';
 
 type Props = {
   params: { locale: string };
@@ -115,7 +116,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         items: ["Ruum kuni 400 inimesele", "Lõkkease", "Lipuvarras skautidele", "Väliköök pliidiga"],
         callToAction: {
           text: "Loe rohkem",
-          href: "/telkimisala",
+          href: "/majutus/telkimisala",
           targetBlank: false
         },
         callToAction2: {
@@ -136,7 +137,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         items: ["4 parkimiskohta elektriga", "Ruum rohkematele karavanidele", "Saadaval vesi ja gaas", "Tualeti tühjendamise võimalus"],
         callToAction: {
           text: "Loe rohkem",
-          href: "/karavanid-autoelamud",
+          href: "/majutus/karavanid-autoelamud",
           targetBlank: false
         },
         callToAction2: {
@@ -157,7 +158,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         items: ["Küttega kämpingud", "Kaheinimesevoodi ja narivoodi", "Kohvimasin ja lauanõud", "Külma veega pesemine kraanikausis"],
         callToAction: {
           text: "Loe rohkem",
-          href: "/kampingumajad",
+          href: "/majutus/kampingumajad",
           targetBlank: false
         },
         callToAction2: {
@@ -180,7 +181,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         items: ["Jagatud toad", "Täiendavad mugavused privaatseks kasutamiseks", "Koridori dushid", "Ligipääsetav aastaringselt"],
         callToAction: {
           text: "Loe rohkem",
-          href: "/hostel",
+          href: "/majutus/hostel",
           targetBlank: false
         },
         callToAction2: {
@@ -201,7 +202,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         items: ["Toad kaheinimesevooditega", "Minibaar ja õhukonditsioneer", "Rikkalik hommikusöök hinna sees", "Jagatud vannitoa mugavused"],
         callToAction: {
           text: "Loe rohkem",
-          href: "/kodumajutuse-toad",
+          href: "/majutus/kodumajutuse-toad",
           targetBlank: false
         },
         callToAction2: {
@@ -224,7 +225,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         items: ["Maja kuni 6 inimesele", "Elutuba kaminaga", "Täielikult varustatud köök", "Saun ja vannituba"],
         callToAction: {
           text: "Loe rohkem",
-          href: "/puhkemaja",
+          href: "/majutus/puhkemaja",
           targetBlank: false
         },
         callToAction2: {
@@ -446,7 +447,7 @@ export default function IndexPage({ params: { locale } }: Props) {
   };
   return (
     <>
-      <HeroImageGrid
+      <Hero
         title={t('title')}
         subtitle="Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel"
         tagline="Puhkekeskus"
@@ -454,7 +455,11 @@ export default function IndexPage({ params: { locale } }: Props) {
         callToActionLink="/contact"
         callToAction2="Teenused"
         callToActionLink2="/about"
-
+        image={{
+          src: Img.src,
+          alt: 'Tere',
+          blurDataURL: 'yourBase64EncodedImage'
+        }}
       />
       <Features {...featuresData} />
       <Pricing {...pricingData} />
