@@ -41,31 +41,16 @@ export default function IndexPage({ params: { locale } }: Props) {
         title: "Erinevad majutusvõimalused",
         description: "Pakume mitmesugust majutust: alates väga lihtsast vähenõudlikule inimesele, kuni mugava ja luksuslikuni. Vali endale sobiv.",
         icon: BedDouble,
-        callToAction: {
-          text: "Learn More",
-          href: "/feature-one",
-          targetBlank: false,
-        },
       },
       {
         title: "Pesemisvõimalused",
         description: "Kui broneerite privaatse ruumi või voodi hostelis on ka jagatud duširuum hinna sees. Muude majutusviiside korral lisandub väike tasu.",
         icon: ShowerHead,
-        callToAction: {
-          text: "Learn More",
-          href: "/feature-two",
-          targetBlank: false,
-        },
       },
       {
         title: "Hommikusöök",
         description: "Me ei valmista sooja sööki. Privaat-tubade külalistele serveerime rikkaliku külma hommikusöögi, kõikides jagatud tubades on kohvi ja tee valmistamise võimalus. Samuti on olemas külmkapp.",
         icon: Coffee,
-        callToAction: {
-          text: "Learn More",
-          href: "/feature-three",
-          targetBlank: false,
-        },
       },
     ],
     columns: 3,
