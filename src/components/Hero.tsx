@@ -41,9 +41,9 @@ const Hero = ({
         >
           <defs>
             <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style={{ stopColor: '#f85e00', stopOpacity: 1 }} />
-              <stop offset="50%" style={{ stopColor: '#f85e00', stopOpacity: 1 }} />
-              <stop offset="100%" style={{ stopColor: '#f85e00', stopOpacity: 1 }} />
+              <stop offset="0%" style={{ stopColor: '#E57373', stopOpacity: 1 }} />
+              <stop offset="50%" style={{ stopColor: '#E57373', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#E57373', stopOpacity: 1 }} />
             </linearGradient>
           </defs>
           <path fill="url(#rainbow-gradient)" d="M0,64 C480,192 960,64 1440,192 L1440,320 L0,320 Z" />
