@@ -31,6 +31,7 @@ const Navigation: React.FC = () => {
           <NavigationLink
             href="/"
             className={`text-2xl font-bold ${pathname === '/' ? 'text-primary' : 'text-white'} hover:text-primary transition-colors`}
+            onClick={handleLinkClick} // Added onClick handler here
           >
             {t("home")}
           </NavigationLink>
@@ -38,6 +39,7 @@ const Navigation: React.FC = () => {
             <NavigationLink
               href="/meist"
               className={`block px-4 py-2 ${pathname === '/meist' ? 'text-primary font-semibold' : 'text-white'} hover:text-primary transition-colors`}
+              onClick={handleLinkClick} // Added onClick handler here
             >
               {t("meist")}
             </NavigationLink>
@@ -50,32 +52,32 @@ const Navigation: React.FC = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-56">
                     <NavigationMenuLink>
-                      <NavigationLink href="/majutus/hostel" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/hostel' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/majutus/hostel" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/hostel' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("hostel")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/majutus/kodumajutuse-toad" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/kodumajutuse-toad' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/majutus/kodumajutuse-toad" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/kodumajutuse-toad' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("kodumajutuseToad")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/majutus/puhkemaja" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/puhkemaja' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/majutus/puhkemaja" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/puhkemaja' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("puhkemaja")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/majutus/kampingmajad" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/kampingmajad' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/majutus/kampingmajad" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/kampingmajad' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("kampingmajad")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/majutus/karavanid-ja-autoelamud" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/karavanid-ja-autoelamud' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/majutus/karavanid-ja-autoelamud" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/karavanid-ja-autoelamud' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("karavanidJaAutoelamud")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/majutus/telkimisala" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/telkimisala' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/majutus/telkimisala" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/majutus/telkimisala' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("telkimisala")}
                       </NavigationLink>
                     </NavigationMenuLink>
@@ -91,17 +93,17 @@ const Navigation: React.FC = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-secondary text-white rounded shadow-lg py-2 w-56">
                     <NavigationMenuLink>
-                      <NavigationLink href="/teenused/kanuurent" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/teenused/kanuurent' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/teenused/kanuurent" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/teenused/kanuurent' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("kanuurent")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/teenused/sundmuste-korraldamine" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/teenused/sundmuste-korraldamine' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/teenused/sundmuste-korraldamine" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/teenused/sundmuste-korraldamine' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("sündmusteKorraldamine")}
                       </NavigationLink>
                     </NavigationMenuLink>
                     <NavigationMenuLink>
-                      <NavigationLink href="/teenused/saun" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/teenused/saun' ? 'text-primary' : 'text-white'}`}>
+                      <NavigationLink href="/teenused/saun" className={`block px-4 py-2 hover:bg-primary hover:text-secondary transition-colors duration-200 ${pathname === '/teenused/saun' ? 'text-primary' : 'text-white'}`} onClick={handleLinkClick}>
                         {t("saun")}
                       </NavigationLink>
                     </NavigationMenuLink>
@@ -113,12 +115,14 @@ const Navigation: React.FC = () => {
             <NavigationLink
               href="/broneerimine"
               className={`block px-4 py-2 ${pathname === '/broneerimine' ? 'text-primary font-semibold' : 'text-white'} hover:text-primary transition-colors`}
+              onClick={handleLinkClick} // Added onClick handler here
             >
               {t("broneerimine")}
             </NavigationLink>
             <NavigationLink
               href="/kontakt"
               className={`block px-4 py-2 ${pathname === '/kontakt' ? 'text-primary font-semibold' : 'text-white'} hover:text-primary transition-colors`}
+              onClick={handleLinkClick} // Added onClick handler here
             >
               {t("kontakt")}
             </NavigationLink>
