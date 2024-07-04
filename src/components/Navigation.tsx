@@ -30,8 +30,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center">
           <NavigationLink
             href="/"
-            className={`text-3xl font-extrabold tracking-tight ${pathname === '/' ? 'text-primary' : 'text-white'} hover:text-primary transition-colors`}
-            style={{ fontFamily: "'Lora', serif" }}
+            className={`text-2xl font-bold ${pathname === '/' ? 'text-primary' : 'text-white'} hover:text-primary transition-colors`}
           >
             {t("home")}
           </NavigationLink>
@@ -127,7 +126,7 @@ const Navigation: React.FC = () => {
         </div>
         <div className="flex items-center">
           <LocaleSwitcher />
-          <Button onClick={toggleMenu} className="md:hidden ml-4 p-2 bg-[#2F4858]" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen}>
+          <Button onClick={toggleMenu} className="md:hidden ml-4 p-2 bg-[#2F4858] hover:bg-[#1F2C3A]" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen}>
             {isOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
           </Button>
         </div>
