@@ -32,8 +32,23 @@ const Hero = ({
 
   return (
     <section className="relative bg-secondary text-primary-foreground" id="hero" role="banner" aria-labelledby="hero-title">
-      <div className="absolute inset-0 overflow-hidden border-border">
-        <div className="absolute left-0 top-1 h-[20500px] w-[20500px] translate-x-[-47.5%] rounded-full bg-primary" />
+      <div className="absolute inset-0 overflow-hidden">
+        <svg
+          className="absolute top-0 left-0 w-full h-24"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style={{ stopColor: '#f85e00', stopOpacity: 1 }} />
+              <stop offset="50%" style={{ stopColor: '#f85e00', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#f85e00', stopOpacity: 1 }} />
+            </linearGradient>
+          </defs>
+          <path fill="url(#rainbow-gradient)" d="M0,64 C480,192 960,64 1440,192 L1440,320 L0,320 Z" />
+        </svg>
+        <div className="absolute left-0 top-0 h-[20500px] w-[20500px] translate-x-[-42.5%] rounded-full bg-primary lg:h-[10250px] lg:w-[10250px]" />
       </div>
       <div className="container relative flex flex-col px-4">
         <div className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 md:flex md:min-h-screen">
