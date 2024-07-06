@@ -10,14 +10,18 @@ import Img3 from '@/assets/images/kampingmaja/chouse1_small.jpg';
 import Img4 from '@/assets/images/lihtneoomaja/kainestusmaja1_small.jpg';
 import Img5 from '@/assets/images/bbtoad/GHroom2a.jpg';
 import Img6 from '@/assets/images/puhkemaja/puhkemaja SW.jpg';
+import Ulrich from '@/assets/images/host/ulrich.jpg';
+import Heinar from '@/assets/images/host/heinar.jpg';
 import Features from '@/components/Features';
-import { BedDouble, ShowerHead, Coffee, Check, CheckCircle, MapPin, Car } from "lucide-react";
+import { BedDouble, ShowerHead, Coffee, Check, CheckCircle, MapPin, Car, Mail, Phone } from "lucide-react";
 //import CarouselHero from '@/components/CarouselHero';
 //import HeroImageGrid from '@/components/HeroImageGrid';
 import Pricing from '@/components/Pricing';
 import Comparison from '@/components/Comparison';
 import Content from '@/components/Content';
 import Img from '@/assets/images/taust.jpg';
+import Team from '@/components/Team';
+import { SiFacebook, SiTripadvisor } from 'react-icons/si';
 
 type Props = {
   params: { locale: string };
@@ -430,6 +434,34 @@ export default function IndexPage({ params: { locale } }: Props) {
     id: "peace",
     hasBackground: true,
   };
+
+  const teamMembers = [
+    {
+      name: 'Ulrich Altenkirch',
+      occupation: 'inglise ja saksa keel',
+      image: { src: Ulrich, alt: 'Ulrich Altenkirch' },
+
+      items: [
+        { title: 'Phone', href: 'tel:+3721234567', icon: Phone },
+        { title: 'Email', href: 'mailto:kalda@mail.ee', icon: Mail },
+        { title: 'Facebook', href: 'https://www.facebook.com/kaldatalu', icon: SiFacebook }
+      ]
+    },
+    {
+      name: 'Heinar Kroon',
+      occupation: 'eesti ja vene keel',
+      image: { src: Heinar, alt: 'Heinar Kroon' },
+
+      items: [
+        { title: 'Phone', href: 'tel:+3727654321', icon: Phone },
+        { title: 'Email', href: 'mailto:tere@gmail.com', icon: Mail },
+        { title: 'Facebook', href: 'https://www.facebook.com/kaldatalu', icon: SiFacebook }
+      ]
+    }
+
+  ];
+
+
   return (
     <>
       <Hero
@@ -438,7 +470,7 @@ export default function IndexPage({ params: { locale } }: Props) {
         tagline="Puhkekeskus"
         callToAction="Majutus"
         callToActionLink="/contact"
-        callToAction2="Teenused"
+        callToAction2="Asukoht"
         callToActionLink2="/about"
         image={{
           src: Img.src,
@@ -446,6 +478,7 @@ export default function IndexPage({ params: { locale } }: Props) {
           blurDataURL: 'yourBase64EncodedImage'
         }}
       />
+      <Team header={{ title: "Tere tulemast Kalda Tallu!", subtitle: "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. ", tagline: 'Võõrustajad' }} teams={teamMembers} hasBackground={true} />
       <Features {...featuresData} />
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} hasBackground={true} />
