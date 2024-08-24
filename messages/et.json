@@ -1,9 +1,143 @@
 {
   "IndexPage": {
-    "title": "Tere tulemast Kalda Tallu! Majutus kauni looduse keskel.",
-    "subtitle": "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel.",
-    "tagline": "Puhkekeskus"
+    "Hero": {
+      "title": "Tere tulemast Kalda Tallu! Majutus kauni looduse keskel.",
+      "subtitle": "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel.",
+      "tagline": "Puhkekeskus",
+      "callToAction": "Majutus",
+      "callToActionLink": "/kontakt",
+      "callToAction2": "Meist",
+      "callToActionLink2": "/meist",
+      "imageAlt": "Tere"
+    },
+    "Team": {
+      "header": {
+        "title": "Tere tulemast Kalda Tallu!",
+        "subtitle": "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv.",
+        "tagline": "Võõrustajad"
+      },
+      "members": {
+        "ulrichOccupation": "inglise ja saksa keel",
+        "heinarOccupation": "eesti ja vene keel"
+      }
+    },
+    "Features": {
+      "header": {
+        "title": "Majutus lihtsast luksuslikuni",
+        "subtitle": "Tere tulemast Kalda Talu Puhkekeskusesse! Siin saate tutvuda meie pakutavate majutusvõimaluste ja teenustega.",
+        "tagline": "Majutus"
+      },
+      "items": {
+        "accommodationOptions": {
+          "title": "Erinevad majutusvõimalused",
+          "description": "Pakume mitmesugust majutust: alates väga lihtsast vähenõudlikule inimesele, kuni mugava ja luksuslikuni. Vali endale sobiv."
+        },
+        "washingFacilities": {
+          "title": "Pesemisvõimalused",
+          "description": "Kui broneerite privaatse ruumi või voodi hostelis on ka jagatud duširuum hinna sees. Muude majutusviiside korral lisandub väike tasu."
+        },
+        "breakfast": {
+          "title": "Hommikusöök",
+          "description": "Me ei valmista sooja sööki. Privaat-tubade külalistele serveerime rikkaliku külma hommikusöögi, kõikides jagatud tubades on kohvi ja tee valmistamise võimalus. Samuti on olemas külmkapp."
+        }
+      }
+    },
+    "Pricing": {
+      "header": {
+        "title": "Meie majutusvõimalused",
+        "subtitle": "Vali endale sobiv peatuspaik.",
+        "tagline": "Hinnakiri"
+      },
+      "common": {
+        "readMore": "Loe rohkem",
+        "bookNow": "Broneeri nüüd",
+        "bookNowHref": "/broneerimine"
+      },
+      "prices": {
+        "camping": {
+          "title": "Telkimisala",
+          "subtitle": "Looduse armastajatele",
+          "period": "öö kohta inimesele",
+          "items": [
+            "Ruum kuni 400 inimesele",
+            "Lõkkease",
+            "Lipuvarras skautidele",
+            "Väliköök pliidiga"
+          ],
+          "imageAlt": "Telkimisala",
+          "readMoreHref": "/majutus/telkimisala"
+        },
+        "caravans": {
+          "title": "Karavanid ja autoelamud",
+          "subtitle": "Mugavus looduses",
+          "period": "öö kohta inimesele",
+          "items": [
+            "4 parkimiskohta elektriga",
+            "Ruum rohkematele karavanidele",
+            "Saadaval vesi ja gaas",
+            "Tualeti tühjendamise võimalus"
+          ],
+          "imageAlt": "Karavanid ja autoelamud",
+          "readMoreHref": "/majutus/karavanid-autoelamud"
+        },
+        "cabins": {
+          "title": "Kämpingumajad",
+          "subtitle": "Hubane ja mugav",
+          "period": "öö kohta",
+          "items": [
+            "Küttega kämpingud",
+            "Kaheinimesevoodi ja narivoodi",
+            "Kohvimasin ja lauanõud",
+            "Külma veega pesemine kraanikausis"
+          ],
+          "ribbonTitle": "Populaarne",
+          "imageAlt": "Kämpingumajad",
+          "readMoreHref": "/majutus/kampingumajad"
+        },
+        "hostel": {
+          "title": "Hostel",
+          "subtitle": "Lihtne ja taskukohane",
+          "period": "öö kohta",
+          "items": [
+            "Jagatud toad",
+            "Täiendavad mugavused privaatseks kasutamiseks",
+            "Koridori dushid",
+            "Ligipääsetav aastaringselt"
+          ],
+          "imageAlt": "Hostel",
+          "readMoreHref": "/majutus/hostel"
+        },
+        "guestRooms": {
+          "title": "Kodumajutuse toad",
+          "subtitle": "Kodu mugavus",
+          "period": "öö kohta",
+          "items": [
+            "Toad kaheinimesevooditega",
+            "Minibaar ja õhukonditsioneer",
+            "Rikkalik hommikusöök hinna sees",
+            "Jagatud vannitoa mugavused"
+          ],
+          "ribbonTitle": "Populaarne",
+          "imageAlt": "Kodumajutuse toad",
+          "readMoreHref": "/majutus/kodumajutuse-toad"
+        },
+        "holidayHouse": {
+          "title": "Puhkemaja",
+          "subtitle": "Ideaalne peredele",
+          "period": "nelja öö või nädala kohta",
+          "items": [
+            "Maja kuni 6 inimesele",
+            "Elutuba kaminaga",
+            "Täielikult varustatud köök",
+            "Saun ja vannituba"
+          ],
+          "imageAlt": "Puhkemaja",
+          "readMoreHref": "/majutus/puhkemaja"
+        }
+      }
+    }
   },
+
   "MeistPage": {
     "title": "Tere tulemast looduse rüppe!",
     "subtitle": "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv.",
@@ -57,19 +191,5 @@
     "bankAccount2": "Swedbank: EE96 2200 0011 0844 3461",
     "bankAccount3": "SEB: EE45 1010 0108 4154 4019",
     "allRightsReserved": "Kõik õigused kaitstud."
-  },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "title": "Docs",
-        "description": "Learn more about next-intl in the official docs.",
-        "href": "https://next-intl-docs.vercel.app/"
-      },
-      "source": {
-        "title": "Source code",
-        "description": "Browse the source code of this example on GitHub.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router"
-      }
-    }
   }
 }
