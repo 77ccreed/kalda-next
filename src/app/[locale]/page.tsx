@@ -121,118 +121,141 @@ export default function IndexPage({ params: { locale } }: Props) {
         }
       },
       {
-        title: "Karavanid ja autoelamud",
-        subtitle: "Mugavus looduses",
+        title: t('Pricing.prices.caravans.title'),
+        subtitle: t('Pricing.prices.caravans.subtitle'),
         price: "12€",
-        period: "öö kohta inimesele",
-        items: ["4 parkimiskohta elektriga", "Ruum rohkematele karavanidele", "Saadaval vesi ja gaas", "Tualeti tühjendamise võimalus"],
+        period: t('Pricing.prices.caravans.period'),
+        items: [
+          t('Pricing.prices.caravans.items.0'),
+          t('Pricing.prices.caravans.items.1'),
+          t('Pricing.prices.caravans.items.2'),
+          t('Pricing.prices.caravans.items.3'),
+        ],
         callToAction: {
-          text: "Loe rohkem",
-          href: "/majutus/karavanid-autoelamud",
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.caravans.readMoreHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine",
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         image: {
           src: Img2,
-          alt: "Karavanid ja autoelamud"
+          alt: t('Pricing.prices.caravans.imageAlt')
         }
       },
       {
-        title: "Kämpingumajad",
-        subtitle: "Hubane ja mugav",
+        title: t('Pricing.prices.cabins.title'),
+        subtitle: t('Pricing.prices.cabins.subtitle'),
         price: "24€ - 72€",
-        period: "öö kohta",
-        items: ["Küttega kämpingud", "Kaheinimesevoodi ja narivoodi", "Kohvimasin ja lauanõud", "Külma veega pesemine kraanikausis"],
+        period: t('Pricing.prices.cabins.period'),
+        items: [
+          t('Pricing.prices.cabins.items.0'),
+          t('Pricing.prices.cabins.items.1'),
+          t('Pricing.prices.cabins.items.2'),
+          t('Pricing.prices.cabins.items.3'),
+        ],
         callToAction: {
-          text: "Loe rohkem",
-          href: "/majutus/kampingumajad",
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.cabins.readMoreHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine",
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         hasRibbon: true,
-        ribbonTitle: "Populaarne",
+        ribbonTitle: t('Pricing.prices.cabins.ribbonTitle'),
         image: {
           src: Img3,
-          alt: "Kämpingumajad"
+          alt: t('Pricing.prices.cabins.imageAlt')
         }
       },
       {
-        title: "Hostel",
-        subtitle: "Lihtne ja taskukohane",
+        title: t('Pricing.prices.hostel.title'),
+        subtitle: t('Pricing.prices.hostel.subtitle'),
         price: "17€ - 19€",
-        period: "öö kohta",
-        items: ["Jagatud toad", "Täiendavad mugavused privaatseks kasutamiseks", "Koridori dushid", "Ligipääsetav aastaringselt"],
+        period: t('Pricing.prices.hostel.period'),
+        items: [
+          t('Pricing.prices.hostel.items.0'),
+          t('Pricing.prices.hostel.items.1'),
+          t('Pricing.prices.hostel.items.2'),
+          t('Pricing.prices.hostel.items.3'),
+        ],
         callToAction: {
-          text: "Loe rohkem",
-          href: "/majutus/hostel",
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.hostel.readMoreHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine",
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         image: {
           src: Img4,
-          alt: "Hostel"
+          alt: t('Pricing.prices.hostel.imageAlt')
         }
       },
       {
-        title: "Kodumajutuse toad",
-        subtitle: "Kodu mugavus",
+        title: t('Pricing.prices.guestRooms.title'),
+        subtitle: t('Pricing.prices.guestRooms.subtitle'),
         price: "29€ - 60€",
-        period: "öö kohta",
-        items: ["Toad kaheinimesevooditega", "Minibaar ja õhukonditsioneer", "Rikkalik hommikusöök hinna sees", "Jagatud vannitoa mugavused"],
+        period: t('Pricing.prices.guestRooms.period'),
+        items: [
+          t('Pricing.prices.guestRooms.items.0'),
+          t('Pricing.prices.guestRooms.items.1'),
+          t('Pricing.prices.guestRooms.items.2'),
+          t('Pricing.prices.guestRooms.items.3'),
+        ],
         callToAction: {
-          text: "Loe rohkem",
-          href: "/majutus/kodumajutuse-toad",
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.guestRooms.readMoreHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine",
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         hasRibbon: true,
-        ribbonTitle: "Populaarne",
+        ribbonTitle: t('Pricing.prices.guestRooms.ribbonTitle'),
         image: {
           src: Img5,
-          alt: "Kodumajutuse toad"
+          alt: t('Pricing.prices.guestRooms.imageAlt')
         }
       },
       {
-        title: "Puhkemaja",
-        subtitle: "Ideaalne peredele",
+        title: t('Pricing.prices.holidayHouse.title'),
+        subtitle: t('Pricing.prices.holidayHouse.subtitle'),
         price: "540€ - 650€",
-        period: "nelja öö või nädala kohta",
-        items: ["Maja kuni 6 inimesele", "Elutuba kaminaga", "Täielikult varustatud köök", "Saun ja vannituba"],
+        period: t('Pricing.prices.holidayHouse.period'),
+        items: [
+          t('Pricing.prices.holidayHouse.items.0'),
+          t('Pricing.prices.holidayHouse.items.1'),
+          t('Pricing.prices.holidayHouse.items.2'),
+          t('Pricing.prices.holidayHouse.items.3'),
+        ],
         callToAction: {
-          text: "Loe rohkem",
-          href: "/majutus/puhkemaja",
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.holidayHouse.readMoreHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine",
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         image: {
           src: Img6,
-          alt: "Puhkemaja"
+          alt: t('Pricing.prices.holidayHouse.imageAlt')
         }
       }
     ]
   };
-
-
 
 
   const comparisonData = {
