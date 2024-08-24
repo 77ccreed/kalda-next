@@ -210,6 +210,81 @@
         }
       },
       "imageAlt": "Skaudid söömas"
+    },
+    "Activities": {
+      "header": {
+        "title": "Maastik ja matkamine",
+        "subtitle": "Kalda Talu ümbruskonnas leidub hulgaliselt võimalusi aktiivseks puhkuseks ning looduse avastamiseks aastaringselt. Jalutamine, jooksmine, rattasõit, ujumine. Talvel suusatamine ja uisutamine. Näiteks pole tõenäoliselt igaüks näinud veel kopratammi.",
+        "tagline": "Tegevused ja Huviväärsused"
+      },
+      "items": {
+        "hikingTrails": {
+          "title": "Matkarajad",
+          "description": "RMK matkarajad, mis pakuvad võimalusi lihtsatest lühikestest kõnnakutest kuni nõudlikumate matkade ja ööbimisvõimalusteni."
+        },
+        "bikeCarRental": {
+          "title": "Ratta ja auto rent",
+          "description": "Rentige meilt jalgratas või auto, et uurida maakonna kaugemaid paiku või põigata Lätti."
+        },
+        "beachCanoeing": {
+          "title": "Rand ja kanuuretked",
+          "description": "Rand on 6 km kaugusel. Väike Emajõgi sobib kanuuretke alguspunktiks. Mitmepäevased ekskursioonid Koiva ja teiste jõgede vahel."
+        }
+      }
+    },
+    "NatureActivities": {
+      "header": {
+        "title": "Kalda talu asub Väikese Emajõe kaldal",
+        "subtitle": "Jõgi, mis suubub Võrtsjärve ning edasi Peipsisse ja kasvab oma teel üha suuremaks. Talu läheduses ühineb Väikese Emajõega Ärnu jõgi - koht kus kalameestel on tegemist.",
+        "tagline": "Jõgi ja Loodus"
+      },
+      "content": "Ka linnuvaatlejatele jagub imetlemist. Tänu rahulikule paigale ja suurtele osalt niisketele metsadele satub siin silma mitmeid liike, keda muidu vaevalt kohtab. Metsloomi võib jõe ääres joomas näha.",
+      "items": {
+        "fishing": {
+          "title": "Kalapüük",
+          "description": "Talu läheduses ühineb Väikese Emajõega Ärnu jõgi - koht kus kalameestel on tegemist."
+        },
+        "birdWatching": {
+          "title": "Linnuvaatlus",
+          "description": "Rahulik paik ja suured metsad pakuvad imetlemist linnuvaatlejatele."
+        },
+        "wildlifeObservation": {
+          "title": "Metsloomade vaatlemine",
+          "description": "Metsloomi võib jõe ääres joomas näha."
+        }
+      },
+      "imageAlt": "Loodus"
+    },
+    "PeaceComfort": {
+      "header": {
+        "title": "Talus on vaikne, kuna maja on teeotsas viimane",
+        "subtitle": "Saab sõita rattaga ning matkata teedel, kuhu mootorsõidukid harva satuvad. Talus on piisavalt ruumi korraga mitmetele külaliste gruppidele.",
+        "tagline": "Talu Rahu ja Mugavused"
+      },
+      "content": "Telkimisplats, kämpingumajakesed ja suuremad majutusruumid on seatud nõnda, et külastajad üksteist ei häiriks. Lisaks Valga/Valka linnale on läheduses uudistamiseks rukkikrahv Bergi Sangaste loss, muuseum ja park, Pokumaa, Antsla ning Karula rahvuspargi vaatamisväärsused. Eestis on hästi levinud Internetiühendus. Nii saab ka siin talus traadita võrgu kaudu uudistele kaasa elada.",
+      "items": {
+        "exceptionalPeace": {
+          "title": "Erakordne rahu",
+          "description": "Talu on viimane maja teeotsas, pakkudes vaikust ja rahu."
+        },
+        "multipleActivities": {
+          "title": "Mitmed tegevused",
+          "description": "Rattasõit ja matkad teedel, kuhu mootorsõidukid harva satuvad."
+        },
+        "variedAccommodation": {
+          "title": "Erinevad majutusvõimalused",
+          "description": "Telkimisplats, kämpingumajakesed ja suuremad majutusruumid."
+        },
+        "nearbyAttractions": {
+          "title": "Lähedal asuvad vaatamisväärsused",
+          "description": "Rukkikrahv Bergi Sangaste loss, Pokumaa, Antsla, Karula rahvuspark."
+        },
+        "goodInternet": {
+          "title": "Hea Internetiühendus",
+          "description": "Eestis on hästi levinud Internetiühendus, saadaval ka talus."
+        }
+      },
+      "imageAlt": "Talu"
     }
   },
 

@@ -58,33 +58,32 @@ export default function IndexPage({ params: { locale } }: Props) {
     columns: 3,
   };
 
-  const featuresData2 = {
+  const activitiesData = {
     header: {
-      title: "Maastik ja matkamine",
-      subtitle: "Kalda Talu ümbruskonnas leidub hulgaliselt võimalusi aktiivseks puhkuseks ning looduse avastamiseks aastaringselt. Jalutamine, jooksmine, rattasõit, ujumine. Talvel suusatamine ja uisutamine. Näiteks pole tõenäoliselt igaüks näinud veel kopratammi.",
-      tagline: "Tegevused ja Huviväärsused",
+      title: t('Activities.header.title'),
+      subtitle: t('Activities.header.subtitle'),
+      tagline: t('Activities.header.tagline'),
       position: "center" as 'center',
     },
     items: [
       {
-        title: "Matkarajad",
-        description: "RMK matkarajad, mis pakuvad võimalusi lihtsatest lühikestest kõnnakutest kuni nõudlikumate matkade ja ööbimisvõimalusteni.",
+        title: t('Activities.items.hikingTrails.title'),
+        description: t('Activities.items.hikingTrails.description'),
         icon: CheckCircle,
       },
       {
-        title: "Ratta ja Auto Rent",
-        description: "Rentige meilt jalgratas või auto, et uurida maakonna kaugemaid paiku või põigata Lätti.",
+        title: t('Activities.items.bikeCarRental.title'),
+        description: t('Activities.items.bikeCarRental.description'),
         icon: Car,
       },
       {
-        title: "Rand ja Kanuuretked",
-        description: "Rand on 6 km kaugusel. Väike Emajõgi sobib kanuuretke alguspunktiks. Mitmepäevased ekskursioonid Koiva ja teiste jõgede vahel.",
+        title: t('Activities.items.beachCanoeing.title'),
+        description: t('Activities.items.beachCanoeing.description'),
         icon: MapPin,
-      },
+      }
     ],
     columns: 3,
   };
-
 
 
   const pricingData = {
@@ -363,82 +362,83 @@ export default function IndexPage({ params: { locale } }: Props) {
   };
 
 
-  const contentData2 = {
+  const natureActivitiesData = {
     header: {
-      title: "Kalda talu asub Väikese Emajõe kaldal",
-      subtitle: "Jõgi, mis suubub Võrtsjärve ning edasi Peipsisse ja kasvab oma teel üha suuremaks. Talu läheduses ühineb Väikese Emajõega Ärnu jõgi - koht kus kalameestel on tegemist.",
-      tagline: "Jõgi ja Loodus",
+      title: t('NatureActivities.header.title'),
+      subtitle: t('NatureActivities.header.subtitle'),
+      tagline: t('NatureActivities.header.tagline'),
     },
-    content: "Ka linnuvaatlejatele jagub imetlemist. Tänu rahulikule paigale ja suurtele osalt niisketele metsadele satub siin silma mitmeid liike, keda muidu vaevalt kohtab. Metsloomi võib jõe ääres joomas näha.",
+    content: t('NatureActivities.content'),
     items: [
       {
-        title: "Kalapüük",
-        description: "Talu läheduses ühineb Väikese Emajõega Ärnu jõgi - koht kus kalameestel on tegemist.",
+        title: t('NatureActivities.items.fishing.title'),
+        description: t('NatureActivities.items.fishing.description'),
         icon: Check,
       },
       {
-        title: "Linnuvaatlus",
-        description: "Rahulik paik ja suured metsad pakuvad imetlemist linnuvaatlejatele.",
+        title: t('NatureActivities.items.birdWatching.title'),
+        description: t('NatureActivities.items.birdWatching.description'),
         icon: Check,
       },
       {
-        title: "Metsloomade vaatlemine",
-        description: "Metsloomi võib jõe ääres joomas näha.",
+        title: t('NatureActivities.items.wildlifeObservation.title'),
+        description: t('NatureActivities.items.wildlifeObservation.description'),
         icon: Check,
-      },
+      }
     ],
     image: {
       src: Sommer,
-      alt: "Loodus",
+      alt: t('NatureActivities.imageAlt')
     },
     isReversed: false,
     isAfterContent: false,
     id: "nature",
-    hasBackground: true,
+    hasBackground: true
   };
 
-  const contentData3 = {
+
+  const peaceComfortData = {
     header: {
-      title: "Talus on vaikne, kuna maja on teeotsas viimane",
-      subtitle: "Saab sõita rattaga ning matkata teedel, kuhu mootorsõidukid harva satuvad. Talus on piisavalt ruumi korraga mitmetele külaliste gruppidele.",
-      tagline: "Talu Rahu ja Mugavused",
+      title: t('PeaceComfort.header.title'),
+      subtitle: t('PeaceComfort.header.subtitle'),
+      tagline: t('PeaceComfort.header.tagline'),
     },
-    content: "Telkimisplats, kämpingumajakesed ja suuremad majutusruumid on seatud nõnda, et külastajad üksteist ei häiriks. Lisaks Valga/Valka linnale on läheduses uudistamiseks rukkikrahv Bergi Sangaste loss, muuseum ja park, Pokumaa, Antsla ning Karula rahvuspargi vaatamisväärsused. Eestis on hästi levinud Internetiühendus. Nii saab ka siin talus traadita võrgu kaudu uudistele kaasa elada.",
+    content: t('PeaceComfort.content'),
     items: [
       {
-        title: "Erakordne rahu",
-        description: "Talu on viimane maja teeotsas, pakkudes vaikust ja rahu.",
+        title: t('PeaceComfort.items.exceptionalPeace.title'),
+        description: t('PeaceComfort.items.exceptionalPeace.description'),
         icon: Check,
       },
       {
-        title: "Mitmed tegevused",
-        description: "Rattasõit ja matkad teedel, kuhu mootorsõidukid harva satuvad.",
+        title: t('PeaceComfort.items.multipleActivities.title'),
+        description: t('PeaceComfort.items.multipleActivities.description'),
         icon: Check,
       },
       {
-        title: "Erinevad majutusvõimalused",
-        description: "Telkimisplats, kämpingumajakesed ja suuremad majutusruumid.",
+        title: t('PeaceComfort.items.variedAccommodation.title'),
+        description: t('PeaceComfort.items.variedAccommodation.description'),
         icon: Check,
       },
       {
-        title: "Lähedal asuvad vaatamisväärsused",
-        description: "Rukkikrahv Bergi Sangaste loss, Pokumaa, Antsla, Karula rahvuspark.",
+        title: t('PeaceComfort.items.nearbyAttractions.title'),
+        description: t('PeaceComfort.items.nearbyAttractions.description'),
         icon: Check,
       },
       {
-        title: "Hea Internetiühendus",
-        description: "Eestis on hästi levinud Internetiühendus, saadaval ka talus.",
+        title: t('PeaceComfort.items.goodInternet.title'),
+        description: t('PeaceComfort.items.goodInternet.description'),
         icon: Check,
-      },
+      }
     ],
     image: {
       src: Puhkemaja,
-      alt: "Talu",
+      alt: t('PeaceComfort.imageAlt')
     },
     isReversed: true,
     isAfterContent: false,
     id: "peace",
-    hasBackground: true,
+    hasBackground: true
   };
 
   const teamMembers = [
@@ -495,9 +495,9 @@ export default function IndexPage({ params: { locale } }: Props) {
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} hasBackground={true} />
       <Content {...contentLocatsion} />
-      <Features {...featuresData2} />
-      <Content {...contentData2} />
-      <Content {...contentData3} />
+      <Features {...activitiesData} />
+      <Content {...natureActivitiesData} />
+      <Content {...peaceComfortData} />
     </>
   );
 }
