@@ -30,8 +30,8 @@ const Navigation: React.FC = () => {
         <div className="flex items-center">
           <NavigationLink
             href="/"
-            className={`text-2xl font-bold ${pathname === '/' ? 'text-primary' : 'text-white'} hover:text-primary transition-colors`}
-            onClick={handleLinkClick} // Added onClick handler here
+            className={`text-2xl font-bold ${pathname === '/' ? 'text-primary' : 'text-accent'} hover:text-primary transition-colors`}
+            onClick={handleLinkClick} 
           >
             {t("home")}
           </NavigationLink>
