@@ -78,7 +78,7 @@
             "Tualeti tühjendamise võimalus"
           ],
           "imageAlt": "Karavanid ja autoelamud",
-          "readMoreHref": "/majutus/karavanid-autoelamud"
+          "readMoreHref": "/majutus/karavanid-ja-autoelamud"
         },
         "cabins": {
           "title": "Kämpingumajad",
@@ -187,6 +187,29 @@
           ]
         }
       }
+    },
+    "ContentLocation": {
+      "header": {
+        "title": "Kalda Talu Iigastes",
+        "subtitle": "Kalda talu Iigastes asub 20 kilomeetri kaugusel Valgast kirdes. Iigaste küla kuulub Valga valda. Lähim keskus on Laatre 6 km kaugusel.",
+        "tagline": "Asukoht"
+      },
+      "content": "Tegemist on metsadest ümbritsetud põllumajanduspiirkonnaga. Kirdesse jäävad spordiga seotud Otepää alad, lõunasse Karula rahvuspark metsaste mägede ning paljude väikeste järvedega.",
+      "items": {
+        "shopProximity": {
+          "title": "Lähimad poed",
+          "description": "Lähemal asuvad toitupoed on Tsirguliinas 10 km kaugusel ja Sangastes 13 km kaugusel. Mitmed suuremad kaubanduskeskused asuvad Valgas."
+        },
+        "specialGuests": {
+          "title": "Erilised külalised",
+          "description": "Eriti oodatakse Kalda talus skaute ja gaide."
+        },
+        "riverLocation": {
+          "title": "Väikese Emajõe kaldal",
+          "description": "Kalda talu asub Väikese Emajõe kaldal."
+        }
+      },
+      "imageAlt": "Skaudid söömas"
     }
   },
 
@@ -211,7 +234,7 @@
     "locale": "{locale, select, de {Deutsch} en {English} et {Eesti} other {Unknown}}"
   },
   "Navigation": {
-    "home": "Kalda Talu",
+    "home": "Kalda talu",
     "meist": "Meist",
     "broneerimine": "Broneerimine",
     "kontakt": "Kontakt",

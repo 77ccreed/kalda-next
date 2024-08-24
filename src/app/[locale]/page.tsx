@@ -328,39 +328,40 @@ export default function IndexPage({ params: { locale } }: Props) {
     ]
   };
 
-  const contentData = {
+  const contentLocatsion = {
     header: {
-      title: "Kalda Talu Iigastes",
-      subtitle: "Kalda talu Iigastes asub 20 kilomeetri kaugusel Valgast kirdes. Iigaste küla kuulub Valga valda. Lähim keskus on Laatre 6 km kaugusel.",
-      tagline: "Asukoht"
+      title: t('ContentLocation.header.title'),
+      subtitle: t('ContentLocation.header.subtitle'),
+      tagline: t('ContentLocation.header.tagline')
     },
-    content: "Tegemist on metsadest ümbritsetud põllumajanduspiirkonnaga. Kirdesse jäävad spordiga seotud Otepää alad, lõunasse Karula rahvuspark metsaste mägede ning paljude väikeste järvedega.",
+    content: t('ContentLocation.content'),
     items: [
       {
-        title: "Lähimad poed",
-        description: "Lähemal asuvad toitupoed on Tsirguliinas 10 km kaugusel ja Sangastes 13 km kaugusel. Mitmed suuremad kaubanduskeskused asuvad Valgas.",
+        title: t('ContentLocation.items.shopProximity.title'),
+        description: t('ContentLocation.items.shopProximity.description'),
         icon: Check
       },
       {
-        title: "Erilised külalised",
-        description: "Eriti oodatakse Kalda talus skaute ja gaide.",
+        title: t('ContentLocation.items.specialGuests.title'),
+        description: t('ContentLocation.items.specialGuests.description'),
         icon: Check
       },
       {
-        title: "Väikese Emajõe kaldal",
-        description: "Kalda talu asub Väikese Emajõe kaldal.",
+        title: t('ContentLocation.items.riverLocation.title'),
+        description: t('ContentLocation.items.riverLocation.description'),
         icon: Check
       }
     ],
     image: {
       src: ImgSkaut,
-      alt: "Skaudid söömas",
+      alt: t('ContentLocation.imageAlt')
     },
     isReversed: false,
     isAfterContent: false,
     id: "location",
     hasBackground: true
   };
+
 
   const contentData2 = {
     header: {
@@ -493,7 +494,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       <Features {...featuresData} />
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} hasBackground={true} />
-      <Content {...contentData} />
+      <Content {...contentLocatsion} />
       <Features {...featuresData2} />
       <Content {...contentData2} />
       <Content {...contentData3} />
