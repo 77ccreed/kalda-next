@@ -135,6 +135,58 @@
           "readMoreHref": "/majutus/puhkemaja"
         }
       }
+    },
+    "Comparison": {
+      "header": {
+        "title": "Võrdle majutusvõimalusi",
+        "subtitle": "Vaata, mida iga võimalus pakub.",
+        "tagline": "Võrdlustabel"
+      },
+      "columns": {
+        "features": {
+          "title": "Omadused",
+          "items": [
+            "Voodipesu",
+            "Rätik",
+            "Pesemisvõimalused",
+            "Dušš",
+            "Hommikusöök",
+            "Toiduvalmistamise võimalused",
+            "Küte"
+          ]
+        },
+        "camping": {
+          "title": "Telkimine",
+          "items": ["Pesemisala / kraanikauss", "2€", "Väliköök koos külmikuga"]
+        },
+        "hostel": {
+          "title": "Hostel",
+          "items": [
+            "Suvel kaasas, talvel renditav",
+            "Renditav",
+            "Dušš, tualett ja bidee suvel. Pesemisala kõrvalhoones talvel.",
+            "Suvel tasuta, talvel 2€",
+            "Nõud ja söögiriistad, kohvimasin, pliit, veekeetja",
+            "Väliköök koos külmikuga, väike köök"
+          ]
+        },
+        "campingCabin": {
+          "title": "Kämpingumaja",
+          "items": [
+            "Renditav",
+            "Pesemisala kõrvalhoones",
+            "Nõud ja söögiriistad, kohvimasin, veekeetja",
+            "Väliköök koos külmikuga"
+          ]
+        },
+        "room": {
+          "title": "Tuba",
+          "items": [
+            "Kraanikauss toas, tualett ja dušš koridoris",
+            "Köök ja külmik, minibaar toas"
+          ]
+        }
+      }
     }
   },
 

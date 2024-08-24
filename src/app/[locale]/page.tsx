@@ -260,90 +260,70 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   const comparisonData = {
     header: {
-      title: "Compare Accommodation Options",
-      subtitle: "See what each option has to offer.",
-      tagline: "Comparison Table"
+      title: t('Comparison.header.title'),
+      subtitle: t('Comparison.header.subtitle'),
+      tagline: t('Comparison.header.tagline')
     },
     columns: [
       {
-        title: "Features",
+        title: t('Comparison.columns.features.title'),
         items: [
-          "Bedding",
-          "Towel",
-          "Washing Facilities",
-          "Shower",
-          "Breakfast",
-          "Cooking Facilities",
-          "Heating"
+          t('Comparison.columns.features.items.0'),
+          t('Comparison.columns.features.items.1'),
+          t('Comparison.columns.features.items.2'),
+          t('Comparison.columns.features.items.3'),
+          t('Comparison.columns.features.items.4'),
+          t('Comparison.columns.features.items.5'),
+          t('Comparison.columns.features.items.6')
         ]
       },
       {
-        title: "Camping",
+        title: t('Comparison.columns.camping.title'),
         items: [
           "✗",
           "✗",
-          "Washing area / sink",
-          "2€",
+          t('Comparison.columns.camping.items.0'),
+          t('Comparison.columns.camping.items.1'),
           "✗",
-          "Outdoor kitchen with fridge",
+          t('Comparison.columns.camping.items.2'),
           "✗"
-        ],
-        callToAction: {
-          text: "Book Camping",
-          href: "/booking/camping",
-          targetBlank: false
-        }
+        ]
       },
       {
-        title: "Hostel",
+        title: t('Comparison.columns.hostel.title'),
         items: [
-          "Included in summer, rentable in winter",
-          "Rentable",
-          "Shower, toilet, and bidet in summer. Washing area in nearby building in winter.",
-          "Free in summer, 2€ in winter",
-          "Utensils and dishes, coffee machine, stove, kettle",
-          "Outdoor kitchen with fridge, small kitchen",
+          t('Comparison.columns.hostel.items.0'),
+          t('Comparison.columns.hostel.items.1'),
+          t('Comparison.columns.hostel.items.2'),
+          t('Comparison.columns.hostel.items.3'),
+          t('Comparison.columns.hostel.items.4'),
+          t('Comparison.columns.hostel.items.5'),
           "✓"
-        ],
-        callToAction: {
-          text: "Book Hostel",
-          href: "/booking/hostel",
-          targetBlank: false
-        }
+        ]
       },
       {
-        title: "Camping Cabin",
+        title: t('Comparison.columns.campingCabin.title'),
         items: [
           "✓",
-          "Rentable",
-          "Washing area in nearby building",
+          t('Comparison.columns.campingCabin.items.0'),
+          t('Comparison.columns.campingCabin.items.1'),
           "✓",
-          "Utensils and dishes, coffee machine, kettle",
-          "Outdoor kitchen with fridge",
+          t('Comparison.columns.campingCabin.items.2'),
+          t('Comparison.columns.campingCabin.items.3'),
           "✓"
-        ],
-        callToAction: {
-          text: "Book Cabin",
-          href: "/booking/camping-cabin",
-          targetBlank: false
-        }
+        ]
       },
       {
-        title: "Room",
+        title: t('Comparison.columns.room.title'),
         items: [
           "✓",
           "✓",
-          "Sink in room, toilet and shower in corridor",
+          t('Comparison.columns.room.items.0'),
           "✓",
-          "Kitchen and fridge, minibar in room",
+          t('Comparison.columns.room.items.1'),
           "✓",
           "✓"
-        ],
-        callToAction: {
-          text: "Book Room",
-          href: "/booking/room",
-          targetBlank: false
-        }
+        ]
       }
     ]
   };
