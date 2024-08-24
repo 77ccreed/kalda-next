@@ -18,6 +18,8 @@ type HeroProps = {
   };
 };
 
+const defaultBlurDataURL = 'yourBase64EncodedImage';
+
 const Hero = ({
   title,
   subtitle,
@@ -26,7 +28,7 @@ const Hero = ({
   callToAction2,
   callToActionLink,
   callToActionLink2,
-  image
+  image,
 }: HeroProps) => {
   const t = useTranslations('IndexPage');
 
@@ -97,7 +99,7 @@ const Hero = ({
                     className="mx-auto h-full w-auto rounded-md object-cover drop-shadow-2xl"
                     src={image.src}
                     alt={image.alt}
-                    blurDataURL={image.blurDataURL}
+                    blurDataURL={image.blurDataURL || defaultBlurDataURL}
                     width={540}
                     height={405}
                     sizes="(min-width: 1920px) 749px, (min-width: 1540px) 43.89vw, (min-width: 1360px) 542px, (min-width: 780px) calc(39.29vw + 16px), calc(96.52vw - 22px)"
