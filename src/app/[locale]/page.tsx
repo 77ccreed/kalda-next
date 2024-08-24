@@ -14,8 +14,6 @@ import Ulrich from '@/assets/images/host/ulrich.jpg';
 import Heinar from '@/assets/images/host/heinar.jpg';
 import Features from '@/components/Features';
 import { BedDouble, ShowerHead, Coffee, Check, CheckCircle, MapPin, Car, Mail, Phone } from "lucide-react";
-//import CarouselHero from '@/components/CarouselHero';
-//import HeroImageGrid from '@/components/HeroImageGrid';
 import Pricing from '@/components/Pricing';
 import Comparison from '@/components/Comparison';
 import Content from '@/components/Content';
@@ -35,35 +33,34 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   const featuresData = {
     header: {
-      title: "Majutus lihtsast luksuslikuni",
-      subtitle: "Tere tulemast Kalda Talu Puhkekeskusesse! Siin saate tutvuda meie pakutavate majutusvõimaluste ja teenustega.",
-      tagline: "Majutus",
-      position: "center" as 'center', // Ensure the type is one of 'left' | 'center' | 'right'
+      title: t('Features.header.title'),
+      subtitle: t('Features.header.subtitle'),
+      tagline: t('Features.header.tagline'),
+      position: "center" as 'center',
     },
     items: [
       {
-        title: "Erinevad majutusvõimalused",
-        description: "Pakume mitmesugust majutust: alates väga lihtsast vähenõudlikule inimesele, kuni mugava ja luksuslikuni. Vali endale sobiv.",
+        title: t('Features.items.accommodationOptions.title'),
+        description: t('Features.items.accommodationOptions.description'),
         icon: BedDouble,
       },
       {
-        title: "Pesemisvõimalused",
-        description: "Kui broneerite privaatse ruumi või voodi hostelis on ka jagatud duširuum hinna sees. Muude majutusviiside korral lisandub väike tasu.",
+        title: t('Features.items.washingFacilities.title'),
+        description: t('Features.items.washingFacilities.description'),
         icon: ShowerHead,
       },
       {
-        title: "Hommikusöök",
-        description: "Me ei valmista sooja sööki. Privaat-tubade külalistele serveerime rikkaliku külma hommikusöögi, kõikides jagatud tubades on kohvi ja tee valmistamise võimalus. Samuti on olemas külmkapp.",
+        title: t('Features.items.breakfast.title'),
+        description: t('Features.items.breakfast.description'),
         icon: Coffee,
-      },
+      }
     ],
     columns: 3,
   };
 
-
   const featuresData2 = {
     header: {
-      title: "Maastik ja Matkamine",
+      title: "Maastik ja matkamine",
       subtitle: "Kalda Talu ümbruskonnas leidub hulgaliselt võimalusi aktiivseks puhkuseks ning looduse avastamiseks aastaringselt. Jalutamine, jooksmine, rattasõit, ujumine. Talvel suusatamine ja uisutamine. Näiteks pole tõenäoliselt igaüks näinud veel kopratammi.",
       tagline: "Tegevused ja Huviväärsused",
       position: "center" as 'center',
@@ -92,30 +89,35 @@ export default function IndexPage({ params: { locale } }: Props) {
 
   const pricingData = {
     header: {
-      title: "Meie majutusvõimalused",
-      subtitle: "Vali endale sobiv peatuspaik.",
-      tagline: "Hinnakiri"
+      title: t('Pricing.header.title'),
+      subtitle: t('Pricing.header.subtitle'),
+      tagline: t('Pricing.header.tagline')
     },
     prices: [
       {
-        title: "Telkimisala",
-        subtitle: "Looduse armastajatele",
+        title: t('Pricing.prices.camping.title'),
+        subtitle: t('Pricing.prices.camping.subtitle'),
         price: "6€",
-        period: "öö kohta inimesele",
-        items: ["Ruum kuni 400 inimesele", "Lõkkease", "Lipuvarras skautidele", "Väliköök pliidiga"],
+        period: t('Pricing.prices.camping.period'),
+        items: [
+          t('Pricing.prices.camping.items.0'),
+          t('Pricing.prices.camping.items.1'),
+          t('Pricing.prices.camping.items.2'),
+          t('Pricing.prices.camping.items.3'),
+        ],
         callToAction: {
-          text: "Loe rohkem",
-          href: "/majutus/telkimisala",
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.camping.readMoreHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: "Broneeri nüüd",
-          href: "/broneerimine",
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         image: {
           src: Img1,
-          alt: "Telkimisala"
+          alt: t('Pricing.prices.camping.imageAlt')
         }
       },
       {
@@ -438,8 +440,8 @@ export default function IndexPage({ params: { locale } }: Props) {
   const teamMembers = [
     {
       name: 'Ulrich Altenkirch',
-      occupation: 'inglise ja saksa keel',
-      image: { src: Ulrich, alt: 'Ulrich Altenkirch' },
+      occupation: t('Team.members.ulrichOccupation'),
+      image: { src: Ulrich.src, alt: 'Ulrich Altenkirch' },
 
       items: [
         { title: 'Phone', href: 'tel:+3721234567', icon: Phone },
@@ -449,8 +451,8 @@ export default function IndexPage({ params: { locale } }: Props) {
     },
     {
       name: 'Heinar Kroon',
-      occupation: 'eesti ja vene keel',
-      image: { src: Heinar, alt: 'Heinar Kroon' },
+      occupation: t('Team.members.heinarOccupation'),
+      image: { src: Heinar.src, alt: 'Heinar Kroon' },
 
       items: [
         { title: 'Phone', href: 'tel:+3727654321', icon: Phone },
@@ -458,27 +460,33 @@ export default function IndexPage({ params: { locale } }: Props) {
         { title: 'Facebook', href: 'https://www.facebook.com/kaldatalu', icon: SiFacebook }
       ]
     }
-
   ];
 
 
   return (
     <>
       <Hero
-        title={t('title')}
-        subtitle="Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel"
-        tagline="Puhkekeskus"
-        callToAction="Majutus"
-        callToActionLink="/contact"
-        callToAction2="Asukoht"
-        callToActionLink2="/about"
+        title={t('Hero.title')}
+        subtitle={t('Hero.subtitle')}
+        tagline={t('Hero.tagline')}
+        callToAction={t('Hero.callToAction')}
+        callToActionLink={t('Hero.callToActionLink')}
+        callToAction2={t('Hero.callToAction2')}
+        callToActionLink2={t('Hero.callToActionLink2')}
         image={{
           src: Img.src,
-          alt: 'Tere',
-          blurDataURL: 'yourBase64EncodedImage'
+          alt: t('Hero.imageAlt'),
         }}
       />
-      <Team header={{ title: "Tere tulemast Kalda Tallu!", subtitle: "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. ", tagline: 'Võõrustajad' }} teams={teamMembers} hasBackground={true} />
+      <Team
+        header={{
+          title: t('Team.header.title'),
+          subtitle: t('Team.header.subtitle'),
+          tagline: t('Team.header.tagline'),
+        }}
+        teams={teamMembers}
+        hasBackground={true}
+      />
       <Features {...featuresData} />
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} hasBackground={true} />
