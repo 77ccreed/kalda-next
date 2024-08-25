@@ -474,9 +474,13 @@ export default function IndexPage({ params: { locale } }: Props) {
         subtitle={t('Hero.subtitle')}
         tagline={t('Hero.tagline')}
         callToAction={t('Hero.callToAction')}
-        callToActionLink={t('Hero.callToActionLink')}
+        scrollTargetId="features-section"
+        // callToActionLink={t('Hero.callToActionLink')}
+        //callToActionLink={scrollToFeatures}
         callToAction2={t('Hero.callToAction2')}
-        callToActionLink2={t('Hero.callToActionLink2')}
+        scrollTargetId2='location'
+        //callToActionLink2={t('Hero.callToActionLink2')}
+        //callToActionLink2={scrollToActivities}
         image={{
           src: Img.src,
           alt: t('Hero.imageAlt'),
@@ -491,10 +495,11 @@ export default function IndexPage({ params: { locale } }: Props) {
         teams={teamMembers}
         hasBackground={true}
       />
-      <Features {...featuresData} />
+
+      <Features {...featuresData} id="features-section" />
       <Pricing {...pricingData} />
       <Comparison {...comparisonData} hasBackground={true} />
-      <Content {...contentLocatsion} />
+      <Content {...contentLocatsion} id='location' />
       <Features {...activitiesData} />
       <Content {...natureActivitiesData} />
       <Content {...peaceComfortData} />
