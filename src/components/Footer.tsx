@@ -108,7 +108,7 @@ const SocialMediaLinks = () => {
       {socialMediaLinks.map(({ href, label, Icon }) => (
         <Tooltip key={href}>
           <TooltipTrigger asChild>
-            <a href={href} aria-label={label} className="hover-accent">
+            <a href={href} aria-label={label} className="hover-accent" target="_blank" rel="noopener noreferrer">
               <Icon className="w-6 h-6" />
             </a>
           </TooltipTrigger>
