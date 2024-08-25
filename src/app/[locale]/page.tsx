@@ -105,13 +105,13 @@ export default function IndexPage({ params: { locale } }: Props) {
           t('Pricing.prices.camping.items.3'),
         ],
         callToAction: {
-          text: t('Pricing.common.readMore'),
-          href: t('Pricing.prices.camping.readMoreHref'),
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: t('Pricing.common.bookNow'),
-          href: t('Pricing.common.bookNowHref'),
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.camping.readMoreHref'),
           targetBlank: false
         },
         image: {
@@ -131,13 +131,13 @@ export default function IndexPage({ params: { locale } }: Props) {
           t('Pricing.prices.caravans.items.3'),
         ],
         callToAction: {
-          text: t('Pricing.common.readMore'),
-          href: t('Pricing.prices.caravans.readMoreHref'),
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: t('Pricing.common.bookNow'),
-          href: t('Pricing.common.bookNowHref'),
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.caravans.readMoreHref'),
           targetBlank: false
         },
         image: {
@@ -157,13 +157,13 @@ export default function IndexPage({ params: { locale } }: Props) {
           t('Pricing.prices.cabins.items.3'),
         ],
         callToAction: {
-          text: t('Pricing.common.readMore'),
-          href: t('Pricing.prices.cabins.readMoreHref'),
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: t('Pricing.common.bookNow'),
-          href: t('Pricing.common.bookNowHref'),
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.cabins.readMoreHref'),
           targetBlank: false
         },
         hasRibbon: true,
@@ -185,13 +185,13 @@ export default function IndexPage({ params: { locale } }: Props) {
           t('Pricing.prices.hostel.items.3'),
         ],
         callToAction: {
-          text: t('Pricing.common.readMore'),
-          href: t('Pricing.prices.hostel.readMoreHref'),
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: t('Pricing.common.bookNow'),
-          href: t('Pricing.common.bookNowHref'),
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.hostel.readMoreHref'),
           targetBlank: false
         },
         image: {
@@ -211,13 +211,13 @@ export default function IndexPage({ params: { locale } }: Props) {
           t('Pricing.prices.guestRooms.items.3'),
         ],
         callToAction: {
-          text: t('Pricing.common.readMore'),
-          href: t('Pricing.prices.guestRooms.readMoreHref'),
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: t('Pricing.common.bookNow'),
-          href: t('Pricing.common.bookNowHref'),
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.guestRooms.readMoreHref'),
           targetBlank: false
         },
         hasRibbon: true,
@@ -239,13 +239,13 @@ export default function IndexPage({ params: { locale } }: Props) {
           t('Pricing.prices.holidayHouse.items.3'),
         ],
         callToAction: {
-          text: t('Pricing.common.readMore'),
-          href: t('Pricing.prices.holidayHouse.readMoreHref'),
+          text: t('Pricing.common.bookNow'),
+          href: t('Pricing.common.bookNowHref'),
           targetBlank: false
         },
         callToAction2: {
-          text: t('Pricing.common.bookNow'),
-          href: t('Pricing.common.bookNowHref'),
+          text: t('Pricing.common.readMore'),
+          href: t('Pricing.prices.holidayHouse.readMoreHref'),
           targetBlank: false
         },
         image: {
@@ -255,6 +255,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       }
     ]
   };
+
 
 
   const comparisonData = {
