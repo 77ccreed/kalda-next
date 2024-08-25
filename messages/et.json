@@ -4,10 +4,8 @@
       "title": "Tere tulemast Kalda Tallu! Majutus kauni looduse keskel.",
       "subtitle": "Võõrustajad Ulrich ja Heinar tervitavad Teid ning hoolitsevad, et siinviibimine oleks meeldiv. Võid väga kindel olla: Siin ei torgita kedagi tagant. Samas leiad abistava käe seikluste kavandamisel.",
       "tagline": "Puhkekeskus",
-      "callToAction": "Majutus",
-      "callToActionLink": "/kontakt",
-      "callToAction2": "Meist",
-      "callToActionLink2": "/meist",
+      "callToAction": "Majutuse üldinfo",
+      "callToAction2": "Asukoht ja tegevused",
       "imageAlt": "Tere"
     },
     "Team": {
